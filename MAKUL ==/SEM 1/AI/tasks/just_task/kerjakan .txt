@@ -1,0 +1,4 @@
+minggu 9 - logika fuzzy 
+-metode sugeno 
+-metode sukamoto
+* pilih stau nomer diantara 3

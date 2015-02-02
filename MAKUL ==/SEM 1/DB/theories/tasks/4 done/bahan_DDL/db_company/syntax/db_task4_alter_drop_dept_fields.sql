@@ -1,0 +1,1 @@
+ALTER table departments DROP COLUMN fields;

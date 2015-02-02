@@ -1,0 +1,16 @@
+========================
+==SOFTWARE ENGINEERING==
+========================
+
+dosen : p.kholid
+- END USER soft : software tanpa levelisasi pengguna , ex :game
+
+uts : ?????
+
+
+------------------
+sistem yang terkait dengan pembuatan proyek
+-
+-RPL
+-manajemen proyek
+-permodelan 

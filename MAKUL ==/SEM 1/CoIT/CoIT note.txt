@@ -1,0 +1,14 @@
+=======================================
+== CONCEPT OF INFORMATION TECHNOLOGY ==
+=======================================
+
+dosen : p.Udin
+uts :
+- HTML5 -> INTERNET OF THINGS 
+- Cloud Computing
+- Wireless Sensor Network
+- Internet of Things
+
+-------------------------------------------
+just note :
+big data merupakan pengembangan dari dta warehouse / data mining

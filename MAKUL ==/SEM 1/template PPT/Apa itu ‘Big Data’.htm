@@ -1,0 +1,1374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta property="fb:app_id" content="397600276959629" />
+    <meta property="og:type"   content="article" />
+    <meta property="og:url"    content="http://teknologi.kompasiana.com/internet/2013/03/12/apa-itu-big-data-541499.html" />
+    <meta property="og:title"  content="Apa itu &#8216;Big Data&#8217;?" />
+            <meta property="og:image"  content="http://assets.kompasiana.com/statics/kompasiana4.0/images/logo_kompasiana.png" />
+        <meta property="og:site_name" content="KOMPASIANA.com" />
+    <meta property="og:description" content="Akhir-akhir ini, istilah &#8216;big data&#8217; menjadi topik yang dominan dan sangat sering dibahas dalam industri IT. Banyak pihak yang mungkin heran kenapa topik ini baru menjadi pusat perhatian padahal ledakan " />
+
+    <title>Apa itu &#8216;Big Data&#8217;?</title>
+    <link href="http://assets.kompasiana.com/statics/css3.5/guide.css?310320111329" rel="stylesheet" type="text/css" />
+
+    <link href="http://assets.kompasiana.com/statics/plugins3.5/codabubble/bubble.css" rel="stylesheet" type="text/css" />
+    <link href="http://assets.kompasiana.com/statics/css3.5/share_komentar.css?310320111329" rel="stylesheet" type="text/css" />
+    <link href="http://assets.kompasiana.com/statics/plugins3.5/thickbox/thickbox.css" rel="stylesheet" type="text/css" />
+    <link href="http://assets.kompasiana.com/statics/kompasiana4.0/../newunregistered/css/balong_regist.css" rel="stylesheet" type="text/css" />
+    <link href="http://assets.kompasiana.com/statics/kompasiana4.0/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="http://assets.kompasiana.com/statics/kompasiana4.0/css/kompasiana.css" rel="stylesheet" type="text/css" />
+    <link href="http://assets.kompasiana.com/statics/kompasiana4.0/css/menu.css" rel="stylesheet" type="text/css" />
+    <link href="http://assets.kompasiana.com/statics/kompasiana4.0/css/tab.css" rel="stylesheet" type="text/css" />
+    <link href="http://assets.kompasiana.com/statics/kompasiana4.0/css/kompas2011.css" rel="stylesheet" type="text/css" />
+    <link href="http://assets.kompasiana.com/statics/kompasiana4.0/css/css.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="http://stat.ks.kidsklik.com/statics/kompasiana4.0/promoted_article/css/style.css?201302180240" type="text/css" media="screen" />
+
+    <!-- <link rel="stylesheet" href="http://stat.ks.kidsklik.com/statics/kompasiana4.0/promoted_article/css/style.css?20141225" type="text/css" media="screen" /> -->
+    <style type="text/css">
+        .bershow{
+            float:left;
+        }
+        img{max-width:600px;}
+
+        #fb-root{width:50px;}
+        .connect_widget_number_cloud{width:50px !important;}
+        .wp-caption { border:1px solid #ddd; text-align:center; background-color:#f3f3f3; padding-top:4px; margin:10px; -moz-border-radius:3px; -khtml-border-radius:3px; -webkit-border-radius:3px; border-radius:3px;max-width:600px}
+        .wp-caption img{max-width:600px;}
+        #jsddm { margin:0; padding:0; }
+        #jsddm li { float:left; list-style:none; }
+        #jsddm li a { color:inherit; display:block; padding:5px 3px; text-decoration:none; border-right:1px solid white; border-left:1px solid white; }
+        #jsddm li ul { margin:0; padding:0; position:absolute; visibility:hidden; border-top:1px solid white; }
+        #jsddm li ul li { float:none; display:inline; border-bottom:1px solid white; }
+        #jsddm li ul li a { width:100px; background:#e0e0e0; color:#24313C; border-bottom:1px solid white; }
+        #jsddm li ul li a:hover{ background:#999; }
+
+        /* css untuk skin ad */
+        body {
+            background:url(http://ads6.kompasads.com/new/www/delivery/avw.php?zoneid=1677&cb=INSERT_RANDOM_NUMBER_HERE&n=a3d6e105) no-repeat fixed center top; margin:0 auto; padding:0 auto;z-index:0;
+        }
+        #masklink {
+            top:0;
+            left:0;
+            width:100%;
+            position:inherit;
+            float:left;
+            z-index:0;
+        }
+        #anchormasklink {
+            top:0;
+            left:0;
+            width:10%;
+            height:1800px;
+            position:fixed;
+            float:left;
+            z-index:0;
+            margin-top:0;
+            margin-bottom:-5000px;
+        }
+
+        #anchormasklink2 {
+            top:0;
+            right:0;
+            width:10%;
+            height:1800px;
+            position:fixed;
+            float:right;
+            z-index:0;
+            margin-top:0;
+            margin-bottom:-5000px;
+        }
+
+        /*iklan bottom start*/
+        #iklanbottom { position: absolute; center: 0px; bottom: 0px;text-align:left; width: 100%; }
+        div > div#iklanbottom { position: fixed; }
+        /*iklan bottom end*/
+
+        /*Gate Forum Kompas*/
+        .forum_box_idx      { width:315px; background:url(http://assets.kompasiana.com/statics/images3.5/kforum_bg_idx.gif) repeat-y;}
+        .forum_top_idx      { background:url(http://assets.kompasiana.com/statics/images3.5/kforum_top_idx.gif) no-repeat top; height:43px; padding-bottom:5px; padding-top:14px;}
+        .forum_top_idx a        { display:block; height:20px; width:140px; margin:0px 0px 0px 150px}
+        .forum_bot_idx      { background:url(http://assets.kompasiana.com/statics/images3.5/kforum_bot_idx.gif) no-repeat bottom; height:5px; padding-top:5px;}
+        .forum_kon_idx      { font:normal 12px Arial, Helvetica, sans-serif;}
+        .forum_kon_idx ul       { list-style:square outside; margin:0px 10px 0px 40px; padding:0px;}
+        .forum_kon_idx li           { line-height:18px; margin-bottom:3px; }
+        .forum_kon_idx  a           {  color:#1170a0; text-decoration:none; margin:0px; padding:0px; font-weight:bold;}
+        .forum_kon_idx a:hover  { text-decoration:underline;}
+
+        .forum_box      { width:300px; background:url(http://assets.kompasiana.com/statics/images3.5/kforum_bg.gif) repeat-y;}
+        .forum_top      { background:url(http://assets.kompasiana.com/statics/images3.5/kforum_top.gif) no-repeat top; height:43px; padding-bottom:5px; padding-top:14px;}
+        .forum_top a        { display:block; height:20px; width:140px; margin:0px 0px 0px 150px}
+        .forum_bot      { background:url(http://assets.kompasiana.com/statics/images3.5/kforum_bot.gif) no-repeat bottom; height:5px; padding-top:5px;}
+        .forum_kon      { font:normal 12px Arial, Helvetica, sans-serif;}
+        .forum_kon ul       { list-style:square outside; margin:0px 10px 0px 40px; padding:0px;}
+        .forum_kon li           { line-height:18px; margin-bottom:3px; }
+        .forum_kon a            {  color:#1170a0; text-decoration:none; margin:0px; padding:0px; font-weight:bold;}
+        .forum_kon a:hover  { text-decoration:underline;}
+        /*Gate Forum Kompas end*/
+        /*css untuk banner freez  */
+        .konten_balongfreez {background:url(http://assets.kompasiana.com/statics/fiksiana/banner_freez/balong_freez02.jpg);background-repeat:no-repeat;width:264px;height:171px;padding:10px 18px 10px 18px;overflow:hidden;}
+        #list_bfreez { margin-left: 0px; margin-top: 0px; padding-left: 0; list-style: none;line-height:3px;}
+        #list_bfreez li { padding-left: 15px; background-image:url(http://assets.kompasiana.com/statics/fiksiana/banner_freez/bullet_bfreez.gif);background-repeat:no-repeat;background-position: 0 .4em; padding-bottom:5px;}
+        #list_bfreez    {font:normal 12px Arial, Helvetica, sans-serif;color:#0c74b1;line-height:16px;}
+        #list_bfreez a { font:bold 12px arial; color:#0c74b1; text-decoration:none;}
+        #list_bfreez a:hover { color:#0c74b1; text-decoration:underline;}
+        #list_bfreez span {font-weight:bold;color:#ee4c11;}
+        .wbfr300    {width:300px;}
+
+
+        img, div, input { behavior: url("http://assets.kompasiana.com/statics/kompasiana4.0/iepngfix.htc") }
+
+
+        /*style for banner kratingdeng (Top2)*/
+
+
+        .thumb_kpsfes {width:147px;height:72px;overflow:hidden;}
+        .thumb_kpsfes img {width:147px;height:auto;}
+        .t_kpsfes01 a{font:bold 12px Arial, Helvetica, sans-serif;color:#ffc023;text-decoration:none;}
+        .t_kpsfes01 a:hover{font:bold 12px Arial, Helvetica, sans-serif;color:#ffc023;text-decoration:underline;}
+        .t_kpsfes02 a{font:bold 12px Arial, Helvetica, sans-serif;color:#620605;text-decoration:none;}
+        .t_kpsfes02 a:hover{font:bold 12px Arial, Helvetica, sans-serif;color:#620605;text-decoration:underline;}
+        .t_kpsfes03 {font:normal 11px Arial, Helvetica, sans-serif;color:#ffffff;text-decoration:none;}
+
+        .outer_kompasiana {width:1010px;}
+        /*update box profil - 10/02/14 */
+        .boxprofil2014 {padding:3px;border:solid 1px #d3d3d3;margin:10px 0px;}
+        .improfil14 {width:120px;height:120px;overflow:hidden;margin-right:10px;}
+        .improfil14 img {width:120px;height:auto;}
+        .dataprofil14 {width:350px;height:90px;padding-right:3px;overflow:hidden;}
+        .dataprofil14 h2 {font:bold 18px Arial, Helvetica, sans-serif;color:#000;margin:0px;padding:5px 0px;}
+        .dataprofil14 h2 a{font:bold 18px Arial, Helvetica, sans-serif;color:#000;text-decoration:none;}
+        .dataprofil14 h2 a:hover{color:#000;text-decoration:underline;}
+        .dataprofil14 p {font:normal 12px/18px Arial, Helvetica, sans-serif;padding:0px;margin:0px;}
+        .veryyear {width:120px;padding-top:5px;}
+        .icovery {padding:5px 6px 0px 3px;}
+        .veryyear h1 {color:#2478a6;font:bold 11px Arial, Helvetica, sans-serif;text-transform:uppercase;text-decoration:none;margin:0px;padding:6px 0px 0px 0px;}
+        .veryyear h1 a {color:#2478a6;text-decoration:none;}
+        .veryyear h1 a:hover {text-transform:underline;}
+        .optionprofil14 {font:bold 12px/18px Arial, Helvetica, sans-serif;color:#000;text-decoration:none;padding:5px 0px 0px 0px;}
+        .optionprofil14 a{font:bold 11px/18px Arial, Helvetica, sans-serif;color:#000;text-decoration:none;}
+        .optionprofil14 a:hover {color:#000;text-decoration:underline;}
+        .mb_6 {margin-bottom:6px;}
+
+    </style>
+
+    <script type="text/javascript" src="http://assets.kompasiana.com/statics/kompasiana4.0/js/tabcontent.js"></script>
+    <script src="http://assets.kompasiana.com/statics/kompasiana4.0/js/jquery-1.4.2.min.js" type="text/javascript"></script>
+    <script src="http://assets.kompasiana.com/statics/kompasiana4.0/js/droppanel.js" type="text/javascript"></script>
+    <script src="http://assets.kompasiana.com/statics/kompasiana4.0/js/droppanel_2.js" type="text/javascript"></script>
+    <script type="text/javascript" src="http://assets.kompasiana.com/statics/kompasiana4.0/js/iepngfix_tilebg.js"></script>
+    <script type="text/javascript" src="http://assets.kompasiana.com/statics/kompasiana4.0/js/tabcontent.js"></script>
+    <script type="text/javascript" src="http://assets.kompasiana.com/statics/kompasiana4.0/js/jquery.min.js"></script>
+    <script type="text/javascript">
+    <!--//<![CDATA[
+    jQuery(document).ready(function($){
+            $(".berhide").hide();
+            $("#berinilai_user").live('click',function() {
+                $(".berhide").show();
+                $("#berinilai_user").hide();
+            });
+
+            get_post_rate();
+        });
+
+    function get_post_rate(){
+                $('#nilai_container').html('Processing data ...');
+                $.getJSON('ajax?m=get_post_rate&pid=2&nid=541499', function(json){
+                    var cetak = '';
+                        if(json.status== 0 ){
+                            $('#star_num').html('0');
+                            $('#nilai_container').html('Artikel ini belum ada yang menilai.');
+
+                            return false;
+                        }
+                        $.each(json.data,function(x,y){
+
+                            if(x <=5){
+                                cetak +='<div  class="left w135 mr_10 bershow pb_10"><img src="'+y.user_image+'" />\
+                                            <h2><a href="http://www.kompasiana.com/'+y.profile_url+'">'+y.display_name+'</a></h2>\
+                                            <span class="btn_orange">'+y.rate_value+'</span>\
+                                            <div class="clearit"></div>\
+                                        </div>';
+                            }else{
+                                cetak +='<div  class="left w135 mr_10 berhide pb_10" style="display:none">\
+                                        <img src="'+y.user_image+'" />\
+                                        <h2><a href="http://www.kompasiana.com/'+y.profile_url+'">'+y.display_name+'</a></h2>\
+                                        <span class="btn_orange">'+y.rate_value+'</span>\
+                                        <div class="clearit"></div>\
+                                    </div>';
+                            }
+
+                        });
+                        cetak +='<div class="clearit"></div>';
+                        if(json.total > 6){
+                        cetak +='<span class="left mt_30">\
+                                <input id="berinilai_user" type="image" src="http://assets.kompasiana.com/statics/kompasiana4.0/images/btn_more.jpg" />\
+                                </span>';
+                        }
+
+
+                    $('#star_num').html(json.total);
+                    $('#nilai_container').html(cetak);
+                });
+            }
+    //]]>-->
+    </script>
+    <script type="text/javascript">
+    <!--//<![CDATA[
+        jQuery(document).ready(function($)
+        {
+            //slides the element with class "menu_body" when paragraph with class "menu_head" is clicked
+            $(".tab_def").show(function()
+            {
+                $(this).css({backgroundImage:"url(http://assets.kompasiana.com/statics/kompasiana4.0/images/blank.gif)"}).next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
+                $(this).siblings().css({backgroundImage:"url(http://assets.kompasiana.com/statics/kompasiana4.0/images/ico_down.gif)"});
+            });
+            //slides the element with class "menu_body" when paragraph with class "menu_head" is clicked
+            $("#firstpane p.menu_head").click(function()
+            {
+                $(this).css({backgroundImage:"url(http://assets.kompasiana.com/statics/kompasiana4.0/images/blank.gif)"}).next("div.menu_body").slideToggle(300).siblings("div.menu_body").slideUp("slow");
+                $(this).siblings().css({backgroundImage:"url(http://assets.kompasiana.com/statics/kompasiana4.0/images/ico_down.gif)"});
+            });
+            //slides the element with class "menu_body" when mouse is over the paragraph
+            $("#secondpane p.menu_head").mouseover(function()
+            {
+                 $(this).css({backgroundImage:"url(http://assets.kompasiana.com/statics/kompasiana4.0/images/ico_down.gif)"}).next("div.menu_body").slideDown(500).siblings("div.menu_body").slideUp("slow");
+                 $(this).siblings().css({backgroundImage:"url(http://assets.kompasiana.com/statics/kompasiana4.0/images/ico_down.gif)"});
+            });
+        });
+    //]]>-->
+    </script>
+
+    <script type="text/javascript">
+    <!--//<![CDATA[
+        $(function() {
+            var offset = $("#box").offset();
+            var topPadding = 15;
+            $(window).scroll(function() {
+                if ($(window).scrollTop() > offset.top) {
+                    $("#box").stop().animate({
+                        marginTop: $(window).scrollTop() - offset.top + topPadding
+                    });
+                } else {
+                    $("#box").stop().animate({
+                        marginTop: 0
+                    });
+                };
+            });
+        });
+    //]]>-->
+    </script>
+</head>
+
+<body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=397600276959629";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <!-- Skin Ad -->
+        <div id="masklink">
+            <div id="anchormasklink">
+                <!--/* S: Skin Ad Kiri */-->
+
+                <script type='text/javascript'><!--//<![CDATA[
+                   var m3_u = (location.protocol=='https:'?'https://ads6.kompasads.com/new/www/delivery/ajs.php':'http://ads6.kompasads.com/new/www/delivery/ajs.php');
+                   var m3_r = Math.floor(Math.random()*99999999999);
+                   if (!document.MAX_used) document.MAX_used = ',';
+                   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+                   document.write ("?zoneid=2637");
+                   document.write ('&amp;cb=' + m3_r);
+                   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+                   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+                   document.write ("&amp;loc=" + escape(window.location));
+                   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+                   if (document.context) document.write ("&context=" + escape(document.context));
+                   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+                   document.write ("'><\/scr"+"ipt>");
+                //]]>--></script><noscript><a href='http://ads6.kompasads.com/new/www/delivery/ck.php?n=aa139f23&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ads6.kompasads.com/new/www/delivery/avw.php?zoneid=2637&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=aa139f23' border='0' alt='' /></a></noscript>
+
+                <!--/* E: Skin Ad Kiri */-->
+            </div>
+            <div id="anchormasklink2">
+                <!--/* S: Skin Ad Kanan */-->
+
+                <script type='text/javascript'><!--//<![CDATA[
+                   var m3_u = (location.protocol=='https:'?'https://ads6.kompasads.com/new/www/delivery/ajs.php':'http://ads6.kompasads.com/new/www/delivery/ajs.php');
+                   var m3_r = Math.floor(Math.random()*99999999999);
+                   if (!document.MAX_used) document.MAX_used = ',';
+                   document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+                   document.write ("?zoneid=2635");
+                   document.write ('&amp;cb=' + m3_r);
+                   if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+                   document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+                   document.write ("&amp;loc=" + escape(window.location));
+                   if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+                   if (document.context) document.write ("&context=" + escape(document.context));
+                   if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+                   document.write ("'><\/scr"+"ipt>");
+                //]]>--></script><noscript><a href='http://ads6.kompasads.com/new/www/delivery/ck.php?n=a2ea8297&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ads6.kompasads.com/new/www/delivery/avw.php?zoneid=2635&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a2ea8297' border='0' alt='' /></a></noscript>
+
+            </div>
+        </div>
+
+    <!-- S: TOP 1 -->
+    <!-- Start: GPT Sync -->
+    <script type='text/javascript'>
+        var gptadslots=[];
+        (function(){
+            var useSSL = 'https:' == document.location.protocol;
+            var src = (useSSL ? 'https:' : 'http:') + '//www.googletagservices.com/tag/js/gpt.js';
+            document.write('<scr' + 'ipt src="' + src + '"></scr' + 'ipt>');
+        })();
+    </script>
+
+    <script type="text/javascript">
+
+            //Adslot 1 declaration
+            gptadslots[1]= googletag.defineSlot('/31800665/KOMPAS.COM/kompasiana', [[970,90]],'div-gpt-ad-812459828763220023-1').setTargeting('Pos',['Top_1']).addService(googletag.pubads());
+
+            //Adslot 2 declaration
+            gptadslots[2]= googletag.defineSlot('/31800665/KOMPAS.COM/kompasiana', [[300,250]],'div-gpt-ad-812459828763220023-2').setTargeting('Pos',['Right_1']).addService(googletag.pubads());
+
+            //Adslot 3 declaration
+            //gptadslots[3]= googletag.defineSlot('/31800665/KOMPAS.COM/kompasiana', [[300,250]],'div-gpt-ad-812459828763220023-3').setTargeting('Pos',['Right_2']).addService(googletag.pubads());
+
+            //Adslot 4 declaration
+            //gptadslots[4]= googletag.defineSlot('/31800665/KOMPAS.COM/kompasiana', [[300,250]],'div-gpt-ad-812459828763220023-4').setTargeting('Pos',['Right_3']).addService(googletag.pubads());
+
+            //Adslot oop declaration
+            gptadslots[0] = googletag.defineOutOfPageSlot('/31800665/KOMPAS.COM/kompasiana', 'div-gpt-ad-812459828763220023-oop').setTargeting('Pos',['Overlay']).addService(googletag.pubads());
+
+            googletag.pubads().enableSingleRequest();
+            googletag.pubads().enableSyncRendering();
+            googletag.enableServices();
+
+    </script>
+    <!-- End: GPT -->
+    <div align="center" class="pt_5 pb_5">
+         <div style="width:980px;margin:10px auto;text-align:center;">
+
+            <!-- Beginning Sync AdSlot 1 for Ad unit KOMPAS.COM > kompasiana ### size: [[970,90]]  -->
+            <div id='div-gpt-ad-812459828763220023-1'>
+                <script type='text/javascript'>
+                    googletag.display('div-gpt-ad-812459828763220023-1');
+                </script>
+            </div>
+            <!-- End AdSlot 1 -->
+        </div>
+    </div><!-- E: TOP 1 -->
+
+    <div class="outer_kompasiana arial" style="position:relative;z-index:2;">
+
+        <!-- S: HEADER -->
+        <div class="header2" style="margin-top:15px;">
+
+            <!-- kanal -->
+        	<div id="panelout" class="bgi_nav">
+            	<div class="left"><img src="http://assets.kompasiana.com/statics/kompasiana4.0/images/kiri_atas.jpg" /></div>	
+                <div class="panel_menu menu_kanal_baru left" style="display: visible;"> 
+                    <span class="kompas"><a href="#">Kompasiana</a></span>
+                    <a href="http://www.kompas.com" target="_blank">Kompas.com</a>
+                    <a href="http://cetak.kompas.com" target="_blank">Cetak</a>
+                    <a href="http://epaper.kompas.com" target="_blank">ePaper</a>
+                    <a href="http://www.kompas.tv" target="_blank">Kompas TV</a>
+                    <a href="http://bola.kompas.com" target="_blank">Bola</a>
+                    <a href="http://entertainment.kompas.com" target="_blank">Entertainment</a>
+                    <a href="http://tekno.kompas.com" target="_blank">Tekno</a>
+                    <a href="http://otomotif.kompas.com" target="_blank">Otomotif</a>
+                    <a href="http://female.kompas.com" target="_blank">Female</a>
+                    <a href="http://health.kompas.com" target="_blank">Health</a>
+                    <a href="http://properti.kompas.com" target="_blank">Properti</a>
+                    <a href="http://www.urbanesia.com" target="_blank">Urbanesia</a>
+                    <a href="http://www.kompasimages.com"  target="_blank">Images</a>
+                	<span class="more"><a href="#">More <img src="http://assets.kompasiana.com/statics/kompasiana4.0/images/panah_turun.gif" border="0"/></a></span>
+				</div>
+                <div class="clearit"></div>
+				<div id="panelmenu" class="menu_kanal_baru_a" style="margin-left:88px;">
+					<a href="http://www.kompasgames.com" target="_blank">Games</a>
+                    <a href="http://www.kompaskarier.com" target="_blank">KompasKarier</a>   
+                    <a href="http://www.pasangiklan.com" target="_blank">PasangIklan</a>
+                    <a href="http://www.grazera.com/" target="_blank">Grazera</a>
+                    <a href="http://forum.kompas.com" target="_blank">Forum</a>
+                	<div class="clearit"></div> 
+				</div>
+            	<!-- <div id="panelmenuc"><img src="http://assets.kompasiana.com/statics/kompasiana4.0/images/bawah_kanan.gif" border="0" style="padding:0px;"></div> -->
+			</div>	
+<!-- kanal -->
+
+            <!-- logo -->
+            <div class="bg_blue4 h92">
+                <span class="left mt_15 ml_15">
+                    					<a href="http://www.kompasiana.com">
+						<!-- <img width="250px" style="border: 0pt none;margin:5px;padding:0px;" alt="Back to Kompasiana" src="http://assets.kompasiana.com/statics/images3.5/logo_theme/logo_kompasiana_17_2014.jpg" /> -->
+						  <img height="50px" style="border: 0pt none;margin:5px;padding:0px;" alt="Back to Kompasiana" src="http://assets.kompasiana.com/statics/kompasiana4.0/images/logo_kompasiana.png" /> 
+					</a>
+                    <!-- <a href="http://www.kompasiana.com">
+                        <img src="http://assets.kompasiana.com/statics/kompasiana4.0/images/logo_kompasiana.gif" border="0" />
+                    </a> -->
+                </span>
+                <!-- <span class="left mt_15 ml_15"><a href="http://www.kompasiana.com"><img src="http://assets.kompasiana.com/statics/images3.5/logo_theme/logo_kompasiana_ny_white.png" border="0" height="67px" /></a></span> -->
+                <iframe id='a6c629f4' name='a6c629f4' src='http://ads6.kompasads.com/new/www/delivery/afr.php?zoneid=1319&amp;cb=INSERT_RANDOM_NUMBER_HERE' frameborder='0' scrolling='no' width='582' height='85' allowtransparency='true'><a href='http://ads6.kompasads.com/new/www/delivery/ck.php?n=ac22031e&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ads6.kompasads.com/new/www/delivery/avw.php?zoneid=1319&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=ac22031e' border='0' alt='' /></a></iframe>
+                <div class="clearit"></div>
+            </div><!-- logo -->
+
+            
+<!-- S: SUBINDEX -->
+		<div class="sub_index">
+			<div class="sub_img1">
+				<a class="" href="http://www.kompasiana.com/" ><img src="http://assets.kompasiana.com/statics/kompasiana4.0/images/ico_home.png" border="0" /></a>
+			</div>
+			<a class="" href="http://www.kompasiana.com/channel/peristiwa">Berita</a>
+			<a class="" href="http://www.kompasiana.com/channel/polhukam">Politik</a>
+			<a  class="" href="http://www.kompasiana.com/channel/humaniora">Humaniora</a>
+			<a class="" href="http://ekonomi.kompasiana.com">Ekonomi</a>
+			<a  class="" href="http://hiburan.kompasiana.com">Hiburan</a>
+			<a class="" href="http://olahraga.kompasiana.com">Olahraga</a>
+			<a class="" href="http://lifestyle.kompasiana.com">Lifestyle</a>
+			<a class=""   href="http://wisata.kompasiana.com">Wisata</a>
+			<a class="" href="http://kesehatan.kompasiana.com">Kesehatan</a>
+			<a class="active" href="http://teknologi.kompasiana.com">Tekno</a>
+			<a class="" href="http://media.kompasiana.com">Media</a>
+			<a class="" href="http://www.kompasiana.com/channel/muda">Muda</a>
+			<a class="" href="http://green.kompasiana.com">Green</a>
+			<a href="http://jakarta.kompasiana.com" style="color:#fff">Jakarta</a>
+            <!-- <a href="#">Foto</a> -->
+			<a href="http://fiksiana.kompasiana.com" style="color:#fff">Fiksiana</a>
+			<!--a href="http://freez." style="color:#fff">Freez</a-->
+		</div>
+
+<!-- E: SUBINDEX -->
+
+<!-- S: SUBINDEX DROPDOWN -->
+			                <!-- E: SUBINDEX DROPDOWN -->
+
+        </div><!-- E: HEADER -->
+
+        <div class="fb-kolom" style="margin-top:23px"></div>
+
+        <!-- s: BANNER UNDER THE HEADER -->
+        <div style="width:980px;margin:0 auto">
+            <!-- <script type='text/javascript'><!--//<![CDATA[
+               var m3_u = (location.protocol=='https:'?'https://ads6.kompasads.com/new/www/delivery/ajs.php':'http://ads6.kompasads.com/new/www/delivery/ajs.php');
+               var m3_r = Math.floor(Math.random()*99999999999);
+               if (!document.MAX_used) document.MAX_used = ',';
+               document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+               document.write ("?zoneid=1795");
+               document.write ('&amp;cb=' + m3_r);
+               if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+               document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+               document.write ("&amp;loc=" + escape(window.location));
+               if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+               if (document.context) document.write ("&context=" + escape(document.context));
+               if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+               document.write ("'><\/scr"+"ipt>");
+            //]]>--><!-- </script><noscript><a href='http://ads6.kompasads.com/new/www/delivery/ck.php?n=a5e6576a&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ads6.kompasads.com/new/www/delivery/avw.php?zoneid=1795&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a5e6576a' border='0' alt='' /></a></noscript>
+             -->
+        </div><!-- e: BANNER UNDER THE HEADER -->
+
+        <!-- S: CONTENT LEFT -->
+        <div class="w620 left ml_20 arial ml6_10 index_artikel pt_20">
+
+            <!-- s: menu home -->
+            <div class="bgi_gray w50 left" align="center"><a href="http://www.kompasiana.com/home">Home</a></div><img src="http://assets.kompasiana.com/statics/kompasiana4.0/images/ico_right1.gif" align="left" />
+            <div class="bgi_gray  left" align="center"><a href="http://teknologi.kompasiana.com">Teknologi</a></div><img src="http://assets.kompasiana.com/statics/kompasiana4.0/images/ico_right1.gif" align="left" />
+            <div class="bgi_gray  left" align="center"><a href="http://teknologi.kompasiana.com/internet">Internet</a></div><img src="http://assets.kompasiana.com/statics/kompasiana4.0/images/ico_right2.gif" align="left" />
+            <div class="bgi_blue2 w60 left" align="center">Artikel</div><img src="http://assets.kompasiana.com/statics/kompasiana4.0/images/ico_right3.gif" align="left" />
+            <div class="clearit"></div><!-- e: menu home -->
+
+            <h2 class="mt_15">Internet</h2>
+            
+                 <div class="boxprofil2014">
+                    <!-- s: photo profil -->
+                    <div class="left improfil14"><img src="http://assets.kompasiana.com/statics/u/prf/1387180469103207198.jpg" class="pr_10" /></div>
+                    <!-- e: photo profil -->
+                    <div class="left">
+                        <!-- s: nama data -->
+                      <div class="left dataprofil14">
+                            <h2><a href="http://www.kompasiana.com/wmwijaya">W Jaya</a></h2>
+                          <p>Catatan Akhir Pekan.
+vijjam.blogspot.com
+                          </p>
+                        </div>
+                        <!-- e: nama data -->
+                        <!-- s: verifikasi badge -->
+                        <div class="left veryyear">
+                                                        <div class="clearit mb_6"></div>
+                            
+                        </div>
+                        <!-- e: verifikasi badge -->
+                        <div class="clearit"></div>
+
+                        <div class="optionprofil14 right">
+                                                    <span id="friend_request"><a href="#" onClick="add_as_firend('W Jaya',142231);return false;">Jadikan Teman</a></span> |
+                                                      &nbsp;<a href="http://www.kompasiana.com/dashboard/message/wmwijaya"  onClick="div_message(); return false;">Kirim Pesan</a>
+                        </div>
+                        <div class="clearit"></div>
+                    </div>
+                    <div class="clearit"></div>
+                </div>
+            <div id="page-wrap" class="1410078584" >
+
+                <!-- s: Floating box -->
+                <div id="floating-box">
+                    <div id="box" style="text-align:center">
+                        <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+                        <fb:like href="http://teknologi.kompasiana.com/internet/2013/03/12/apa-itu-big-data-541499.html" send="false" layout="box_count" data-width="50" show_faces="false" font="" ></fb:like>
+                        <div class="clearit"></div>
+                        <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://kom.ps/AEjr5u" data-text="Apa itu &#8216;Big Data&#8217;?" data-count="vertical" data-via="kompasiana" data-counturl="http://teknologi.kompasiana.com/internet/2013/03/12/apa-itu-big-data-541499.html""> </a>
+                        <div class="clearit"></div>
+                        <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script><g:plusone size="tall" href="http://teknologi.kompasiana.com/internet/2013/03/12/apa-itu-big-data-541499.html"></g:plusone>
+                        <div class="clearit"></div>
+                        <script type="text/javascript" src="http://platform.linkedin.com/in.js"></script>
+                        <script type="in/share" data-url="http://teknologi.kompasiana.com/internet/2013/03/12/apa-itu-big-data-541499.html" data-counter="size_linkedin"></script>
+                        <div class="clearit"></div>
+                    </div>
+                </div><!-- e: Floating box -->
+
+                <h1 class="w580 ml_5">Apa itu &#8216;Big Data&#8217;?</h1>
+
+                <!-- e: bookmark after login -->
+
+                <!-- <div class="h20" align="right">
+                    <a href="#"><img src="http://assets.kompasiana.com/statics/kompasiana4.0/images/ico_tambah.gif" border="0" /></a>
+                </div> -->
+
+                <!-- s: date post -->
+                <span class="left font11 ml_5 cc_gray2">
+                    <span class="c_blue"><a href="http://www.kompasiana.com/posts/type/raport/">REP</a></span>
+                     | 12 March 2013 | 22:29                </span><!-- e: date post -->
+
+                <span class="right font11 mr_5 cc_gray2">
+                    <img src="http://assets.kompasiana.com/statics/kompasiana4.0/images/ico_baca.gif" border="0" class="mr_5" />
+                    Dibaca: <span class="c_black"><b>
+                    1832 </b></span>
+                    &nbsp; <img src="http://assets.kompasiana.com/statics/kompasiana4.0/images/img_komen.gif" border="0" class="mr_5" />
+                    Komentar: <span class="c_black"><b>2</b></span>
+                    &nbsp; <img src="http://assets.kompasiana.com/statics/kompasiana4.0/images/ico_nilai.gif" border="0" class="mr_5" />
+                    0                </span>
+                <div class="clearit"></div>
+                <div class="bl_3 mt_5 mb_20"></div>
+
+                <div style="width:600px;">
+
+                    
+                    <div style="width:600px;" id="ct_708">
+
+                    <p>
+<p class="MsoNormal" style="text-align: justify;">Akhir-akhir ini, istilah &#8216;big data&#8217; menjadi topik yang dominan dan sangat sering dibahas dalam industri IT. Banyak pihak yang mungkin heran kenapa topik ini baru menjadi pusat perhatian padahal ledakan informasi telah terjadi secara berkelangsungan sejak dimulainya era informasi. Perkembangan volume dan jenis data yang terus meningkat secara berlipat-lipat dalam dunia maya Internet semenjak kelahirannya adalah fakta yang tak dapat dipungkiri. Mulai data yang hanya berupa teks, gambar atau foto, lalu data berupa video hingga data yang berasal system pengindraan. Lalu kenapa baru sekarang orang ramai-ramai membahas istilah big data? Apa sebenarnya &#8216;big data&#8217; itu?</p>
+<p class="MsoNormal" style="text-align: justify;">Hingga saat ini, definisi resmi dari istilah big data belum ada. Namun demikian, latar belakang dari munculnya istilah ini adalah fakta yang menunjukkan bahwa pertumbuhan data yang terus berlipat ganda dari waktu ke waktu telah melampaui batas kemampuan media penyimpanan maupun sistem database yang ada saat ini. Kemudian, <a href="http://www.mckinsey.com/Insights/MGI/Research/Technology_and_Innovation/Big_data_The_next_frontier_for_innovation" target="_blank">McKinseyGlobal Institute</a> (MGI), dalam laporannya yang dirilis pada Mei 2011, mendefinisikan bahwa big data adalah data yang sudah sangat sulit untuk dikoleksi, disimpan, dikelola maupun dianalisa dengan menggunakan sistem database biasa karena volumenya yang terus berlipat. Tentu saja definisi ini masih sangat relatif, tidak mendeskripsikan secara eksplisit sebesar apa big data itu. Tetapi, untuk saat sekarang ini, data dengan volume puluhan terabyte hingga beberapa petabyte kelihatannya dapat memenuhi definis MGI tersebut. Di lain pihak, berdasarkan definisi dari <a href="http://www.gartner.com/newsroom/id/1731916" target="_blank">Gartner</a>, big data itu memiliki tiga atribute yaitu : volume , variety , dan velocity. Ketiga atribute ini dipakai juga oleh <a href="http://www-06.ibm.com/software/jp/data/bigdata/" target="_blank">IBM dalam mendifinisikan big data</a>. Volume berkaitan dengan ukuran, dalam hal ini kurang lebih sama dengan definisi dari MGI. Sedangkan variety berarti tipe atau jenis data, yang meliputi berbagai jenis data baik data yang telah terstruktur dalam suatu database maupun data yang tidak terorganisir dalam suatu database seperti halnya data teks pada web pages, data suara, video, click stream, log file dan lain sebagainya. Yang terakhir, velocity dapat diartikan sebagai kecepatan dihasilkannya suatu data dan seberapa cepat data itu harus diproses agar dapat memenuhi permintaan pengguna.</p>
+<p class="MsoNormal" style="text-align: justify;">Dari segi teknologi, dipublikasikannya <a href="http://vijjam.blogspot.jp/2013/02/google-bigtable-tabel-yang-memuat.html" target="_blank">GoogleBigtable</a> pada 2006 telah menjadi moment muncul dan meluasnya kesadaran akan pentingnya kemampuan untuk memproses ‘big data’. Berbagai layanan yang disediakan Google, yang melibatkan pengolahan data dalam skala besar termasuk <em>search engine-</em>nya, dapat beroperasi secara optimal berkat adanya Bigtable yang merupakan sistem database berskala besar dan cepat. Semenjak itu, teknik akses dan penyimpanan data KVS (Key-Value Store) dan teknik komputasi paralel yang disebut <a href="http://vijjam.blogspot.jp/2013/02/mapreduce-besar-dan-powerful-tapi-tidak.html" target="_blank">MapReduce</a> mulai menyedot banyak perhatian. Lalu, terinspirasi oleh konsep dalam <a href="http://vijjam.blogspot.jp/2013/02/gfs-menggotong-royongkan-ribuan.html" target="_blank">GoogleFile System</a> dan MapReduce yang menjadi pondasi Google Bigtable, seorang karyawan Yahoo! bernama Doug Cutting kemudian mengembangkan software untuk komputasi paralel terdistribusi (distributed paralel computing) yang ditulis dengan menggunakan Java dan diberi nama <a href="http://vijjam.blogspot.jp/2013/02/hdfs-berawal-dari-google-untuk-big-data.html" target="_blank">Hadoop</a>. Saat ini Hadoop telah menjadi project <em>open source-</em>nya <a href="http://hadoop.apache.org/" target="_blank">Apache Software</a>. Salah satu pengguna Hadoop adalah Facebook, SNS (Social Network Service) terbesar dunia dengan jumlah pengguna yang mencapai 800 juta lebih. Facebook menggunakan Hadoop dalam memproses big data seperti halnya content sharing, analisa access log, layanan message / pesan dan layanan lainnya yang melibatkan pemrosesan big data.</p>
+<p class="MsoNormal" style="text-align: justify;">Jadi, yang dimaksud dengan ‘big data’ bukanlah semata-mata hanya soal ukuran, bukan hanya tentang data yang berukuran raksasa. Big data adalah data berukuran raksasa yang volumenya terus bertambah, terdiri dari berbagai jenis atau varietas data, terbentuk secara terus menerus dengan kecepatan tertentu dan harus diproses dengan kecepatan tertentu pula. Momen awal ketenaran istilah ‘big data’ adalah kesuksesan Google dalam memberdayakan ‘big data’ dengan menggunakan teknologi canggihnya yang disebut Bigtable beserta teknologi-teknologi pendukungnya.</p>
+
+                    </div>
+
+                    
+                    <div class="clearit info_art mb_10 mt_10">
+                        <h4 class="left cc_black"> Tags:
+                            <a href="http://www.kompasiana.com/posts/tags/bigtable">bigtable</a> <a href="http://www.kompasiana.com/posts/tags/mapreduce">mapreduce</a> <a href="http://www.kompasiana.com/posts/tags/ibm">ibm</a> <a href="http://www.kompasiana.com/posts/tags/hadoop">hadoop</a> <a href="http://www.kompasiana.com/posts/tags/google">google</a> <a href="http://www.kompasiana.com/posts/tags/big data">big data</a> <a href="http://www.kompasiana.com/posts/tags/google file system">google file system</a> <a href="http://www.kompasiana.com/posts/tags/gfs">gfs</a>                         </h4>
+                        <div class="clearit"></div>
+                    </div><!-- /tags -->
+                                        
+                    <div class="clearit mt10 mb10 left">
+                        <span class="left">
+                            <a href="http://twitter.com/share" class="twitter-share-button"  data-url="http://kom.ps/AEjr5u" data-text="Apa itu &#8216;Big Data&#8217;?" data-related="kompasiana:kompasiana,kompascom:kompascom" data-count="horizontal" data-via="kompasiana" data-counturl="http://teknologi.kompasiana.com/internet/2013/03/12/apa-itu-big-data-541499.html" > </a>
+                        </span>
+                        <span class="left"><div class="fb-like" data-href="http://teknologi.kompasiana.com/internet/2013/03/12/apa-itu-big-data-541499.html" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false" data-font="segoe ui" data-action="recommend"></div></span>
+                        &nbsp;
+                    </div>
+
+                    <div class="right">
+                        <ul id="jsddm" class="font10" style="color:#2462a3; font-weight:bold; position:relative; z-index:99;">
+                                                        <li>
+                                <a rel="post" title="Report this Post" id="_513f49f0a03098ad6b007159" href="#" class="reportThis">Laporkan</a>
+                            </li>
+                            <li>
+                                <a href="#" onClick="scrollTo('#comment'); $('#comment').focus();return false;">Tanggapi</a>
+                            </li>
+                                                    </ul>
+                    </div>
+
+                    <div class="clearit"></div>
+
+                    <div style="width:500px;margin:20px auto;background:#c4bdbd;padding:20px;font:14px;border-radius:10px;">
+                        Kompasiana adalah Media Warga. Setiap berita/opini di Kompasiana menjadi tanggung jawab Penulis.
+                    </div>
+
+                    <!--div class="OUTBRAIN" data-src="http://" data-widget-id="AR_1" data-ob-template="Kompasiana" ></div>
+                    <div class="OUTBRAIN" data-src="http://" data-widget-id="AR_2" data-ob-template="Kompasiana" ></div>
+                    <script type="text/javascript" async="async" src="http://widgets.outbrain.com/outbrain.js"></script-->
+
+                    <!-- s: beri nilai -->
+                    <div style="background:#ebebeb;" class="ml_10 mt_30 w540 pt_5">
+                        <span class="left font14 c_gray3 ml_20 pr_20">Siapa  yang menilai tulisan ini?</span>
+                        <ul id="jsddm" class="font10" style="color:#2462a3;margin-left:20px; font-weight:bold; position:relative; z-index:99;" >
+                                                        <img src="http://assets.kompasiana.com/statics/kompasiana4.0/images/img_rate.jpg" border="0" />
+                            <span class="font14 c_gray3" id="star_num">-</span>
+                        </ul>
+                        <div class="clearit"></div>
+                    </div>
+
+                    <div style="background:#f5f5f5; height:auto; float:left;margin-bottom: 12px;" class="nilai pt_10 pb_10 pr_20 pl_20 mt_1 ml_10 w600" id="nilai_container" >
+                        Processing data ..
+                        <div class="clearit"></div>
+                    </div>  <!-- e: beri nilai -->
+
+                    <div style="width:468px;margin:10px auto;">
+                        <script type="text/javascript"><!--
+                            google_ad_client = "ca-pub-9012468469771973";
+                            /* Kompasiana_468x60 */
+                            google_ad_slot = "7923678993";
+                            google_ad_width = 468;
+                            google_ad_height = 60;
+                            //-->
+                        </script>
+                        <script type="text/javascript"src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+                    </div>
+
+                    <!-- list komentar -->
+                    <div class="list_komentar">
+                                    </div><!-- /list komentar -->
+
+                <!-- form komentar -->
+                <div class="clearit pt_10"></div>
+                    <div id="kmntr" style="background-color:#f2f2f2; padding:20px;">
+                        <div class="font14 pb_10 c_abu"><strong>Tulis Tanggapan Anda</strong></div>
+                        <form action="" name="testform" method="post">
+                            <!-- <div id="capcay"></div> -->
+                            <div class="left mr_10"><img src="http://assets.kompasiana.com/statics/u/prf/00_no_image_50.gif" alt="Guest User" /></div>
+                            <div class="left">
+                                <textarea name="comment" id="comment" class="form_2 h100 mb_10" style="width:500px;" ></textarea><br />
+                                <input type="submit" id="submit_button" name="submit" value="Submit" class="submit_comment font11 pd_5" />
+                                <input type="button" id="cancel_button" name="513f49f0a03098ad6b007159" value="Cancel" class="can_com font11 pd_5" />
+                            </div>
+                        </form>
+                        <div class="clearit pb_10"></div>
+                    </div><!-- /form komentar -->
+                </div>
+            </div>
+        </div>
+
+         <script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+         <script type="text/javascript">
+             Recaptcha.create("6Lf-M_oSAAAAAIGsPJGehsUI7vfEJ_yg0dnk9knG",
+                "capcay",
+                {
+                  theme: "red",
+                  callback: Recaptcha.focus_response_field
+                }
+              );
+         </script>
+        <!-- E: CONTENT LEFT -->
+
+
+        <!-- S: CONTENT RIGHT -->
+        <style>
+    .terekomendasi {
+        width: 292px;
+    }
+</style>
+<div class="w300 right mr_20 mt_20 mr6_10">
+    
+    <div id="user_shortcut"></div>
+
+        <!-- s: search -->
+    <div class="search mb_15">
+        <form action="http://www.kompasiana.com/search" id="cse-search-form"
+            method="get">
+            <input name="q" type="text" size="26" class="left" /> <input
+                type="hidden" name="pg" value="search" /> <input type="hidden"
+                name="cx" value="014314690270547682587:2a02hxzrgqc" /> <input
+                type="hidden" name="cof" value="FORID:11" /> <input type="hidden"
+                name="ie" value="UTF-8" /> <input type="submit" name="button"
+                id="button" value="" class="left"
+                style="margin-left: 7px; background: none; width: 30px;" />
+        </form>
+        <!-- <input type="text" border="0"/> -->
+    </div>
+    <!-- e: search -->
+
+    <!-- S: RIGHT 1 -->
+    <div class="mb_15">
+        <!-- Beginning Sync AdSlot 2 for Ad unit KOMPAS.COM > kompasiana ### size: [[300,250]]  -->
+        <div id='div-gpt-ad-812459828763220023-2'>
+            <script type='text/javascript'>
+                googletag.display('div-gpt-ad-812459828763220023-2');
+            </script>
+        </div>
+        <!-- End AdSlot 2 -->
+    </div>
+    <!-- E: RIGHT 1 -->
+
+    <!-- S: RIGHT 2 -->
+    <div class="mb_15">
+        <!-- Non DFP Script -->
+        <script type='text/javascript'><!--//<![CDATA[
+           var m3_u = (location.protocol=='https:'?'https://ads6.kompasads.com/new/www/delivery/ajs.php':'http://ads6.kompasads.com/new/www/delivery/ajs.php');
+           var m3_r = Math.floor(Math.random()*99999999999);
+           if (!document.MAX_used) document.MAX_used = ',';
+           document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+           document.write ("?zoneid=639");
+           document.write ('&amp;cb=' + m3_r);
+           if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+           document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+           document.write ("&amp;loc=" + escape(window.location));
+           if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+           if (document.context) document.write ("&context=" + escape(document.context));
+           if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+           document.write ("'><\/scr"+"ipt>");
+        //]]>--></script>
+        <noscript><a href='http://ads6.kompasads.com/new/www/delivery/ck.php?n=abc50239&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ads6.kompasads.com/new/www/delivery/avw.php?zoneid=639&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=abc50239' border='0' alt='' /></a></noscript>
+        <!-- Non DFP Script -->
+        <!-- Beginning Sync AdSlot 3 for Ad unit KOMPAS.COM > kompasiana ### size: [[300,250]]  -->
+                <!-- End AdSlot 3 -->
+    </div>
+    <!-- E: RIGHT 2 -->
+
+    <!-- S: RIGHT 3 -->
+    <div class="mb_15">
+        <!-- Non DFP Script -->
+        <script type='text/javascript'><!--//<![CDATA[
+           var m3_u = (location.protocol=='https:'?'https://ads6.kompasads.com/new/www/delivery/ajs.php':'http://ads6.kompasads.com/new/www/delivery/ajs.php');
+           var m3_r = Math.floor(Math.random()*99999999999);
+           if (!document.MAX_used) document.MAX_used = ',';
+           document.write ("<scr"+"ipt type='text/javascript' src='"+m3_u);
+           document.write ("?zoneid=1153");
+           document.write ('&amp;cb=' + m3_r);
+           if (document.MAX_used != ',') document.write ("&amp;exclude=" + document.MAX_used);
+           document.write (document.charset ? '&amp;charset='+document.charset : (document.characterSet ? '&amp;charset='+document.characterSet : ''));
+           document.write ("&amp;loc=" + escape(window.location));
+           if (document.referrer) document.write ("&amp;referer=" + escape(document.referrer));
+           if (document.context) document.write ("&context=" + escape(document.context));
+           if (document.mmm_fo) document.write ("&amp;mmm_fo=1");
+           document.write ("'><\/scr"+"ipt>");
+        //]]>--></script><noscript><a href='http://ads6.kompasads.com/new/www/delivery/ck.php?n=abb35fcd&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ads6.kompasads.com/new/www/delivery/avw.php?zoneid=1153&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=abb35fcd' border='0' alt='' /></a></noscript>
+        <!-- Non DFP Script -->
+        <!-- Beginning Sync AdSlot 4 for Ad unit KOMPAS.COM > kompasiana ### size: [[300,250]]  -->
+                <!-- End AdSlot 4 -->
+    </div>
+    <!-- E: RIGHT 3 -->
+
+
+        <br />
+    <!-- s: terekomendasi -->
+    <div class="terekomendasi">
+        <h1 class="left">HEADLINE ARTICLES</h1>
+        <span class="cc_gray font11 right pt_5 pr_10">
+            <!-- <a href="#">INDEX +</a> -->
+        </span>
+        <div class="clearit pb_15"></div>
+                <!-- s: list -->
+        <img
+            src="http://assets.kompasiana.com/statics/u/prf/134208560513125971621735853150.jpg"
+            align="right" />
+        <h4 class="w220">
+            <a
+                style="color: #363636; font: bold 14px/18px Arial, Helvetica, sans-serif; text-decoration: none;"
+                href="http://lifestyle.kompasiana.com/catatan/2014/12/25/sehatkan-anak-indonesia-itu-kuncinya-712679.html">Sehatkan Anak Indonesia, itu Kuncinya        &#8230;            </a>
+        </h4>
+        <h3>
+            Avis            |
+            | 25 December 2014 | 00:01        </h3>
+        <!-- s: bookmark after login -->
+
+                <!-- e: bookmark after login -->
+        <div class="clearit"></div>
+        <div class="bl_1 mb_10"></div>
+        <!-- e: list -->
+
+                <!-- s: list -->
+        <img
+            src="http://assets.kompasiana.com/statics/u/prf/14106761931387468706.jpg?v=50&t=o"
+            align="right" />
+        <h4 class="w220">
+            <a
+                style="color: #363636; font: bold 14px/18px Arial, Helvetica, sans-serif; text-decoration: none;"
+                href="http://filsafat.kompasiana.com/2014/12/25/tulisan-adalah-investasi-712695.html">Tulisan adalah Investasi                     &#8230;            </a>
+        </h4>
+        <h3>
+            Agung Han            |
+            | 25 December 2014 | 05:57        </h3>
+        <!-- s: bookmark after login -->
+
+                <!-- e: bookmark after login -->
+        <div class="clearit"></div>
+        <div class="bl_1 mb_10"></div>
+        <!-- e: list -->
+
+                <!-- s: list -->
+        <img
+            src="http://assets.kompasiana.com/statics/u/prf/14036603621760175297.jpg?v=50&t=o"
+            align="right" />
+        <h4 class="w220">
+            <a
+                style="color: #363636; font: bold 14px/18px Arial, Helvetica, sans-serif; text-decoration: none;"
+                href="http://media.kompasiana.com/mainstream-media/2014/12/25/kesalahan-fatal-tiga-media-mainstream-dalam-pemberitaan-asumsi-makro-rapbn-p-2015-693589.html">Kesalahan Fatal Tiga Media Mainstream dalam &#8230;            </a>
+        </h4>
+        <h3>
+            Harja Saputra            |
+            | 25 December 2014 | 11:14        </h3>
+        <!-- s: bookmark after login -->
+
+                <!-- e: bookmark after login -->
+        <div class="clearit"></div>
+        <div class="bl_1 mb_10"></div>
+        <!-- e: list -->
+
+                <!-- s: list -->
+        <img
+            src="http://assets.kompasiana.com/statics/u/prf/1419483573385762056.jpg?v=50&t=o"
+            align="right" />
+        <h4 class="w220">
+            <a
+                style="color: #363636; font: bold 14px/18px Arial, Helvetica, sans-serif; text-decoration: none;"
+                href="http://lifestyle.kompasiana.com/hobi/2014/12/25/tips-dasar-fotografi-bunga-693599.html">Tips Dasar Fotografi Bunga                   &#8230;            </a>
+        </h4>
+        <h3>
+            Rahmad Agus Koto            |
+            | 25 December 2014 | 11:52        </h3>
+        <!-- s: bookmark after login -->
+
+                <!-- e: bookmark after login -->
+        <div class="clearit"></div>
+        <div class="bl_1 mb_10"></div>
+        <!-- e: list -->
+
+                <!-- s: list -->
+        <img
+            src="http://assets.kompasiana.com/statics/u/prf/1419421082631248466.jpg?v=50&t=o"
+            align="right" />
+        <h4 class="w220">
+            <a
+                style="color: #363636; font: bold 14px/18px Arial, Helvetica, sans-serif; text-decoration: none;"
+                href="http://blog.kompasiana.com/2014/12/24/kompasiana-blogtrip-jejak-para-riser-menuju-yogyakarta-709530.html">Kompasiana BlogTrip: Jejak Para Riser        &#8230;            </a>
+        </h4>
+        <h3>
+            Kompasiana            |
+            | 24 December 2014 | 18:26        </h3>
+        <!-- s: bookmark after login -->
+
+                <!-- e: bookmark after login -->
+        <div class="clearit"></div>
+        <div class="bl_1 mb_10"></div>
+        <!-- e: list -->
+
+            </div>
+    <br />
+    <div class="terekomendasi">
+        <h1 class="left">TRENDING ARTICLES</h1>
+        <span class="cc_gray font11 right pt_5 pr_10">
+            <!-- <a href="#">INDEX +</a> -->
+        </span>
+        <div class="clearit pb_15"></div>
+                <!-- s: list -->
+        <img
+            src="http://assets.kompasiana.com/statics/u/prf/130856346813965938421164364951.jpg"
+            align="right" />
+        <h4 class="w220">
+            <a
+                style="color: #363636; font: bold 14px/18px Arial, Helvetica, sans-serif; text-decoration: none;"
+                href="http://lifestyle.kompasiana.com/catatan/2014/12/25/amplop-putih-antara-mbah-maimoen-zubair-dan-gus-mus-698824.html">Amplop Putih antara Mbah Maimoen Zubair dan &#8230;            </a>
+        </h4>
+        <h3>
+            Arif Khunaifi            |
+            12 jam lalu        </h3>
+        <!-- s: bookmark after login -->
+
+                <!-- e: bookmark after login -->
+        <div class="clearit"></div>
+        <div class="bl_1 mb_10"></div>
+        <!-- e: list -->
+
+                <!-- s: list -->
+        <img
+            src="http://assets.kompasiana.com/statics/u/prf/9207601331366148025255601986.jpg"
+            align="right" />
+        <h4 class="w220">
+            <a
+                style="color: #363636; font: bold 14px/18px Arial, Helvetica, sans-serif; text-decoration: none;"
+                href="http://politik.kompasiana.com/2014/12/25/pertanyaan-sulit-jokowi-di-hari-natal-698821.html">Pertanyaan Sulit Jokowi di Hari Natal        &#8230;            </a>
+        </h4>
+        <h3>
+            Jimmy Haryanto            |
+            12 jam lalu        </h3>
+        <!-- s: bookmark after login -->
+
+                <!-- e: bookmark after login -->
+        <div class="clearit"></div>
+        <div class="bl_1 mb_10"></div>
+        <!-- e: list -->
+
+                <!-- s: list -->
+        <img
+            src="http://assets.kompasiana.com/statics/u/prf/13576582213903161701519598591.jpg"
+            align="right" />
+        <h4 class="w220">
+            <a
+                style="color: #363636; font: bold 14px/18px Arial, Helvetica, sans-serif; text-decoration: none;"
+                href="http://sejarah.kompasiana.com/2014/12/25/sulaiman-the-magnificent-bacalah-sejarah-dari-sudut-pandang-sejarah-bukan-agama--698817.html">(Sulaiman The Magnificent), Bacalah Sejarah &#8230;            </a>
+        </h4>
+        <h3>
+            Maria Fauzi            |
+            13 jam lalu        </h3>
+        <!-- s: bookmark after login -->
+
+                <!-- e: bookmark after login -->
+        <div class="clearit"></div>
+        <div class="bl_1 mb_10"></div>
+        <!-- e: list -->
+
+                <!-- s: list -->
+        <img
+            src="http://assets.kompasiana.com/statics/u/prf/1405472385546607054.jpg?v=50&t=o"
+            align="right" />
+        <h4 class="w220">
+            <a
+                style="color: #363636; font: bold 14px/18px Arial, Helvetica, sans-serif; text-decoration: none;"
+                href="http://hiburan.kompasiana.com/film/2014/12/25/10-film-yang-dapat-merubah-pemahaman-tentang-kehidupan-712221.html">10 Film yang Dapat Merubah Pemahaman tentang &#8230;            </a>
+        </h4>
+        <h3>
+            Axtea 99            |
+            16 jam lalu        </h3>
+        <!-- s: bookmark after login -->
+
+                <!-- e: bookmark after login -->
+        <div class="clearit"></div>
+        <div class="bl_1 mb_10"></div>
+        <!-- e: list -->
+
+                <!-- s: list -->
+        <img
+            src="http://assets.kompasiana.com/statics/u/prf/1419434802199516851.jpg?v=50&t=o"
+            align="right" />
+        <h4 class="w220">
+            <a
+                style="color: #363636; font: bold 14px/18px Arial, Helvetica, sans-serif; text-decoration: none;"
+                href="http://olahraga.kompasiana.com/bola/2014/12/25/kerasnya-liga-inggris-menelan-korban-698780.html">Kerasnya Liga Inggris Menelan Korban         &#8230;            </a>
+        </h4>
+        <h3>
+            Aditya Nawara            |
+            19 jam lalu        </h3>
+        <!-- s: bookmark after login -->
+
+                <!-- e: bookmark after login -->
+        <div class="clearit"></div>
+        <div class="bl_1 mb_10"></div>
+        <!-- e: list -->
+
+            </div>
+
+
+    <!-- s: terekomendasi -->
+
+    <!-- s: banner right 4
+                <div class="mt_15">
+                        <img src="http://assets.kompasiana.com/statics/kompasiana4.0/images/right1.gif" />
+                </div> -->
+    <!-- s: banner right 4 -->
+
+    
+    <div class="clearit"></div>
+
+    <!-- s: accordion -->
+    <div class="mt_15">
+        <!--This is the first division of left-->
+        <div id="firstpane" class="menu_list">
+            <!--Code for menu starts here-->
+            
+            
+            
+            
+                    </div>
+        <!--Code for menu ends here-->
+    </div>
+    <!-- e: accordion -->
+
+
+
+
+    <br />
+    
+    <div style="width:320px; height:2188px">
+        <iframe id="iframe-berita-terpopuler-kompascom" name="iframe-berita-terpopuler-kompascom" src='http://widget.kompas.com/kompasiana_terpopuler_widget' target='_blank' async="true" height="2188" width="100%" style="height:2188px;width:100%" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <!-- s: subscribe -->
+    <div class="subs">
+        <h1>Subscribe and Follow Kompasiana:</h1>
+        <a href="https://www.facebook.com/KOMPASIANAcom"><img
+            src="http://assets.kompasiana.com/statics/kompasiana4.0/images/ico_fb.jpg" border="0" />
+        </a> <a href="https://www.twitter.com/kompasiana"><img
+            src="http://assets.kompasiana.com/statics/kompasiana4.0/images/ico_twit.jpg" border="0" />
+        </a>
+    </div>
+    <!-- e: subscribe -->
+</div>
+        <!-- E: CONTENT RIGHT -->
+
+        <div class="clearit"></div>
+
+        
+
+
+<!-- S: FOOTER -->
+        <div class="footer arial font14 c_white">
+            <span class="left" style="margin-left:40px"><p align="center" class="pt_30 mg_0"><a href="http://www.kompasiana.com/about">About Kompasiana</a> &nbsp;|&nbsp; <a href="http://www.kompasiana.com/term">Terms & Conditions</a> &nbsp;|&nbsp; <a href="http://www.kompasiana.com/help">Tutorial</a> &nbsp;|&nbsp; <a href="http://www.kompasiana.com/help/faq">FAQ</a> &nbsp;|&nbsp; <a href="http://www.kompasiana.com/help/contactus">Contact Us</a> &nbsp;|&nbsp; <a href="https://s3.amazonaws.com/com.alexa.toolbar/atbp/lr4ge_/download/index.htm">Kompasiana Toolbar</a> </span></span><span class="right"><a href="http://kompas.com" target="_blank" style="margin-right:35px;margin-top:3px;margin-left:94px;"><img src="http://assets.kompasiana.com/statics/kompasiana4.0/images/logo_kompascom.png" border="0" /></a></span></p>
+            <p align="center" class="font11 pt_5 mg_0 right" style="margin-right:68px;">&copy; 2008-2014</p>
+            <!-- <p align="center" class="pt_55 mg_0"><a href="http://kompas.com" target="_blank"><img src="http://assets.kompasiana.com/statics/kompasiana4.0/images/logo_kompascom.png" border="0" /></a><br /></p>
+            <p align="center" class="font11 pt_5 mg_0">&copy; 2008-2011</p> -->
+        </div>
+<!-- E: FOOTER -->
+<!-- S:iklan bottom -->
+        <!--
+        <div style="width:995px;margin:auto;">
+           <div id="iklanbottom" style="z-index:1000;" align="center">
+              <div align="center" style="width:995px;"> <a style="float:right;" href="#" id="bannerclose"><img src="http://img.ads.kompas.com/bannerlink/close.gif" border="0" /></a>
+                <iframe id='a88e5fd3' name='a88e5fd3' src='http://ads6.kompasads.com/new/www/delivery/afr.php?zoneid=1025&amp;cb=INSERT_RANDOM_NUMBER_HERE' frameborder='0' scrolling='no' width='995' height='40' allowtransparency='true'><a href='http://ads6.kompasads.com/new/www/delivery/ck.php?n=a48ec3c1&amp;cb=INSERT_RANDOM_NUMBER_HERE' target='_blank'><img src='http://ads6.kompasads.com/new/www/delivery/avw.php?zoneid=1025&amp;cb=INSERT_RANDOM_NUMBER_HERE&amp;n=a48ec3c1' border='0' alt='' /></a></iframe>
+              </div>
+            </div>
+          </div>
+        -->
+
+<!-- E:iklan bottom -->
+    </div>
+
+        <script type="text/javascript" charset="utf-8">
+            var static_domain = 'http://assets.kompasiana.com/';
+            var dn = 'Guest User';
+            var uid = '142231';
+            var img_stat = '';
+            var post_master_id = '513f49f0a03098ad6b007159';
+            var udata = [];
+            udata['this_url'] = 'http%3A%2F%2Fteknologi.kompasiana.com%2Finternet%2F2013%2F03%2F12%2Fapa-itu-big-data-541499.html';
+            udata['upid'] = '142231';
+            udata['_id'] = '513f49f0a03098ad6b007159';
+            var uinfo = {};
+            uinfo['u_img'] = 'http://assets.kompasiana.com/statics/u/prf/00_no_image_50.gif';
+            uinfo['u_url'] = 'http%3A%2F%2Fteknologi.kompasiana.com%2Finternet%2F2013%2F03%2F12%2Fapa-itu-big-data-541499.html';
+            uinfo['u_dis_name'] = 'Guest User';
+            var _cp = 1, _cf = _cr = true, _ct, _co = 'date'; // comment: page; total page; flag; request; timeout; order;
+            var _rcf = true;
+            var partitionid='2';
+            window.onload = function(){
+            
+                    get_comment();
+
+           
+            }
+        </script>
+
+        <!-- Script ads popup -->
+        <script type='text/javascript'><!--//<![CDATA[
+           var ox_u = 'http://ads6.kompasads.com/new/www/delivery/al.php?zoneid=1321&layerstyle=simple&align=center&valign=top&padding=0&closetime=15&padding=0&shifth=0&shiftv=50&closebutton=t&nobg=t&noborder=t';
+           if (document.context) ox_u += '&context=' + escape(document.context);
+           document.write("<scr"+"ipt type='text/javascript' src='" + ox_u + "'></scr"+"ipt>");
+        //]]>--></script>
+        <!-- Beginning Sync AdSlot oop for Ad unit KOMPAS.COM > kompasiana ### size:   -->
+        <div id='div-gpt-ad-812459828763220023-oop'>
+            <script type='text/javascript'>
+                googletag.display('div-gpt-ad-812459828763220023-oop');
+            </script>
+        </div>
+        <!-- End AdSlot oop -->
+        <!-- Script ads popup -->
+
+        <script src="http://stat.ks.kidsklik.com/statics/kompasiana4.0/promoted_article/js/jquery-latest.pack.js" type="text/javascript"></script>
+        <script src="http://stat.ks.kidsklik.com/statics/kompasiana4.0/promoted_article/js/jcarousellite_1.0.1c4.js" type="text/javascript"></script>
+
+        <script type="text/javascript" src="http://assets.kompasiana.com/statics/js3.5/jquery-1.4.4.min.js"></script>
+        <script type="text/javascript" src="http://assets.kompasiana.com/statics/plugins3.5/cufon/cufon-yui.js"></script>
+        <script type="text/javascript" src="http://assets.kompasiana.com/statics/plugins3.5/cufon/DINPro-Bold_700.font.js"></script>
+        <script type="text/javascript" src="http://assets.kompasiana.com/statics/plugins3.5/tabs/jquery.tabs.min.js"></script>
+        <script type="text/javascript" src="http://assets.kompasiana.com/statics/plugins3.5/ddaccordion.min.js"></script>
+        <script type="text/javascript" src="http://assets.kompasiana.com/statics/plugins3.5/codabubble/jquery.codabubble.js"></script>
+        <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+        <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+        <script type="text/javascript" src="http://assets.kompasiana.com/statics/plugins3.5/thickbox/thickbox.js"></script>
+        <script type="text/javascript" src="http://assets.kompasiana.com/statics/js3.5/message_ad.js"></script>
+        <script type="text/javascript" src="http://assets.kompasiana.com/statics/js3.5/kompasiana.js?090320111557"></script>
+        <script type="text/javascript" src="http://assets.kompasiana.com/statics/js3.5/detail.js?090320111557"></script>
+
+        <script type="text/javascript">
+
+            
+                         function reply_comment(a){if(_rcf){_rcf=false;if($("#reply_comment").length)if($("#reply_comment").parents(".artikel_komen:eq(0)").attr("id")!="form_"+a)$("#reply_comment").parents(".artikel_komen:eq(0)").remove();else return _rcf=true,scrollTo("#reply_comment"),false;preload();$.getJSON("ajax?m=is_login",function(b){if(b.status==1){var b=$("#pc_"+a).attr("class")=="sub"?1:0,d=$("#pc_"+a).nextAll(".artikel_komen:eq(0)");d.length?(d=d.attr("id"),$(form_comment(a,uinfo,b)).insertBefore("#"+d)):$("#comments .artikel_komen:last").attr("id")!="pc_"+ a?$(form_comment(a,uinfo,b)).insertAfter("#pc_"+a):$(form_comment(a,uinfo,b)).appendTo("#comments");jQuery("#TB_load").remove();scrollTo("#form_"+a);$("textarea#reply_comment").focus()}else do_login(uinfo.u_url);_rcf=true})}}function cancle_reply(a){$("#form_"+a).remove()} function send_reply(a){var b=$("textarea#reply_comment").val();b==""?inline_popup("Comment Errors",'<p style="text-align: center;">Silahkan isikan komentar Anda.<br /><input id="Login" type="submit" onclick="tb_remove()" value=" Ok "/></p>'):(preload(),$.post("ajax?m=post_comment",{comment:b,p:post_master_id,parent:a},function(b){b.status==0?do_login(uinfo.u_url+"#comment"):($(new_post_comment(b.new_comment,a,"sub",false,uinfo,b.app)).insertAfter("#form_"+a).hide().fadeIn(2E3),jQuery("#TB_load").remove(), cancle_reply(a))},"json"))}function get_comment_timeout(){_cf=true;$("#cldr").remove();$('<p id="cldr" class="font10" style="font-weight:bold;"><img src="http://assets.kompasiana.com/statics/images3.5/exclamation.png" alt="" style="vertical-align:middle;" /> GAGAL MENGAMBIL KOMENTAR. <a href="#" id="crty">COBA ULANGI</a></p>').appendTo(".list_komentar");clearTimeout(_ct)} function get_comment(){_cf=false;$("#cldr").remove();$("#moreCommentButton").remove();$('<p id="cldr" class="font10" style="font-weight:bold;"><img src="http://assets.kompasiana.com/statics/images3.5/ajax-loader.gif" alt="" style="vertical-align:middle;" /> LOADING KOMENTAR</p>').appendTo(".list_komentar");_ct=setTimeout(get_comment_timeout,25E3);$.get("ajax?m=get_post_comments",{_id:post_master_id,page:_cp,order:_co},function(a){if(a&&a.status==1){var b="";$.each(a.comments,function(a,c){c.comment_parent_id? (n="2",w="w470",s="sub", wahy="mt_10",yu="w450"):(n="1",w="w550",s="par", wahy="mt_30",yu="w500");var e=lb="",f='<span class="comment_'+c.comment_id+'"></span>';c.rm==1&&(e='<a href="#" class="rem">Hapus</a> | ');c.comment_liked==1?f="Anda telah merating komentar ini":lb='<div class="right pr_5 rate_image_'+c.comment_id+'"><strong>Suka</strong></div><div class="ico_jempol_plus right rate_image_'+c.comment_id+'"><a href="#" onClick="rate_comment('+c.comment_id+', 2); return false;"><strong></strong></a></div>';b+='<div id="pc_'+c.comment_id+'" class="artikel_komen '+wahy+'"> <div class="right"> <span class="left"><img src="http://assets.kompasiana.com/statics/kompasiana4.0/images/left_box.jpg" align="left" class="mt_25" /></span> <span class="box_komen left '+yu+' pd_10"><span class="left"><h1>'+c.comment_date+'</h1><p>'+c.comment_content+'</p> </span> <span class="right w125 mr_5"><div class="bl_3 mt_2 mb_5"></div><h2><a href="#" onClick="test_laporkan(post_master_id,'+c.comment_id+',partitionid);return false;" rel="post" title="Report this Post"  id="_513f49f0a03098ad6b007159" class="reportThis">Laporkan Komentar</a></h2> <div class="bl_3 mt_2 mb_5"></div> <span class="left"><img src="http://assets.kompasiana.com/statics/kompasiana4.0/images/ico_jempol.gif" onClick="rate_comment('+c.comment_id+', 2); return false;" title="suka"  /></span> <h2 class="left mt_5 ml_5 good_now_'+c.comment_id+ '">'+c.comment_like+'</h2><span class="right pt_3 mt_5 mr_10"><img src="http://assets.kompasiana.com/statics/kompasiana4.0/images/ico_balas.gif" /></span><h3 class="right mt_5 mr_5">'+e+'<a href="#" onClick="reply_comment('+(c.comment_parent_id==0?c.comment_id:c.comment_parent_id)+'); return false;">Balas</a></h3><div class="clearit"></div></span><div class="clearit"></div></span> </div><div class="w50 right mr_5" align="center"><img src="'+c.author_pic+'" width="45" height="45" /> <span class="font11"><a href="'+c.author_profile+'" style="text-decoration:none;">'+c.author_name+'</a></span> </div><div class="clearit"></div> </div>'});(_cp=a.next_page)?_cf=true:_cr=false; $("#cldr").remove();$(".list_komentar ul").length?$(b).appendTo(".list_komentar ul"):$('<ul id="comments">'+b+"</ul>").appendTo(".list_komentar");clearTimeout(_ct);a.next_page&&moreComment()}else a&&a.status==2?_cr=false:(_cf=true,$('<p id="cldr" class="font10" style="font-weight:bold;"><img src="http://assets.kompasiana.com/statics/images3.5/exclamation.png" alt="" style="vertical-align:middle;" /> GAGAL MENGAMBIL KOMENTAR. <a href="#" id="crty">COBA ULANGI</a></p>').appendTo(".list_komentar")),$("#cldr").remove(), clearTimeout(_ct)},"json")}function moreComment(){$('<div class="bg_gray ml_10 mt_20 mb_15 pd_5" align="center" id="moreCommentButton"><span   class="cc_gray font11"><a href="#" onClick="get_comment();return false;">Komentar Berikutnya</a></span></div>').appendTo(".list_komentar")}$("#newclick").click(function(){$(window).scrollTop()>$(document).height()-$(window).height()-1250&&_cf&&_cr&&get_comment()});$("#crty").live("click",function(){_cf&&_cr&&get_comment();return false}); function rate_comment(a,b){preload();$.getJSON("ajax?m=is_login",function(d){d.status!=1?(jQuery("#TB_load").remove(),do_login(uinfo.u_url)):(jQuery("#TB_load").remove(),$.post("ajax?m=rate_comment",{rate_comment:b,cid:a,pid:post_master_id},function(b){if(b.status==0)do_login(uinfo.u_url+"#comment");else{if(b.rated==0&&$(".good_now_"+a).html()==0)return inline_popup("Rating Status",'<p style="text-align: center;">Komentar ini belum pernah dirating sebelumnya.<br /><input type="button" onclick="tb_remove()" value=" Ok "/></p>'), false;else if(b.rated=="done")return inline_popup("Rating Status",'<p style="text-align: center;">Anda telah merating artikel ini sebelumnya.<br /><input type="button" onclick="tb_remove()" value=" Ok "/></p>'),false;$(".good_now_"+a).html(b.rated);$(".comment_"+a).html("Anda telah merating komentar ini");$(".rate_image_"+a).remove()}},"json"))})} function rate_post(a){preload();$.getJSON("ajax?m=is_login", function(b) { b.status == 1 ? $.post("ajax?m=post_rate", { rate_post : a, pid: post_master_id }, function(a) { if (a.status == 0) do_login(uinfo.u_url); else if (a.status == 99)  return inline_popup("Rating Status", '<p style="text-align: center;">Rating gagal.</p><p style="text-align: center;"><input type="button" onclick="tb_remove()" value=" Ok "/></p>'), false; else if (a.rated == "done") return inline_popup("Rating Status", '<p style="text-align: center;">Anda telah merating artikel ini sebelumnya.<br /><input type="button" onclick="tb_remove()" value=" Ok "/></p>'), false; else jsddm_close(),alert("Anda telah berhasil merating artikel ini"),$(".trigger").html(a.rated.rate_max + " dari " + a.rated.total + " Kompasianer menilai " + a.rated.rate_value + "."), $("#r").html('<a href="javascript:;">Nilai dari Anda: ' + a.rated.rate_strings + "</a>"), $(".bubble_content").html('<img src="' + a.new_chart + '">'), jQuery("#TB_load").remove(),get_post_rate() }, "json"): do_login(uinfo.u_url) })}function hit(){$.post("ajax?m=sta",{p:1,path:location.pathname,pid:post_master_id},function(){},"json")}var cmt_list='<div class="font10 pt_10" style="border-top:1px solid #ccc; text-align:right;">'; cmt_list+="KOMENTAR BERDASARKAN : ";cmt_list+='<select class="font10" id="cmt_sort">';cmt_list+='<option value="date" selected="selected">TANGGAL</option>';cmt_list+='<option value="like">SUKA</option>';cmt_list+="</select>";cmt_list+="</div>";$(cmt_list).insertBefore(".list_komentar");$("#cmt_sort").live("change",function(){_co=$(this).val();_cp=1;_cf=_cr=true;$(".list_komentar").empty();get_comment()});$("a.reply_comment").click(function(){var a=this.name,a=a.split("id_")[1];reply_comment(a);return false}); $("input.submit_comment").click(function(){var a=$("textarea#comment").val();a==""?inline_popup("Comment Errors",'<p style="text-align: center;">Silahkan isikan komentar Anda.<br /><input id="Login" type="submit" onclick="tb_remove()" value=" Ok "/></p>'):(preload(),$("#submit_button").attr("disabled","disabled"),$("#cancel_button").attr("disabled","disabled"),$.post("ajax?m=post_comment",{comment:a,p:post_master_id},function(a){a.status==0?do_login(uinfo.u_url+"#comment"):($("#comments").length|| $(".list_komentar").append('<ul id="comments"></ul><a href="#" id="newclick">more comments</li></ul>'),$("#comments").append(new_post_comment(a.new_comment,a.cid,"par",true,uinfo,a.app)).children(":last").hide().fadeIn(2E3),$("textarea#comment").val(""),$("#TB_load").remove(),$("#submit_button").removeAttr("disabled"),$("#cancel_button").removeAttr("disabled"))},"json"));return false}); $(".rem").live("click",function(){if(!confirm("Do you want to remove this comment and all it replied comments (if any)?"))return false;preload();var a=$(this).parents(".artikel_komen:eq(0)").attr("id");$.post("ajax?m=delete_comment",{deleteComment:a,p:post_master_id},function(b){if(b.status==0)do_login(uinfo.u_url+"#comment");else if(b.status==3)return alert("Sorry, there are no matching post."),false;else if(b.status==2)return alert("You have no privileges to remove this comment."),false;else{if($("#"+a).attr("class")== "par"){b=$("#"+a).prevAll().length+1;$("#comments li");for(var d=[];;){var c=$("#comments li:eq("+b+")");if(c.attr("class")=="par")break;else if(c.attr("class")=="sub")d.push(c.attr("id"));else break;b++}$(d).each(function(a,b){$("#"+b).remove()})}$("#"+a).remove()}},"json");jQuery("#TB_load").remove();return false}); $(".remf").click(function(){if(!confirm("Do you want to remove "+dn+" from your friends list?"))return false;$.post("ajax?m=remove_friend",{fid:uid},function(a){if(a.status==0)do_login(udata.this_url);else if(a.status==2)return alert("Sorry, an error has occurred. Try again later."),false;else location.replace("?friend_removed")},"json");return false});$("#jsddm > li").bind("mouseover",jsddm_open);$("#jsddm > li").bind("mouseout",jsddm_timer);var timeout=500,closetimer=0,ddmenuitem=0; function jsddm_open(){jsddm_canceltimer();jsddm_close();ddmenuitem=$(this).find("ul").eq(0).css("visibility","visible")}function jsddm_close(){ddmenuitem&&ddmenuitem.css("visibility","hidden")}function jsddm_timer(){closetimer=window.setTimeout(jsddm_close,timeout)}function jsddm_canceltimer(){closetimer&&(window.clearTimeout(closetimer),closetimer=null)}document.onclick=jsddm_close;
+
+
+
+
+    function test_laporkan (id,idcomment,partitionid) {
+
+            id = id;
+            idcomment=idcomment;
+            type = 'comentar';
+            title = 'Report this comeent';
+            partitionid=partitionid;
+            var g = false;
+            var a = '#TB_popup?mess<;><strong>Tuliskan alasan Anda:</strong> <span id="err"></span><br /><textarea name="text_message" id="text_message" cols="48" rows="8" class="fsize11 bord_1px fa pd5"></textarea><br /><input class="docomment" type="button" name="submit" value="Kirim"> <input type="button" onclick="tb_remove()" value="Cancel"/><;>180<;>328';
+            id = id.replace('_', '');
+             tb_show(title,a,g);
+                //return false;
+                 $('.docomment').live('click', function(){
+                    var mess = $('textarea#text_message').val();
+            if(mess == ''){
+                $("#err").html('').append('<span style="color: #f00;"> Silahkan isikan alasan Anda</span>').show().fadeOut(5000);
+                return false;
+            }
+            var callback = function (data) {
+                preload();
+                if (data.status == 0){
+                $("#TB_load").remove();
+                $('#TB_ajaxContent').html('<p style="text-align: center;">Anda belum login. Untuk login silahkan klik <a href="'+url_base+'login?continue='+udata['this_url']+'">di sini</a></p>.');
+                }
+                else{
+                $('#TB_ajaxContent').html('<p style="text-align: center;">Laporan Anda telah terkirim.<br /><input type="button" onclick="tb_remove()" value="Ok"/></p>');
+                $("#TB_load").remove();
+                setTimeout('tb_remove()',4000);
+                }
+            };
+            
+            $.post("ajax?m=report",{report:mess,id:id,type:type,partitionid:partitionid,idcomment:idcomment},callback,"json");
+
+            });
+    };
+
+            			
+			$('#user_shortcut').load('http://www.kompasiana.com/home/user_shortcut');
+        </script>
+        
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <script type="text/javascript" src="http://assets.kompasiana.com/statics/js3.5/jquery-1.4.4.min.js"></script>
+    <script type="text/javascript" src="http://assets.kompasiana.com/statics/plugins3.5/cufon/cufon-yui.js"></script>
+    <script type="text/javascript" src="http://assets.kompasiana.com/statics/plugins3.5/cufon/DINPro-Bold_700.font.js"></script>
+    <script type="text/javascript" src="http://assets.kompasiana.com/statics/plugins3.5/tabs/jquery.tabs.min.js"></script>
+    <script type="text/javascript" src="http://assets.kompasiana.com/statics/plugins3.5/ddaccordion.min.js"></script>
+    <script type="text/javascript" src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+    <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+    <script type="text/javascript" src="http://assets.kompasiana.com/statics/js3.5/list.js?090320111557"></script>
+    <script src="http://assets.kompasiana.com/statics/kompasiana4.0/promoted_article/js/jcarousellite_1.0.1c4.js" type="text/javascript"></script>
+
+
+
+        <script type="text/javascript">
+              window.___gcfg = {
+                lang: 'en-US'
+              };
+
+              (function() {
+                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+              })();
+        </script>
+        <script type="text/javascript" src="http://www1.kompas.com/script/jquery.js"></script>
+        <script type="text/javascript">
+            $.noConflict();
+            jQuery(document).ready(function() {
+                    jQuery('#bannerclose').click(function() {
+                        jQuery('#iklanbottom').remove();
+                        return false;
+                    });
+                });
+
+        </script>
+        <script type="text/javascript" src="http://assets.kompasiana.com/statics/js3.5/kanal.js?090320111557"></script>
+         <script type="text/javascript" src="http://assets.kompasiana.com/statics/kompasiana4.0/js/jquery-ui.min.js" ></script>
+    <script type="text/javascript" src="http://assets.kompasiana.com/statics/kompasiana4.0/js/stepcarousel2.js"></script>
+         <script type="text/javascript">
+
+        function addkoleksi(url)
+        {
+            $.ajax({
+
+                type:'GET',
+                dataType:'jsonp',
+                url:url,
+                success: function(a){
+                    if(a.status == 'false'){
+                        alert('Artikel ini telah anda koleksi.');
+                    }else{
+                        alert('Artikel telah di tambahkan');
+                    }
+
+                }
+            })
+
+        }
+
+        function addbacananti(url)
+        {
+            $.ajax({
+
+                type:'GET',
+                dataType:'jsonp',
+                url:url,
+                success: function(a){
+
+                    if(a.status){
+                        alert('Artikel telah di tambahkan ke ruang baca Anda.');
+                    }else{
+                        alert('Artikel ini sudah ada di ruang baca Anda');
+                    }
+
+                }
+            })
+        }
+        </script>
+
+        <script type="text/javascript">
+            // OQ's exp.
+            //document.write(String.fromCharCode(60,105,109,103,32,115,114,99,61,34,104,116,116,112,58,47,47,120,109,108,46,97,108,101,120,97,46,99,111,109,47,100,97,116,97,63,99,108,105,61,49,48,38,100,97,116,61,110,115,97,38,118,101,114,61,113,117,105,114,107,45,115,101,97,114,99,104,115,116,97,116,117,115,38,117,105,100,61,50,48,49,48,49,48,50,56,49,48,52,55,48,48,38,117,114,108,61,104,116,116,112,37,51,65,47,47,119,119,119,46,107,111,109,112,97,115,105,97,110,97,46,99,111,109,47,34,32,115,116,121,108,101,61,34,100,105,115,112,108,97,121,58,110,111,110,101,59,34,32,47,62));
+        </script>
+
+        <!-- Begin comScore Tag -->
+    <script>
+      var _comscore = _comscore || [];
+      _comscore.push({ c1: "2", c2: "8077308" });
+      (function() {
+        var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+        el.parentNode.insertBefore(s, el);
+      })();
+    </script>
+    <noscript>
+      <img src="http://b.scorecardresearch.com/p?c1=2&c2=8077308&cv=2.0&cj=1" />
+    </noscript>
+    <!-- End comScore Tag -->
+    <!-- BEGIN EFFECTIVE MEASURE CODE -->
+    <!-- COPYRIGHT EFFECTIVE MEASURE -->
+    <script type="text/javascript" language="JavaScript">
+    //<![CDATA[
+     document.write(unescape('%3Cscript%20type%3D%22text/javascript%22%20language%3D%22JavaScript%22%20src%3D%22'));
+     document.write((location.protocol.indexOf('https')>-1?'https://id-ssl':'http://id-cdn')
+     +unescape('.effectivemeasure.net/em.js%22%3E%3C/script%3E'));
+    //]]>
+    </script>
+    <noscript>
+    <img src="//id.effectivemeasure.net/em_image" alt="" style="position:absolute; left:-5px;" />
+    </noscript>
+    <!--END EFFECTIVE MEASURE CODE -->
+    <!-- Start Alexa Certify Javascript -->
+    <script type="text/javascript">_atrk_opts={atrk_acct:"bUvni1a8s700gi",domain:"kompasiana.com",dynamic:true};(function(){var as=document.createElement('script');as.type='text/javascript';as.async=true;as.src="https://d31qbv1cthcecs.cloudfront.net/atrk.js";var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as,s);})();</script>
+    <noscript><img src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=bUvni1a8s700gi" style="display:none" height="1" width="1" alt=""/></noscript>
+    <!-- End Alexa Certify Javascript -->
+
+    <!--ga-->
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['A._setAccount', 'UA-3296578-31']);
+      _gaq.push(['A._trackPageview']);
+      _gaq.push(['A._trackPageLoadTime']);
+      _gaq.push(['B._setAccount', 'UA-3296578-2']);
+      _gaq.push(['B._trackPageview']);
+      _gaq.push(['B._trackPageLoadTime']);
+      _gaq.push(['C._setAccount', 'UA-9341640-16']);
+      _gaq.push(['C._setDomainName', 'auto']);
+      _gaq.push(['C._setAllowLinker', true]);
+      _gaq.push(['C._trackPageview']);
+      _gaq.push(['C._trackPageLoadTime']);
+      _gaq.push(['D._setAccount', 'UA-3374285-4']);
+      _gaq.push(['D._trackPageview']);
+      _gaq.push(['D._trackPageLoadTime']);
+            _gaq.push(['E._setAccount', 'UA-3296578-11']);
+            _gaq.push(['E._trackPageview']);
+      _gaq.push(['E._trackPageLoadTime']);
+
+
+     (function() {
+       var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+       ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+     })();
+    </script>
+    <!--ga-->
+
+</body>
+
+        
+
+    <script type="text/javascript">
+        /*$(function() {
+            $(".js_style").jCarouselLite({
+                vertical: true,
+                hoverPause:true,
+                visible: 3,
+                auto:5000,
+                speed:1000
+            });
+        });*/
+
+        $(function(){
+
+        //  $.post("ajax?m=s_worker",{url:uinfo['u_url']},callback,"json");
+            
+        var _q_worker = {
+                             'post_title': 'Apa itu &#8216;Big Data&#8217;?',
+                             'post_author':'W Jaya',
+                             'author_id':'142231',     
+                             'partition_id': '2',
+                             'ID':'541499',
+                             'use_tweet':1,
+                             'use_fb_share':1,
+                             'hits':1
+                            
+                        }
+
+                            var tags = [];
+
+                                           
+                        tags[0]  = 'bigtable' 
+                   
+                                           
+                        tags[1]  = 'mapreduce' 
+                   
+                                           
+                        tags[2]  = 'ibm' 
+                   
+                                           
+                        tags[3]  = 'hadoop' 
+                   
+                                           
+                        tags[4]  = 'google' 
+                   
+                                           
+                        tags[5]  = 'big data' 
+                   
+                                           
+                        tags[6]  = 'google file system' 
+                   
+                                           
+                        tags[7]  = 'gfs' 
+                   
+                   
+                   _q_worker.tags = tags;
+         
+                   
+         //console.log(_q_worker);
+          $.ajax({
+
+                type:'GET',
+                url:'ajax?m=s_worker',
+                data:_q_worker,
+                dataType:'JSON',
+                success: function(a){
+                        //console.log(a);
+                }
+            })
+        
+        
+        });
+    </script>
+    <!-- Script for promoted -->
+
+    
+
+
+</html>
+
+
+

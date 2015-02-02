@@ -1,0 +1,9 @@
+Representasi Semantic Network
+- banyak kemungkinan =  kemungkinan pangkat object
+
+Frame
+- penyelesaian masalah secara object oriented
+- is a (Turunan)
+- ako (akind of) (intance)
+- perbedaan sub class dan intance
+dalam prolog

@@ -1,0 +1,1 @@
+ALTER TABLE departments add (fields VARCHAR(9));

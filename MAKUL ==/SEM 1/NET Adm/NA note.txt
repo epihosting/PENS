@@ -1,0 +1,78 @@
+============================
+== NETWORK ADMINISTRATOR ===
+============================
+
+
+dosen : p.idris
+----------------------------------------------------------------------
+uts :
+- SSH SERVER
+- DHCP SERVER
+just note:
+----------------------------------------------------------------------
+bagaiamana cara kerja sistem agar nama user berada di depan 
+(chroot:sistem terkarantina ) 
+
+
+others :
+-aplikasi exploit: c99
+
+-----------------------------------------------------------------------
+
+
+pembagian tugas (kelompok)
+1. domain + web (DNS)
+2. integrasi FTP dengan active directory (LDAP)
+3. integrasi web server dengan CHROOT
+4. integrasi web server dengan ANTIVIRUS
+5. integrasi FTP dengan ANTIVIRUS
+6. integrasi web server/ftp server  dengan quota
+ 
+tugas : 
+-laporan(langkah) + capture 
+-upload salah 1 anggota web student [PDF]
+-url web studnet kirimkan ke email p. idris
+
+deadline : 1 minggu
+------------------------------------------------------------
+
+list kelompok :
+kelompok 1
+-wilda
+-lukman
+-elim
+-munir
+
+kelompok 2 :
+-syukri
+-asih
+-malibi
+-indra
+-tony
+
+kelompok 3 :
+-reka
+-nuri
+-arief
+-husna
+
+kelompok 4 :
+-yuni
+-niken
+-epi
+-faruq
+-masfiatus
+
+kelompok 5:
+-sigit
+-bastian
+-rofi
+-ahlizh
+-herjuno
+
+kelompok 6 :
+-rhyzky
+-hilman 
+-novita
+-rindang
+-----------------------------------------------------------------

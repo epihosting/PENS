@@ -1,0 +1,13 @@
+================
+=== DATABASE ===
+================
+
+dosen : 
+-teori : P.Arief basofi
+-prakt : P.syauqi
+
+uts:
+-konsep dasar database
+-Normalisasi ke 3 
+----------------------------------
+x:\basis data\d4lj-pjj 2014-2015

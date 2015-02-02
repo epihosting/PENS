@@ -1,0 +1,1588 @@
+<!DOCTYPE html>
+<!--[if IE 8]>
+<html id="ie8" lang="en">
+<![endif]-->
+<!--[if !(IE 8)]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Integrasi Antivirus dan Antispam ke Email Server | Efrizal Zaida</title>
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<link rel="pingback" href="https://efrizalzaida.wordpress.com/xmlrpc.php" />
+<!--[if lt IE 9]>
+<script src="https://s0.wp.com/wp-content/themes/pub/oxygen/js/html5.js" type="text/javascript"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="Efrizal Zaida &raquo; Feed" href="https://efrizalzaida.wordpress.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Efrizal Zaida &raquo; Comments Feed" href="https://efrizalzaida.wordpress.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Efrizal Zaida &raquo; Integrasi Antivirus dan Antispam ke Email Server Comments Feed" href="https://efrizalzaida.wordpress.com/2013/01/07/integrasi-antivirus-dan-antispam-ke-email-server/feed/" />
+<script type="text/javascript">
+/* <![CDATA[ */
+function addLoadEvent(func){var oldonload=window.onload;if(typeof window.onload!='function'){window.onload=func;}else{window.onload=function(){oldonload();func();}}}
+/* ]]> */
+</script>
+<link rel='stylesheet' id='all-css-0' href='https://s1.wp.com/wp-content/mu-plugins/smileyproject/smileyproject.css?m=1412325662g' type='text/css' media='all' />
+<link rel='stylesheet' id='open-sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A300italic%2C400italic%2C600italic%2C300%2C400%2C600&#038;subset=latin%2Clatin-ext&#038;ver=4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css-2' href='https://s2.wp.com/_static/??-eJx9UFtOAzEMvBBpWKiAH8RZ8jCsu85DsdPS29e7EosoUv7G9szYHnupBnOgHoFtYLbR8YyhZD4kzAftPNh7ios6Mt61PxTVCGSxqZtK/QszW+6eQ8MqqH72sxCVy4g/lzM047v3pKtYrgT/LzixFb1w8eV7ByNTwmVVgVQXFrNVI3oDcgLR1MJyV41keyY6DyWZ34w2EdpcZIt1ByO3UBpoP1UnKyNBRAcESWkjWaovP6oVzvrwtuYjvU/Hp+n5+PY4vZ5u/Ia6LQ==' type='text/css' media='all' />
+<link rel='stylesheet' id='screen-css-2' href='https://s1.wp.com/wp-content/themes/pub/oxygen/style.css?m=1418843127g' type='text/css' media='screen' />
+<link rel='stylesheet' id='font-abel-css'  href='https://fonts.googleapis.com/css?family=Abel&#038;ver=20120821' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css-4' href='https://s2.wp.com/_static/??-eJx9kEluwzAMRS8UhrXrTRZFzyKrtMxAIgWJruvbx0GyyIBqQ/KD/4EDrhm8ipEY2kyJKuZlRP3bAgmyeKy2RYI1e01HX+sBH4i0QI5LYKlISc98iy2bqO0j3E9igdEV+O1b7kAKUb0zVnkSMEXHpYUWGqOGvQy4ux5kCzKtUChrMZi0pFfdQlkmFrbt/YstKmu12y1YZ1eu295z+y1ChffGP+Ube99pHjBEHV28Gr7TVzf03cfpc+j68wXneMMA' type='text/css' media='all' />
+<link rel='stylesheet' id='print-css-4' href='https://s0.wp.com/wp-content/mu-plugins/global-print/global-print.css?m=1387483371g' type='text/css' media='print' />
+<script type='text/javascript' src='https://s2.wp.com/_static/??-eJx9kGEKwjAMhS9kV4aD6Q/xLFuXjdS2qU3r0NNbYaLOKgRCyEfy3pOzF+iUSQOw1LnOCcJ1aZXmjfwHCItT6CJUFt0TVuQiuChtEt6kCR1LTj2rgD4i5WkkY2he4/m0J44WmLsJCltLPRoQiSFkwMWsaqQC9+kA3QWh9GxlFKLv1EkEYLx9fX+zEsBkv4N4aF1NpbTYv4L5HfNCHe2hbuq2aevtfqfvGSWZ3w=='></script>
+<link rel='stylesheet' id='all-css-0' href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/style.css?m=1377793621g' type='text/css' media='all' />
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563g&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://efrizalzaida.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Postfix plus-plus (+dovecot+squirrelmail)' href='https://efrizalzaida.wordpress.com/2013/01/02/postfix-plus-plus-dovecotsquirrelmail/' />
+<link rel='next' title='Konfigurasi Dovecot ( POP3 dan IMAP standar konfigurasi, quota dan autentikasi)' href='https://efrizalzaida.wordpress.com/2013/01/13/konfigurasi-dovecot-pop3-dan-imap-standar-konfigurasi-quota-dan-autentikasi/' />
+<meta name="generator" content="WordPress.com" />
+<link rel='canonical' href='https://efrizalzaida.wordpress.com/2013/01/07/integrasi-antivirus-dan-antispam-ke-email-server/' />
+<link rel='shortlink' href='http://wp.me/p2AXnS-7S' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=json&amp;url=https%3A%2F%2Fefrizalzaida.wordpress.com%2F2013%2F01%2F07%2Fintegrasi-antivirus-dan-antispam-ke-email-server%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/1.0/?format=xml&amp;url=https%3A%2F%2Fefrizalzaida.wordpress.com%2F2013%2F01%2F07%2Fintegrasi-antivirus-dan-antispam-ke-email-server%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Integrasi Antivirus dan Antispam ke Email Server" />
+<meta property="og:url" content="https://efrizalzaida.wordpress.com/2013/01/07/integrasi-antivirus-dan-antispam-ke-email-server/" />
+<meta property="og:description" content="Integrasi Antivirus dan Antispam ke Email Server Intalasi dan konfigurasi Clamav dan Spammassin serta Amavis Antivirus dan Antispam adalah hal penting dalam membangun mail transfer agent (MTA), dal..." />
+<meta property="article:published_time" content="2013-01-07T01:53:29+00:00" />
+<meta property="article:modified_time" content="2013-01-07T01:53:29+00:00" />
+<meta property="article:author" content="https://efrizalzaida.wordpress.com/author/bugihlamo/" />
+<meta property="og:site_name" content="Efrizal Zaida" />
+<meta property="og:image" content="https://efrizalzaida.files.wordpress.com/2013/01/clamavdan-spamasssin.jpeg" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+<meta name="twitter:image" content="https://efrizalzaida.files.wordpress.com/2013/01/clamavdan-spamasssin.jpeg?w=240" />
+<meta name="twitter:card" content="summary" />
+<meta property="fb:app_id" content="249643311490" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+<link rel="shortcut icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="apple-touch-icon-precomposed" href="https://s0.wp.com/i/webclip.png" />
+<link rel='openid.server' href='https://efrizalzaida.wordpress.com/?openidserver=1' />
+<link rel='openid.delegate' href='https://efrizalzaida.wordpress.com/' />
+<link rel="search" type="application/opensearchdescription+xml" href="https://efrizalzaida.wordpress.com/osd.xml" title="Efrizal Zaida" />
+<link rel="search" type="application/opensearchdescription+xml" href="http://wordpress.com/opensearch.xml" title="WordPress.com" />
+	<style type="text/css">
+		#page {
+			background-color: #ffffff		}
+	</style>
+	<style>
+		html {
+			font-size: 16px;
+		}
+		h1, h2, h3, h4, h5, h6, dl dt, blockquote, blockquote blockquote blockquote, .site-title, .main-navigation a, .widget_calendar caption {
+			font-family: 'Abel', sans-serif;
+		}
+		.error, .entry-title a, .entry-content a, entry-summary a, .main-navigation > div > ul > li > a, .widget a, .post-navigation a, #image-navigation a, .pingback a, .logged-in-as a, .more-articles .entry-title a:hover, .widget_flickr #flickr_badge_uber_wrapper a {
+			color: #1ad30d;
+		}
+		a:hover, .comment-meta a, .comment-meta a:visited {
+			border-color: #1ad30d;
+		}
+		a.read-more, a.read-more:visited, .pagination a:hover, .comment-navigation a:hover, button, html input[type="button"], input[type="reset"], input[type="submit"], #infinite-handle span {
+			background-color: #1ad30d;
+		}
+	</style>
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+		<style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style>
+		<style type="text/css" media="print">#wpadminbar { display:none; }</style>
+<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+<meta name="application-name" content="Efrizal Zaida" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-task" content="name=Subscribe;action-uri=https://efrizalzaida.wordpress.com/feed/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Read Freshly Pressed;action-uri=http://wordpress.com/#fresh;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Support;action-uri=http://support.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=WordPress.com Forums;action-uri=http://forums.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="title" content="Integrasi Antivirus dan Antispam ke Email Server | Efrizal Zaida on WordPress.com" />
+<meta name="description" content="Integrasi Antivirus dan Antispam ke Email Server Intalasi dan konfigurasi Clamav dan Spammassin serta Amavis Antivirus dan Antispam adalah hal penting dalam membangun mail transfer agent (MTA), dalam filterisasi terhadap email yang dikirimkan maupun diterima, sebuah MTA memerlukan dukungan dari beberapa perangkat lunak penunjang seperti antivirus serta email scanner. Antivirus yang digunakan dalam tutorial ini&hellip;" />
+	<style type="text/css">
+			.site-title,
+		.site-description {
+			position: absolute;
+			clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+			clip: rect(1px, 1px, 1px, 1px);
+		}
+		</style>
+	<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+<body class="single single-post postid-488 single-format-standard logged-in admin-bar no-customize-support custom-background no-js mp6 highlander-enabled highlander-light">
+<div id="page" class="hfeed site">
+		<header id="masthead" class="site-header" role="banner">
+		<hgroup>
+						<h1 class="site-title"><a href="https://efrizalzaida.wordpress.com/" title="Efrizal Zaida" rel="home">Efrizal Zaida</a></h1>
+			<h2 class="site-description"></h2>
+		</hgroup>
+
+		
+		
+			<a href="https://efrizalzaida.wordpress.com/" title="Efrizal Zaida" rel="home">
+				<img src="https://efrizalzaida.files.wordpress.com/2012/11/cropped-123.png" width="1201" height="275" alt="" class="custom-header" />
+			</a>
+
+		
+		<nav role="navigation" class="site-navigation main-navigation clear-fix">
+			<h1 class="assistive-text">Main Menu</h1>
+			<div class="assistive-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
+
+			<div class="menu-home-container"><ul id="menu-home" class="menu"><li id="menu-item-390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-390"><a title="HOME" href="https://efrizalzaida.wordpress.com">HOME</a></li>
+<li id="menu-item-401" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-401"><a href="https://efrizalzaida.wordpress.com/category/email-server/">EMAIL SERVER</a></li>
+<li id="menu-item-402" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-402"><a href="https://efrizalzaida.wordpress.com/category/netadmin/">NETADMIN</a></li>
+<li id="menu-item-403" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-403"><a href="https://efrizalzaida.wordpress.com/category/sysadmin/">SYSADMIN</a></li>
+<li id="menu-item-404" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-404"><a href="https://efrizalzaida.wordpress.com/category/security/">SECURITY</a></li>
+<li id="menu-item-405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-405"><a href="https://efrizalzaida.wordpress.com/category/file-server/">FILE SERVER</a></li>
+<li id="menu-item-406" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-406"><a href="https://efrizalzaida.wordpress.com/category/databases/">DATABASE</a></li>
+</ul></div>		</nav>
+	</header><!-- #masthead .site-header -->
+
+	<div id="main" class="clear-fix">
+		<div id="primary" class="site-content">
+			<div id="content" role="main">
+
+			
+				
+<article id="post-488" class="post-488 post type-post status-publish format-standard hentry category-email-server category-netadmin clear-fix">
+	<header class="entry-header">
+		<h1 class="entry-title">Integrasi Antivirus dan Antispam ke Email Server</h1>
+
+		<div class="entry-meta">
+			<span class="entry-date"><a href="https://efrizalzaida.wordpress.com/2013/01/07/integrasi-antivirus-dan-antispam-ke-email-server/" title="1:53 am" rel="bookmark"><time class="entry-date" datetime="2013-01-07T01:53:29+00:00" pubdate>January 7, 2013</time></a></span>			<span class="sep">&middot;</span>
+			<span class="byline">by <span class="author vcard"><a class="url fn n" href="https://efrizalzaida.wordpress.com/author/bugihlamo/" title="View all posts by bugihlamo" rel="author">bugihlamo</a></span></span>			<span class="sep">&middot;</span>
+			in <a href="https://efrizalzaida.wordpress.com/category/email-server/" rel="category tag">Email Server</a>, <a href="https://efrizalzaida.wordpress.com/category/netadmin/" rel="category tag">NetAdmin</a>.			<span class="sep">&middot;</span>
+					</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+	<div class="entry-content clear-fix">
+		<p align="JUSTIFY"><strong>Integrasi Antivirus dan Antispam ke Email Server</strong></p>
+<p align="JUSTIFY"><a href="https://efrizalzaida.files.wordpress.com/2013/01/clamavdan-spamasssin.jpeg"><img class="aligncenter size-full wp-image-491" alt="clamavdan spamasssin" src="https://efrizalzaida.files.wordpress.com/2013/01/clamavdan-spamasssin.jpeg?w=470"   /></a></p>
+<p align="JUSTIFY">Intalasi dan konfigurasi Clamav dan Spammassin serta Amavis</p>
+<p align="JUSTIFY"><span style="font-size:small;">Antivirus dan Antispam adalah hal penting dalam membangun mail transfer agent (MTA), dalam filterisasi terhadap email yang dikirimkan maupun diterima, sebuah MTA memerlukan dukungan dari beberapa perangkat lunak penunjang seperti antivirus serta email scanner. Antivirus yang digunakan dalam tutorial ini adalah CLAM Antivirus ( <a href="http://www.clamav.org" rel="nofollow">http://www.clamav.org</a> ) sedangkan email scanner yang digunakan adalah MailScanner ( <a href="http://www.mailscanner.org" rel="nofollow">http://www.mailscanner.org</a> ).</span></p>
+<p align="JUSTIFY"><span style="font-size:small;">Untuk melakukan instalasi CLAM Antivirus pada sistem operasi linux ubuntu dapat dengan menjalakan perintah sebagai berikut.</span></p>
+<pre><span style="color:#0000ff;"><span style="text-decoration:underline;"><a href="mailto:root@efrizal">root@efrizal</a></span></span>:~#apt-get install clamav clamav-freshclam clamav-base clamav-daemon</pre>
+<p align="JUSTIFY"><span style="font-size:small;">clamav dan clamav-base adalah paket perangkat lunak utama clam antivirus sedangkan <i>clamav-freshclam</i> adalah paket perangkat lunak tambahan untuk pembaharuan database virus.</span></p>
+<p align="JUSTIFY"><a name="result_box5"></a> <span style="font-size:small;">Sekarang coba cek pada file /etc/passwd apakah sudah ada user clamav dan amavis emudian tambahkan user ke grup clamav amavis dan sebaliknya agar Clamav untuk memiliki akses scan file.</span></p>
+<p align="JUSTIFY">  <span style="color:#0000ff;"><span style="text-decoration:underline;"><a href="mailto:root@efrizal">root@efrizal</a></span></span>:~#adduser clamav amavis</p>
+<p align="JUSTIFY"><span style="color:#0000ff;"><span style="text-decoration:underline;"><a href="mailto:root@efrizal">root@efrizal</a></span></span>:~#adduser amavis clamav</p>
+<h3><a name="__RefHeading__3857_258709670"></a> <span style="font-family:Trebuchet MS, sans-serif;"><span style="font-size:small;"><b>Konfigurasi Clam Antivirus</b></span></span></h3>
+<p align="JUSTIFY"><span style="font-size:small;">Untuk melakukan penyesuaian maka ubahlah file konfigurasi clamav yang terletak pada file <i>/etc/clamav/clamav.conf .</i></span></p>
+<p align="JUSTIFY"> root@efrizal:~# vim.tiny /etc/clamav/clamd.conf</p>
+<p align="JUSTIFY"> <span style="font-size:small;">jika ingin melakukan cek sebuah file ada virus bisa dengan mengunakan perintah clamavscan, seperti berikut:</span></p>
+<pre><em>root@efrizal:~# clamscan /home/efrizal/hltv.exe
+----------- SCAN SUMMARY -----------
+Known viruses: 0
+Engine version: 0.96.1
+Scanned directories: 0
+Scanned files: 0
+Infected files: 0
+Data scanned: 0.00 MB
+Data read: 0.00 MB (ratio 0.00:1)
+Time: 0.010 sec (0 m 0 s)
+root@efrizal:~#</em></pre>
+<p align="JUSTIFY"> <span style="font-family:Trebuchet MS, sans-serif;"><span style="font-size:small;"><b>Update Database Virus</b></span></span></p>
+<p align="JUSTIFY"><span style="font-size:small;"> Clam Antivirus mempunyai sebuah fitur untuk melakukan pembaharuan terhadap database, hal tersebut dapat dilakukan secara otomatis dengan menambahkan sebuah job scheduler atau dapat dilakukan secara manual.</span></p>
+<pre>root@efrizal:~# freshclam 
+ClamAV update process started at Tue Jul 13 15:05:47 2012
+Downloading main.cvd [  10%]</pre>
+<p align="JUSTIFY"><span style="font-size:small;">Apabila pengguna ingin melakukan proses pembaharuan database virus secara otomatis, maka dapat menambahkan sebuah job scheduler yang telah tersedia pada sistem<span style="color:#000000;"><span style="font-family:Trebuchet MS, sans-serif;"><span style="font-size:small;"> operasi </span></span></span>linux. Parameter yang dibutuhkan oleh job scheduler (cron) untuk melakukan suatu proses antara lain parameter waktu seperti jam, menit dan hari serta parameter nama program yang ingin dijalankan. Pada tutorial ini penulis menginginkan agar sistem operasi melakukan proses update secara otomatis pada jam 12 malam setiap harinya, maka konfigurasi yang dapat digunakan pada cron adalah sebagai berikut:</span></p>
+<p align="JUSTIFY"> root@efrizal:~# crontab -e</p>
+<p align="JUSTIFY"><span style="font-size:small;">Lalu tambahkan parameter – parameter yang dibutuhkan oleh job scheduler sesuai dengan konfigurasi seperti berikut ini:</span></p>
+<p align="JUSTIFY"><em>0 * * * *    /usr/bin/freshclam</em></p>
+<p align="JUSTIFY"> <span style="font-size:small;">Parameter job scheduler diatas akan menjalankan perintah clamav-freshclam pada menit ke – 0 setiap saat, dengan kata lain perintah tersebut akan dijalankan setiap jam.</span></p>
+<p align="JUSTIFY"><span style="font-size:small;">Dengan melihat log program kita bisa tahu kapan terakhir kali clamav di update, log clamav berada di file <i>/var/log/clamav/freshclam.log , </i>lakukan perintah berikut:</span></p>
+<p align="JUSTIFY"> root@efrizal:~# tail /var/log/clamav/freshclam.log Tue Jul 13 15:05:25 2012 -&gt; ClamAV update process started at Tue Jul 13 15:05:25 2012 Tue Jul 13 15:05:25 2012 -&gt; Trying host db.local.clamav.net (222.225.x.x).</p>
+<h2><a name="__RefHeading__3861_258709670"></a><span style="font-family:Trebuchet MS, sans-serif;"><span style="font-size:medium;"><b>SpamAssasin</b></span></span></h2>
+<p align="JUSTIFY"><span style="font-size:small;">SpamAssassin adalah perangkat lunak yang digunakan untuk melakukan pemeriksaan terhadap isi email yang mengadung spam atau email sampah. Pada implementasinya, spamassassin digunakan dengan aplikasi lain seperti Email Scanner dan Mail Tranfer Agent (MTA).</span></p>
+<h3><span style="font-family:Trebuchet MS, sans-serif;"><span style="font-size:small;">Instalasi SpamAssassin</span></span></h3>
+<p align="JUSTIFY"><span style="font-family:Trebuchet MS, sans-serif;"><span style="font-size:small;">Untuk melakukan instalasi perangkat lunak SpamAssassin maka lakukan perintah sebagai berikut:</span></span></p>
+<p lang="zxx"> root@efrizal:~# apt-get install spamassassin</p>
+<h3><span style="font-family:Trebuchet MS, sans-serif;"><span style="font-size:small;"><b>Konfigurasi SpamAssassin</b></span></span></h3>
+<p align="JUSTIFY"> <span style="font-size:small;">Konfigurasi SpamAssassin berada pada file <i>/etc/default/spamassassin</i>, kemudian ubah variabel “ENABLE =1” ,seperti contoh berikut:</span></p>
+<pre>root@efrizal:~# vim.tiny /etc/default/spamassassin 
+# /etc/default/spamassassin
+# Duncan Findlay
+# WARNING: please read README.spamd before using.
+# There may be security risks.
+#
+ENABLED=1</pre>
+<p align="JUSTIFY"><span style="font-size:small;">Selanjutnya ubah file konfigurasi yang terletak pada file <i>/etc/spamassassin/local.cf </i>seperti berikut :</span></p>
+<pre>root@efrizal:~# vim.tiny /etc/spamassassin/local.cf
+trusted_networks 202.115.x.x
+ trusted_networks 202.115.x.x
+<span style="font-size:small;">Kemudian jalankan service spamassassin, seperti perintah berikut:</span>
+root@efrizal:~# /etc/init.d/spamassassin start
+Starting SpamAssassin Mail Filter Daemon: spamd.
+root@efrizal:~#</pre>
+<p align="JUSTIFY"><span style="font-size:small;">Untuk memastikan apakah service spamassassin berjalan, gunakan perintah berikut:</span></p>
+<pre>root@efrizal:~# netstat -tanp |grep spam
+tcp        0      0 127.0.0.1:783           0.0.0.0:*               LISTEN      26076/spamd.pid 
+root@efrizal:~#</pre>
+<h2>Amavis</h2>
+<p align="JUSTIFY"><span style="font-size:small;">Amavis adalah sekumpulan scipt yang mampu mengintegrasikan mail tranfer agent (MTA) dengan satu atau lebih scanner virus dan anti spam (spamassassin).</span></p>
+<p align="JUSTIFY"><span style="font-size:small;">Amavis mendukung beberapa scanner virus seperti <i>Clamav, OpenAntivirus, Trophie, AVG, Sophos AV, F-Pro</i>t, dan lain-lain. Amavis juga mendukung hampir semua MTA melalui generic mode filter SMTP/LMTP, seperti postfix, exim dan lain-lain.</span></p>
+<h3>Instalasi Amavis</h3>
+<p align="JUSTIFY"> <span style="font-size:small;">Untuk instalasi paket amavis lakukan perintah berikut:</span></p>
+<pre><em>root@efrizal:~# apt-get install amavisd-new maildrop
+</em></pre>
+<p align="JUSTIFY"> <span style="font-size:small;">kemudian instal beberapa paket pendukung untuk meningkatkan proteksi yang lebih baik dari amavis, seperti berikut:</span></p>
+<p align="JUSTIFY"><em>  root@efrizal:~#apt-get install libnet-dns-perl libmail-spf-query-perl pyzor razor </em></p>
+<p align="JUSTIFY"><span style="font-size:small;">Instal juga paket untuk compres dan uncompress seperti berikut:</span></p>
+<pre><em>root@efrizal:~# apt-get install arj bzip2 cpio cabextract file gzip lha nomarch pax rar unrar unzip zoo
+
+</em><strong>Konfigurasi Amavis</strong></pre>
+<p align="JUSTIFY"> <span style="font-size:small;">Ada beberapa konfigurasi amavis yang harus kita rubah agar amavis bisa berjalan dengan baik, file amavis terletak pada direktori <i>/etc/amavis</i>. Langka pertama merubah file <i>/etc/amavis/conf.d/05-node_id, </i>dengan merubah variabel <i> chomp($myhostname = `mail.efrizal.ok`);, dan $$myhostname = &#8220;efrizal.ok&#8221;;</i></span></p>
+<p align="JUSTIFY"><span style="font-size:small;">Berikut contoh perintahnya.</span></p>
+<pre>root@efrizal:~# vim.tiny /etc/amavis/conf.d/05-node_id 
+use strict;
+# $myhostname is used by amavisd-new for node identification, and it is
+# important to get it right (e.g. for ESMTP EHLO, loop detection, and so on).
+#chomp($myhostname = `hostname --fqdn`);
+chomp($myhostname = `mail.efrizal.ok`);
+# To manually set $myhostname, edit the following line with the correct Fully
+# Qualified Domain Name (FQDN) and remove the # at the beginning of the line.
+$myhostname = "efrizal.ok";
+1;  # ensure a defined return</pre>
+<p align="JUSTIFY"><span style="font-size:small;">Langkah kedua kita harus menghapus tanda #(uncomment) pada file /etc/amavis/conf.d/15-content_filter_mode.</span></p>
+<pre>root@efrizal:~# vim.tiny /etc/amavis/conf.d/15-content_filter_mode 
+use strict;
+# You can modify this file to re-enable SPAM checking through spamassassin
+# and to re-enable antivirus checking.
+# Default antivirus checking mode
+# Please note, that anti-virus checking is DISABLED by
+# default.
+# If You wish to enable it, please uncomment the following lines:
+@bypass_virus_checks_maps = (
+\%bypass_virus_checks, \@bypass_virus_checks_acl, \$bypass_virus_checks_re);
+# Default SPAM checking mode
+# Please note, that anti-spam checking is DISABLED by
+# default.
+# If You wish to enable it, please uncomment the following lines:
+@bypass_spam_checks_maps = (
+ \%bypass_spam_checks, \@bypass_spam_checks_acl, \$bypass_spam_checks_re);
+
+1;  # ensure a defined return</pre>
+<p align="JUSTIFY"><span style="font-size:small;">Langkah ketiga, merubah file /etc/amavis/conf.d/20-debian_defaults , untuk menghindari bouncing email-email spam. Rubah variabel  </span>m<span style="font-size:small;">enjadi</span></p>
+<p align="JUSTIFY">$final_spam_destiny       = D_DISCARD;</p>
+<p align="JUSTIFY"><span style="font-size:small;">Kemudian jalankan service amavis, seperti perintah berikut:</span></p>
+<pre>root@efrizal:~# /etc/init.d/amavis restart
+Stopping amavisd: (not running).
+Starting amavisd: amavisd-new.
+root@efrizal:~#</pre>
+<h3>Integrasi Amavis dengan Postfix</h3>
+<p align="JUSTIFY"><span style="font-size:small;">Setelah kita selesai mengkonfigurasi amavis, langkah selanjutnya adalah mengintegrasikan Amavis dengan postfix. Untuk itu perlu kita tambahkan pada file /etc/postfix/main.cf, variabel conten_filter = smtp-amavis;[127.0.0.1]:10024.</span></p>
+<p align="JUSTIFY"><span style="font-size:small;">Kemudian tambahkan baris berikut pada file <i>/etc/postfix/master.cf</i></span></p>
+<pre><i>root@efrizal:~# vim.tiny /etc/postfix/master.cf </i></pre>
+<p align="JUSTIFY"><a name="result_box4"></a><span style="font-size:small;">Atau bisa juga dengan perintah postconf, jalankan sebagai root seperti berikut :</span></p>
+<pre> <i>root@efrizal:~# </i>sudo postconf -e "content_filter = smtp-amavis:[127.0.0.1]:10024"</pre>
+<p align="JUSTIFY"><span style="font-size:small;">Kemudian edit file <i>/etc/postfix/master.cf</i> dan tambahkan konfigurasi berikut:</span></p>
+<pre>smtp-amavis unix    -     -     -    -    2       smtp
+        -o smtp_data_done_timeout=1200
+        -o smtp_send_xforward_command=yes
+        -o disable_dns_lookups=yes
+        -o max_use=20
+
+127.0.0.1:10025 inet n    -    -    -    -       smtpd
+        -o content_filter=
+        -o local_recipient_maps=
+        -o relay_recipient_maps=
+        -o smtpd_restriction_classes=
+        -o smtpd_delay_reject=no
+        -o smtpd_client_restrictions=permit_mynetworks,reject
+        -o smtpd_helo_restrictions=
+        -o smtpd_sender_restrictions=
+        -o smtpd_recipient_restrictions=permit_mynetworks,reject
+        -o smtpd_data_restrictions=reject_unauth_pipelining
+        -o smtpd_end_of_data_restrictions=
+        -o mynetworks=127.0.0.0/8
+        -o smtpd_error_sleep_time=0
+        -o smtpd_soft_error_limit=1001
+        -o smtpd_hard_error_limit=1000
+        -o smtpd_client_connection_count_limit=0
+        -o smtpd_client_connection_rate_limit=0
+        -o receive_override_options=no_header_body_checks,no_unknown_recipient_checks</pre>
+<p align="JUSTIFY"><span style="font-size:small;">Tambahkan juga dua baris berikut tepat di bawah &#8220;<i>pickup</i>&#8221; layanan transportasi:</span></p>
+<pre> -o content_filter=
+ -o receive_override_options=no_header_body_checks</pre>
+<p align="JUSTIFY"><span style="font-size:small;"><i>Kemudian reload service postfix, dengan perintah berikut:</i></span></p>
+<pre><i>root@efrizal:~# /etc/init.d/postfix reload</i>
+ <i>* Reloading Postfix configuration...                                                                                 [ OK ] </i>
+<i>root@efrizal:~#  </i></pre>
+<p align="JUSTIFY"><span style="font-size:small;">Untuk lebih yakin amavis berjalan dengan benar, lakukan perintah netstat seperti berikut:</span></p>
+<pre>root@efrizal:~# netstat -tanp 
+Active Internet connections (servers and established) 
+Proto Recv-Q Send-Q Local Address           Foreign Address 	 State       PID/Program name 
+tcp        0      0 0.0.0.0:2000            0.0.0.0:*               LISTEN      1684/dovecot    
+tcp        0      0 0.0.0.0:25              0.0.0.0:*               LISTEN      2388/master     
+tcp        0      0 0.0.0.0:993             0.0.0.0:*               LISTEN      1684/dovecot    
+tcp        0      0 0.0.0.0:995             0.0.0.0:*               LISTEN      1684/dovecot    
+tcp        0      0 127.0.0.1:10024         0.0.0.0:*               LISTEN      2897/amavisd (maste 
+tcp        0      0 127.0.0.1:10025         0.0.0.0:*               LISTEN      2388/master     
+tcp        0      0 0.0.0.0:110             0.0.0.0:*               LISTEN      1684/dovecot    
+tcp        0      0 0.0.0.0:143             0.0.0.0:*               LISTEN      1684/dovecot    
+tcp        0      0 127.0.0.1:783           0.0.0.0:*               LISTEN      983/spamd.pid   
+
+root@efrizal:~#</pre>
+<p align="JUSTIFY"><span style="font-size:small;">Jika anda ingin merubah mailbox anda ke home direktori masing-masing user, bisa dengan mengunakan perintah “postconf” seperti berikut:</span></p>
+<pre>root@efrizal:~# <strong>sudo postconf -e 'home_mailbox = Maildir/'</strong></pre>
+<p align="JUSTIFY"><span style="font-size:small;">Tapi sebelumnya aplikasi maildrop sudah harus terinstal. Selanjutnya untuk membuat mailbox masing-masing user bisa dengan mengunakan perintah “maidirmake”, seperti perintah berikut:</span></p>
+<pre>efrizal@mail:~$ maildirmake /home/efrizal/Maildir</pre>
+<p align="JUSTIFY"><span style="font-size:small;">Jangan lupa jika anda menjalankan perintah “maildirmake” sebagai root, untuk merubah hak akses dan kepemilikan direktori Maildir ke user yang dituju.</span></p>
+<h3>Percobaan tes Amavis</h3>
+<p align="JUSTIFY"><span style="font-size:small;">Untuk melakukan tes hasil konfigurasi amavis bisa lakukan dengan perintah telnet pada port 10024, seperti perintah berikut:</span></p>
+<pre>root@efrizal:~# telnet localhot 10024</pre>
+<p align="JUSTIFY"><span style="font-size:small;">Kemudian cek juga tampilan log email dengan perintah tail /var/log/mail.log</span></p>
+<p align="JUSTIFY">Selamat Mencoba</p>
+<p align="JUSTIFY">
+<p align="JUSTIFY">
+<p align="JUSTIFY">keyword: instalasi amavis, instalasi dan konfigurasi anti spam dan anti virus, instalation and configuration clamav and spammasssin, instalasi amavis di postfix, intergrasi amavis and spammassasin in postfix</p>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-press-this"><a rel="nofollow" class="share-press-this sd-button share-icon" href="https://efrizalzaida.wordpress.com/2013/01/07/integrasi-antivirus-dan-antispam-ke-email-server/?share=press-this" title="Click to Press This!"><span>Press This</span></a></li><li class="share-twitter"><a rel="nofollow" class="share-twitter sd-button share-icon" href="https://efrizalzaida.wordpress.com/2013/01/07/integrasi-antivirus-dan-antispam-ke-email-server/?share=twitter" title="Click to share on Twitter" id="sharing-twitter-488"><span>Twitter</span></a></li><li class="share-facebook"><a rel="nofollow" class="share-facebook sd-button share-icon" href="https://efrizalzaida.wordpress.com/2013/01/07/integrasi-antivirus-dan-antispam-ke-email-server/?share=facebook" title="Share on Facebook" id="sharing-facebook-488"><span>Facebook</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-38360756-488-54b9029edc462' data-src='//widgets.wp.com/likes/#blog_id=38360756&amp;post_id=488&amp;origin=efrizalzaida.wordpress.com&amp;obj_id=38360756-488-54b9029edc462' data-name='like-post-frame-38360756-488-54b9029edc462'><h3 class='sd-title'>Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height:55px'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+<div id='jp-relatedposts' class='jp-relatedposts' >
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+</div></div>			</div><!-- .entry-content -->
+
+	</article><!-- #post-488 -->
+
+				
+	<div id="sidebar-after-singular" class="widget-area" role="complementary">
+
+		<aside id="facebook-likebox-2" class="widget widget_facebook_likebox"><h1 class="widgettitle"><a href="https://www.facebook.com/efrizal.zaida">Like</a></h1><iframe src="https://www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fefrizal.zaida&#038;width=200&#038;height=432&#038;colorscheme=light&#038;show_faces=true&#038;stream=false&#038;show_border=true&#038;header=false&#038;force_wall=false" scrolling="no" frameborder="0" style="border: none; overflow: hidden; width: 200px;  height: 432px; background: #fff"></iframe></aside>
+	</div><!-- #sidebar-after-singular -->
+
+
+					<nav role="navigation" id="nav-below" class="site-navigation post-navigation clear-fix">
+		<h1 class="assistive-text">Post navigation</h1>
+
+	
+		<div class="nav-previous"><a href="https://efrizalzaida.wordpress.com/2013/01/02/postfix-plus-plus-dovecotsquirrelmail/" rel="prev"><span class="meta-nav">&larr;</span> Postfix plus-plus (+dovecot+squirrelmail)</a></div>		<div class="nav-next"><a href="https://efrizalzaida.wordpress.com/2013/01/13/konfigurasi-dovecot-pop3-dan-imap-standar-konfigurasi-quota-dan-autentikasi/" rel="next">Konfigurasi Dovecot ( POP3 dan IMAP standar konfigurasi, quota dan autentikasi) <span class="meta-nav">&rarr;</span></a></div>
+	
+	</nav><!-- #nav-below -->
+	
+				
+	
+	<div id="comments" class="comments-area">
+
+	
+	
+	
+									<div id="respond" class="comment-respond">
+				<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2013/01/07/integrasi-antivirus-dan-antispam-ke-email-server/#respond" style="display:none;">Cancel reply</a></small></h3>
+									<form action="https://efrizalzaida.wordpress.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+																																						<input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="c5397763e1" /><input type="hidden" name="_wp_http_referer" value="/2013/01/07/integrasi-antivirus-dan-antispam-ke-email-server/" />
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="wordpress" />
+
+<div class="comment-form-field comment-textarea">
+	<label for="comment">Enter your comment here...</label>
+	<div id="comment-form-comment"><textarea id="comment" name="comment" title="Enter your comment here..."></textarea></div>
+</div>
+
+<div id="comment-form-identity">
+
+	<div id="comment-form-nascar">
+		<p>Fill in your details below or click an icon to log in:</p>
+		<ul>
+			<li style="display:none;">
+				<a href="#comment-form-guest" id="postas-guest" title="Guest">
+					<span></span>
+				</a>
+			</li>
+			<li class="selected">
+				<a href="#comment-form-load-service:WordPress.com" id="postas-wordpress" title="WordPress.com">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Twitter" id="postas-twitter" title="Twitter">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Facebook" id="postas-facebook" title="Facebook">
+					<span></span>
+				</a>
+			</li>
+			<li>
+			<iframe id="googleplus-sign-in" name="googleplus-sign-in" src="https://public-api.wordpress.com/connect/?googleplus-sign-in=https%3A%2F%2Fefrizalzaida.wordpress.com" width="24" height="24" scrolling="no" allowtransparency="true" seamless="seamless" frameborder="0"></iframe>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Gravatar" width="25" class="no-grav" />
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Email <span class="required">(required)</span> <span class="nopublish">(Address never made public)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value="" /></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Name <span class="required">(required)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value="" /></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Website</label>
+					<div class="comment-form-input"><input id="url" name="url" type="text" value="" /></div>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://0.gravatar.com/avatar/c0c6ac8d1913b7a637b372fb85e821d8?s=25&amp;d=https%3A%2F%2F1.gravatar.com%2Favatar%2Fad516503a11cd5ca435acc9bb6523536%3Fs%3D25%26amp%3Bd%3Didenticon%26amp%3Bforcedefault%3Dy%26amp%3Br%3DG&amp;r=G" alt="Gravatar" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="https://0.gravatar.com/avatar/c0c6ac8d1913b7a637b372fb85e821d8?s=25&#038;d=https%3A%2F%2Fs2.wp.com%2Fwp-content%2Fmu-plugins%2Fhighlander-comments%2Fimages%2Fwplogo.png&#038;r=G" />
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="49084738" />
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="45526f8bf616c6810d2a7c6f90ad6ee10eac97c7" />
+				<p class="comment-form-posting-as pa-wordpress"><strong>elfriirlfe:</strong> You are commenting using your WordPress.com account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'wordpress' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Twitter picture" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="" />
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="" />
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="" />
+				<p class="comment-form-posting-as pa-twitter"><strong></strong> You are commenting using your Twitter account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'twitter' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Facebook photo" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="" />
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="" />
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="" />
+				<p class="comment-form-posting-as pa-facebook"><strong></strong> You are commenting using your Facebook account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'facebook' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://1.gravatar.com/avatar/ad516503a11cd5ca435acc9bb6523536?s=25&amp;d=identicon&amp;forcedefault=y&amp;r=G" alt="Google+ photo" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="" />
+				<input type="hidden" name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="" />
+				<input type="hidden" name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="" />
+				<p class="comment-form-posting-as pa-googleplus"><strong></strong> You are commenting using your Google+ account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'googleplus' );">Log&nbsp;Out</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Change</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Cancel</a></div>
+		<p>Connecting to %s</p>
+	</div>
+
+	
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe">
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;" tabindex="6"/> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Notify me of new comments via email.</label></p></div>
+
+												<p class="form-submit">
+							<input name="submit" type="submit" id="comment-submit" class="submit" value="Post Comment" />
+							<input type='hidden' name='comment_post_ID' value='488' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+						</p>
+						<p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="e42e1e2434" /></p>
+<input type="hidden" name="genseq" value="1421410974" />
+<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="113"/></p>					</form>
+							</div><!-- #respond -->
+			<div style="clear: both"></div>
+</div><!-- #comments .comments-area -->
+			
+			</div><!-- #content -->
+		</div><!-- #primary .site-content -->
+
+<div id="secondary" class="clear-fix" role="complementary">
+
+
+	<div class="widget-area" role="complementary">
+
+	
+	<aside id="text-2" class="widget widget_text"><h1 class="widgettitle">Me</h1>			<div class="textwidget"><p><!-- Facebook Badge START --><a href="http://id-id.facebook.com/efrizal.zaida" target="_TOP" style="font-family:&quot;font-size:11px;font-variant:normal;font-style:normal;font-weight:normal;color:#3B5998;text-decoration:none;" title="Efrizal Zaida">Efrizal Zaida</a><br /><a href="http://id-id.facebook.com/efrizal.zaida" target="_TOP" title="Efrizal Zaida"><img src="http://badge.facebook.com/badge/1177505726.3316.984681338.png" style="border:0;" /></a><br /><a href="http://id-id.facebook.com/badges/" target="_TOP" style="font-family:&quot;font-size:11px;font-variant:normal;font-style:normal;font-weight:normal;color:#3B5998;text-decoration:none;" title="Buat lencana Anda sendiri!">Efrizal Zaida</a><!-- Facebook Badge END --></p>
+</div>
+		</aside><aside id="categories-2" class="widget widget_categories"><h1 class="widgettitle">Categories</h1>		<ul>
+	<li class="cat-item cat-item-25234"><a href="https://efrizalzaida.wordpress.com/category/buku/" >Buku</a> (3)
+</li>
+	<li class="cat-item cat-item-10286"><a href="https://efrizalzaida.wordpress.com/category/databases/" >Databases</a> (9)
+</li>
+	<li class="cat-item cat-item-371020"><a href="https://efrizalzaida.wordpress.com/category/email-server/" >Email Server</a> (27)
+</li>
+	<li class="cat-item cat-item-1651333"><a href="https://efrizalzaida.wordpress.com/category/file-server/" >File Server</a> (7)
+</li>
+	<li class="cat-item cat-item-2065"><a href="https://efrizalzaida.wordpress.com/category/info/" >Info</a> (1)
+</li>
+	<li class="cat-item cat-item-31743"><a href="https://efrizalzaida.wordpress.com/category/lain/" >Lain</a> (19)
+</li>
+	<li class="cat-item cat-item-4419"><a href="https://efrizalzaida.wordpress.com/category/mysql/" >Mysql</a> (4)
+</li>
+	<li class="cat-item cat-item-9278329"><a href="https://efrizalzaida.wordpress.com/category/netadmin/" >NetAdmin</a> (51)
+</li>
+	<li class="cat-item cat-item-25"><a href="https://efrizalzaida.wordpress.com/category/open-source/" >Open Source</a> (6)
+</li>
+	<li class="cat-item cat-item-68962"><a href="https://efrizalzaida.wordpress.com/category/printer/" >Printer</a> (2)
+</li>
+	<li class="cat-item cat-item-801"><a href="https://efrizalzaida.wordpress.com/category/security/" >Security</a> (19)
+</li>
+	<li class="cat-item cat-item-828723"><a href="https://efrizalzaida.wordpress.com/category/skrip/" >skrip</a> (7)
+</li>
+	<li class="cat-item cat-item-13505"><a href="https://efrizalzaida.wordpress.com/category/sysadmin/" >Sysadmin</a> (16)
+</li>
+	<li class="cat-item cat-item-5313"><a href="https://efrizalzaida.wordpress.com/category/web-tech/" title="Tugas web techologi">Web Tech</a> (4)
+</li>
+	<li class="cat-item cat-item-355"><a href="https://efrizalzaida.wordpress.com/category/wireless/" >Wireless</a> (3)
+</li>
+	<li class="cat-item cat-item-129220416"><a href="https://efrizalzaida.wordpress.com/category/zesduo/" >zesduo</a> (3)
+</li>
+	<li class="cat-item cat-item-135817920"><a href="https://efrizalzaida.wordpress.com/category/zjobs/" >zjobs</a> (1)
+</li>
+		</ul>
+</aside><aside id="linkcat-1356" class="widget widget_links"><h1 class="widgettitle">Blogroll</h1>
+	<ul class='xoxo blogroll'>
+<li><a href="http://boogiejack.com/" title="web site ilmu web boogiejack">boogiejack</a></li>
+<li><a href="http://www.codecademy.com/" title="Web site codecademy">code academy</a></li>
+<li><a href="http://cssbasics.com/" title="cssbasics.com">cssbasics</a></li>
+<li><a href="http://en.forums.wordpress.com/">Discuss</a></li>
+<li><a href="http://htmlcodetutorial.com/" title="Web Site htmlcodetutorial">html tutorial</a></li>
+<li><a href="http://www.quackit.com/" title="Ilmu web Quackit">quackit</a></li>
+<li><a href="http://theme.wordpress.com/">Theme Showcase</a></li>
+<li><a href="http://www.w3.org/" title="web site w3">w3</a></li>
+<li><a href="http://www.w3schools.com/" title="Web Site W3 SCHOOLS">w3shcools</a></li>
+<li><a href="http://webdesign.tutsplus.com/" title="web design">webdesign</a></li>
+
+	</ul>
+</aside>
+<aside id="calendar-2" class="widget widget_calendar"><h1 class="widgettitle">Calender</h1><div id="calendar_wrap"><table id="wp-calendar">
+	<caption>January 2013</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Monday">M</th>
+		<th scope="col" title="Tuesday">T</th>
+		<th scope="col" title="Wednesday">W</th>
+		<th scope="col" title="Thursday">T</th>
+		<th scope="col" title="Friday">F</th>
+		<th scope="col" title="Saturday">S</th>
+		<th scope="col" title="Sunday">S</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="https://efrizalzaida.wordpress.com/2012/12/">&laquo; Dec</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next"><a href="https://efrizalzaida.wordpress.com/2013/02/">Feb &raquo;</a></td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="1" class="pad">&nbsp;</td><td>1</td><td><a href="https://efrizalzaida.wordpress.com/2013/01/02/" title="Postfix plus-plus (+dovecot+squirrelmail)">2</a></td><td>3</td><td>4</td><td>5</td><td>6</td>
+	</tr>
+	<tr>
+		<td><a href="https://efrizalzaida.wordpress.com/2013/01/07/" title="Integrasi Antivirus dan Antispam ke Email Server">7</a></td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td><a href="https://efrizalzaida.wordpress.com/2013/01/13/" title="Konfigurasi Dovecot ( POP3 dan IMAP standar konfigurasi, quota dan autentikasi)">13</a></td>
+	</tr>
+	<tr>
+		<td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td>
+	</tr>
+	<tr>
+		<td><a href="https://efrizalzaida.wordpress.com/2013/01/21/" title="Lightsquid sebagai monitoring proxy squid">21</a></td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td>
+	</tr>
+	<tr>
+		<td>28</td><td>29</td><td>30</td><td>31</td>
+		<td class="pad" colspan="3">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></aside><aside id="tag_cloud-2" class="widget widget_tag_cloud"><h1 class="widgettitle">Category</h1><div style="overflow: hidden;"><a href="https://efrizalzaida.wordpress.com/category/buku/" style="font-size: 107%; padding: 1px; margin: 1px;"  title="Buku (3)">Buku</a> <a href="https://efrizalzaida.wordpress.com/category/databases/" style="font-size: 128%; padding: 1px; margin: 1px;"  title="Databases (9)">Databases</a> <a href="https://efrizalzaida.wordpress.com/category/email-server/" style="font-size: 191%; padding: 1px; margin: 1px;"  title="Email Server (27)">Email Server</a> <a href="https://efrizalzaida.wordpress.com/category/file-server/" style="font-size: 121%; padding: 1px; margin: 1px;"  title="File Server (7)">File Server</a> <a href="https://efrizalzaida.wordpress.com/category/info/" style="font-size: 100%; padding: 1px; margin: 1px;"  title="Info (1)">Info</a> <a href="https://efrizalzaida.wordpress.com/category/lain/" style="font-size: 163%; padding: 1px; margin: 1px;"  title="Lain (19)">Lain</a> <a href="https://efrizalzaida.wordpress.com/category/mysql/" style="font-size: 110.5%; padding: 1px; margin: 1px;"  title="Mysql (4)">Mysql</a> <a href="https://efrizalzaida.wordpress.com/category/netadmin/" style="font-size: 275%; padding: 1px; margin: 1px;"  title="NetAdmin (51)">NetAdmin</a> <a href="https://efrizalzaida.wordpress.com/category/open-source/" style="font-size: 117.5%; padding: 1px; margin: 1px;"  title="Open Source (6)">Open Source</a> <a href="https://efrizalzaida.wordpress.com/category/printer/" style="font-size: 103.5%; padding: 1px; margin: 1px;"  title="Printer (2)">Printer</a> <a href="https://efrizalzaida.wordpress.com/category/security/" style="font-size: 163%; padding: 1px; margin: 1px;"  title="Security (19)">Security</a> <a href="https://efrizalzaida.wordpress.com/category/skrip/" style="font-size: 121%; padding: 1px; margin: 1px;"  title="skrip (7)">skrip</a> <a href="https://efrizalzaida.wordpress.com/category/sysadmin/" style="font-size: 152.5%; padding: 1px; margin: 1px;"  title="Sysadmin (16)">Sysadmin</a> <a href="https://efrizalzaida.wordpress.com/category/web-tech/" style="font-size: 110.5%; padding: 1px; margin: 1px;"  title="Web Tech (4)">Web Tech</a> <a href="https://efrizalzaida.wordpress.com/category/wireless/" style="font-size: 107%; padding: 1px; margin: 1px;"  title="Wireless (3)">Wireless</a> <a href="https://efrizalzaida.wordpress.com/category/zesduo/" style="font-size: 107%; padding: 1px; margin: 1px;"  title="zesduo (3)">zesduo</a> <a href="https://efrizalzaida.wordpress.com/category/zjobs/" style="font-size: 100%; padding: 1px; margin: 1px;"  title="zjobs (1)">zjobs</a> </div></aside><aside id="blog-stats-2" class="widget widget_blog-stats"><h1 class="widgettitle">Blog Stats</h1>		<ul>
+			<li>17,115 hits</li>
+		</ul>
+		</aside><aside id="rss-2" class="widget widget_rss"><h1 class="widgettitle"><a class="rsswidget" href="http://webdesign.tutsplus.com/posts.atom" title="Syndicate this content"><img style="background: orange; color: white; border: none;" width="14" height="14" src="https://s-ssl.wordpress.com/wp-includes/images/rss.png?m=1354137473g" alt="RSS" /></a> <a class="rsswidget" href="http://webdesign.tutsplus.com" title="">web tech</a></h1><ul><li><a class='rsswidget' href='http://webdesign.tutsplus.com/tutorials/hand-lettering-for-responsive-web-design--cms-23025' title='The re-emergence of hand lettering has taken over Instagram and has made it a sought-after skill again. The vast array of different styles allow the technique to be incredibly versatile and a worthwhile design consideration. Popping up in an enormous amount of logos (Pinterest, Montage) and page headings (The Boxtrolls, World Baking Day) hand lettering has p [&hellip;]'>Hand Lettering for Responsive Web Design</a></li><li><a class='rsswidget' href='http://code.tutsplus.com/articles/tuts-survey-prize-winners--cms-22997' title='An overwhelming response to our 2014 survey created a small backlog in selecting the lucky prize winners. We&#039;ve spent the past few weeks slowly making our way through each survey response, and we&#039;re excited to finally announce the winners!Firstly we&#039;d like to thank you for taking the time to tell us what you think, both the good and the bad. Y [&hellip;]'>Tuts+ Survey Prize Winners</a></li><li><a class='rsswidget' href='http://webdesign.tutsplus.com/tutorials/design-a-material-inspired-mobile-login-form-in-sketch--cms-23042' title='What You&#039;ll Be CreatingIn this tutorial you’ll learn to design a sign-in form, inspired by the aesthetic lessons from Google’s Material Design. We’ll cover some good practices to increase your form completion rates and methods for staying consistent in your designs. To start, download the Archive.zip. Install the Roboto fonts and open the start file.ske [&hellip;]'>Design a Material-Inspired Mobile Login Form in Sketch</a></li><li><a class='rsswidget' href='http://webdesign.tutsplus.com/tutorials/how-to-integrate-no-captcha-recaptcha-in-your-website--cms-23024' title='CAPTCHA inputs are perhaps the commonest of all frustrating experiences on the web. They’re painful enough for the majority of users, let alone the visually impaired or anyone who relies on assistive technologies such as screen-readers to access the web. However, sadly, CAPTCHAs are absolutely vital in the fight against spam.A necessary evil (thanks spammers [&hellip;]'>How to Integrate “No CAPTCHA reCAPTCHA” in Your Website</a></li><li><a class='rsswidget' href='http://webdesign.tutsplus.com/tutorials/rapid-prototyping-using-sketch-symbols-and-templates--cms-23021' title='Starting from scratch every time you mock up a design is a waste of time, especially when building on top of an existing product. On Envato Market we already have an established visual look and we’re working on a style guide to collate all our UI elements. What we need is an easy way to create a clickable prototype using our UI library. A template with all t [&hellip;]'>Rapid Prototyping Using Sketch Symbols and Templates</a></li></ul></aside><aside id="rss-4" class="widget widget_rss"><h1 class="widgettitle"><a class="rsswidget" href="http://feeds2.feedburner.com/blogspot/MQiv" title="Syndicate this content"><img style="background: orange; color: white; border: none;" width="14" height="14" src="https://s-ssl.wordpress.com/wp-includes/images/rss.png?m=1354137473g" alt="RSS" /></a> <a class="rsswidget" href="http://adsenseforfeeds.blogspot.com/" title="">feed</a></h1><ul><li><a class='rsswidget' href='http://feedproxy.google.com/~r/blogspot/MQiv/~3/9ToGwYfU3O4/saying-goodbye-to-adsense-for-feeds-blog.html' title='Thanks to everyone who has been a loyal reader of this blog over the years. After some consideration, we recognize that we&#039;re just not generating enough content here to warrant your time, so we won&#039;t be posting here any longer. Thanks again for being an enthusiastic FeedBurner user.Posted by Emily Wood, Google Blog Team   '>Saying goodbye to the AdSense for Feeds blog</a></li><li><a class='rsswidget' href='http://feedproxy.google.com/~r/blogspot/MQiv/~3/wNoamtTREZ4/your-stats-right-away.html' title='Do you hate delays? Do you think being told to “Please wait…” by websites, cash machines, call centers, and the doughnut stand drive-thru guy in the year 2010 is a sure sign modern living isn’t quite meeting our collective expectations as a planet?Good news! Today, we will be rolling out a new, experimental interface for Google FeedBurner. The real story is [&hellip;]'>Your stats, right away</a></li><li><a class='rsswidget' href='http://feedproxy.google.com/~r/blogspot/MQiv/~3/rNKq3BY7g0w/enabling-social-sharing-with-feedflare.html' title='Feed content is being constantly distributed via new channels and endpoints every day.   More and more, these new channels involve sharing your content in social networks and applications such as Facebook, Twitter and Google Buzz.Recently, we launched our Socialize service to help you as the publisher distribute your feed via social networks, with the first [&hellip;]'>Enabling social sharing with FeedFlare</a></li></ul></aside><aside id="rss-3" class="widget widget_rss"><h1 class="widgettitle"><a class="rsswidget" href="https://www.howtoforge.com/feed.rss" title="Syndicate this content"><img style="background: orange; color: white; border: none;" width="14" height="14" src="https://s-ssl.wordpress.com/wp-includes/images/rss.png?m=1354137473g" alt="RSS" /></a> <a class="rsswidget" href="https://www.howtoforge.com" title="Howtoforge Tutorials">Open source</a></h1><ul><li><a class='rsswidget' href='https://www.howtoforge.com/tutorial/proftpd-tls-opensuse-13.2/' title='This document describes how to install a ProFTPd server with OpenSuse 13.2. I will include TLS connections.  TLS provides endpoint authentication and communications confidentiality over the Internet using cryptography. TLS provides RSA security with 1024 and 2048 bit strengths.'>How to install ProFTPd with TLS on OpenSuse 13.2</a></li><li><a class='rsswidget' href='https://www.howtoforge.com/tutorial/perfect-desktop-ubuntu-14.10-utopic-unicorn/' title='This tutorial shows how you can set up an Ubuntu 14.10 (Utopic Unicorn) desktop that is a full-fledged replacement for a Windows desktop, i.e. that has all the software that people need to do thethings they do on their Windows desktops. The advantages are clear: you get a secure system without DRM restrictions that works even on oldhardware, and the best thi [&hellip;]'>The Perfect Desktop - Ubuntu 14.10 (Utopic Unicorn)</a></li><li><a class='rsswidget' href='https://www.howtoforge.com/tutorial/build-your-own-cloud-on-debian-wheezy/' title='Here&#039;s an overview what we will do: Get a Virtual Private Server, a domain name, and set them up, set up postfix and dovecot to send and receive email, prevent SPAM from reaching your INBOX, make sure the emails you send get through spam filters, host calendars, contacts, files with Owncloud and set up webmail and Sync your devices to the cloud.'>How to build your own cloud for you and your friends on Debian Wheezy</a></li><li><a class='rsswidget' href='https://www.howtoforge.com/tutorial/ssh-key-management-with-privacyidea/' title='In this tutorial I will show, how you can manage your SSH keys for all your servers and different user accounts. This is important, if you have more than one SSH key and it is even more important, if you a responsible for many different users with different SSH keys.'>SSH Key Management with privacyIDEA</a></li><li><a class='rsswidget' href='https://www.howtoforge.com/tutorial/cloud-based-two-factor-authentication-with-wikid-and-packer/' title='WiKID is a dual-sourced two-factor authentication server that uses software tokens (PC/smartphone) to transmit PINs and one-time passwords encrypted with public key encryption. These keys are generated on the device and server and exist only there - unlike most shared-secret based solutions.'>Build your own cloud-based two-factor authentication service using WiKID and Packer.</a></li></ul></aside><aside id="image-2" class="widget widget_image"><h1 class="widgettitle">ME</h1><div style="overflow:hidden;"><a href="http://profile.ak.fbcdn.net/hprofile-ak-snc4/161436_1177505726_1380239_n.jpg"><img src="http://profile.ak.fbcdn.net/hprofile-ak-snc4/161436_1177505726_1380239_n.jpg" title="me" class="alignnone" width="180" height="160" /></a></div>
+</aside>
+	</div><!-- .widget-area -->
+
+</div><!-- #secondary --><div id="tertiary" class="widget-area" role="complementary">
+
+	
+	<aside id="text-3" class="widget widget_text"><h1 class="widgettitle">RSS</h1>			<div class="textwidget"><a href="https://efrizalzaida.wordpress.com/feed/"><img title="RSS Feed" src="https://efrizalzaida.files.wordpress.com/2012/12/rss.jpeg" alt="" width="82" height="82" /></a></div>
+		</aside><aside id="search-2" class="widget widget_search"><h1 class="widgettitle">Search</h1>	<form method="get" id="searchform" action="https://efrizalzaida.wordpress.com/" role="search">
+		<label for="s" class="assistive-text">Search</label>
+		<input type="text" class="field" name="s" id="s" placeholder="Search &hellip;" />
+		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Search" />
+	</form></aside><aside id="nav_menu-3" class="widget widget_nav_menu"><h1 class="widgettitle">JURNAL</h1><div class="menu-jurnal-container"><ul id="menu-jurnal" class="menu"><li id="menu-item-369" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-369"><a href="http://jurnal.pdii.lipi.go.id/index.php/Daftar-Jurnal-Hasil-Akreditasi-DIKTI.html">LIPI</a></li>
+<li id="menu-item-370" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-370"><a href="http://www.proquest.co.uk">Proquest</a></li>
+<li id="menu-item-371" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-371"><a href="http://jurnal.mti.cs.ui.ac.id">UI</a></li>
+<li id="menu-item-372" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-372"><a href="http://papers.gunadarma.ac.id/">Gundar</a></li>
+<li id="menu-item-373" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-373"><a href="http://journal.itb.ac.id">ITB</a></li>
+<li id="menu-item-374" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-374"><a href="http://www.scopus.com">SCOPUS</a></li>
+<li id="menu-item-375" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-375"><a href="http://ieeexplore.ieee.org">IEEE explore</a></li>
+<li id="menu-item-376" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-376"><a href="http://www.jstor.org/">JSTOR</a></li>
+<li id="menu-item-377" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-377"><a href="http://pubs.acs.org/">ACS</a></li>
+<li id="menu-item-378" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-378"><a href="http://publish.aps.org/">APS</a></li>
+<li id="menu-item-379" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-379"><a href="http://www.asme.org/journals">ASME</a></li>
+<li id="menu-item-380" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-380"><a href="http://site.ebrary.com/lib/indonesiau">EBRARY</a></li>
+<li id="menu-item-381" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-381"><a href="http://www.oupjournals.org/">OUP</a></li>
+<li id="menu-item-382" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-382"><a href="http://www.sciencedirect.com/">sciencedirect</a></li>
+<li id="menu-item-383" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-383"><a href="http://search.ebscohost.com/">EBSCO</a></li>
+<li id="menu-item-385" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-385"><a href="http://www.springerlink.com/home/main.mpx">SPRINGER</a></li>
+<li id="menu-item-387" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-387"><a href="http://www.aip.org/">AIP</a></li>
+<li id="menu-item-532" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-532"><a title="AMIKOM" href="http://journal.amikom.ac.id/index.php/TI/search/titles">AMIKOM</a></li>
+<li id="menu-item-533" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-533"><a href="http://www.people.vcu.edu/~xhe2/publications.htm">vcu.edu</a></li>
+<li id="menu-item-680" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-680"><a href="http://http://feedburner.google.com/">Feddburner</a></li>
+</ul></div></aside><aside id="nav_menu-2" class="widget widget_nav_menu"><h1 class="widgettitle">Profesional</h1><div class="menu-profesional-container"><ul id="menu-profesional" class="menu"><li id="menu-item-365" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-365"><a href="http://ieee.org">ieee</a></li>
+<li id="menu-item-366" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-366"><a href="http://www.gnu.org">gnu</a></li>
+<li id="menu-item-367" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-367"><a href="http://www.kernel.org">kernel</a></li>
+<li id="menu-item-368" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-368"><a href="http://www.ieice.org/">ieice</a></li>
+<li id="menu-item-394" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-394"><a href="http://aptikom.or.id">APTIKOM</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-395"><a href="http://www.witsa.org">WITSA</a></li>
+<li id="menu-item-396" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-396"><a href="http://http://www.ijma3.org/">IJMA3</a></li>
+<li id="menu-item-442" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-442"><a href="https://www.facebook.com/groups/intelligentsystems/">intelligentsystems</a></li>
+</ul></div></aside><aside id="linkcat-1356" class="widget widget_links"><h1 class="widgettitle">Blogroll</h1>
+	<ul class='xoxo blogroll'>
+<li><a href="http://boogiejack.com/" title="web site ilmu web boogiejack">boogiejack</a></li>
+<li><a href="http://www.codecademy.com/" title="Web site codecademy">code academy</a></li>
+<li><a href="http://cssbasics.com/" title="cssbasics.com">cssbasics</a></li>
+<li><a href="http://en.forums.wordpress.com/">Discuss</a></li>
+<li><a href="http://htmlcodetutorial.com/" title="Web Site htmlcodetutorial">html tutorial</a></li>
+<li><a href="http://www.quackit.com/" title="Ilmu web Quackit">quackit</a></li>
+<li><a href="http://theme.wordpress.com/">Theme Showcase</a></li>
+<li><a href="http://www.w3.org/" title="web site w3">w3</a></li>
+<li><a href="http://www.w3schools.com/" title="Web Site W3 SCHOOLS">w3shcools</a></li>
+<li><a href="http://webdesign.tutsplus.com/" title="web design">webdesign</a></li>
+
+	</ul>
+</aside>
+<aside id="blog_subscription-2" class="widget widget_blog_subscription"><h1 class="widgettitle"><label for="subscribe-field">Follow </label></h1>
+				<form action="https://subscribe.wordpress.com" method="post" accept-charset="utf-8" id="subscribe-blog">
+											<p>Click to follow this blog and receive notifications of new posts by email.</p>
+<p>Join 3 other followers</p>
+					
+					<p>
+						<input type="hidden" name="action" value="subscribe"/>
+						<input type="hidden" name="blog_id" value="38360756"/>
+						<input type="hidden" name="source" value="https://efrizalzaida.wordpress.com/2013/01/07/integrasi-antivirus-dan-antispam-ke-email-server/"/>
+						<input type="hidden" name="sub-type" value="widget"/>
+						<input type="hidden" name="redirect_fragment" value="blog_subscription-2" />
+						<input type="hidden" id="_wpnonce" name="_wpnonce" value="c08247ff6e" />						<input type="submit" value="Follow" />
+					</p>
+				</form>
+			
+</aside><aside id="top-clicks-2" class="widget widget_top-clicks"><h1 class="widgettitle">Top Clicks</h1><ul><li><a href='http://www.barracudacentral.org/account/register' target='_blank' rel='nofollow'>barracudacentral.org/acco&#8230;</a></li><li><a href='http://mail.bsmi.co.id:7780/mailman/admin' target='_blank' rel='nofollow'>mail.bsmi.co.id:7780/mail&#8230;</a></li><li><a href='http://mail.bsmi.co.id:7780/mailman/admin/cc/privacy' target='_blank' rel='nofollow'>mail.bsmi.co.id:7780/mail&#8230;</a></li></ul></aside><aside id="rss-5" class="widget widget_rss"><h1 class="widgettitle"><a class="rsswidget" href="http://feeds.feedburner.com/zimbra" title="Syndicate this content"><img style="background: orange; color: white; border: none;" width="14" height="14" src="https://s-ssl.wordpress.com/wp-includes/images/rss.png?m=1354137473g" alt="RSS" /></a> <a class="rsswidget" href="http://blog.zimbra.com" title="All Things Zimbra.">ZIMBRA</a></h1><ul><li><a class='rsswidget' href='http://feedproxy.google.com/~r/zimbra/~3/N1DunuvCQ3M/deployment-part-1-in-considering-your-next-email-system.html' title='It seems every week we have a new article about either a business or vendor trying to “kill” email. Simply put, email isn’t going anywhere, anytime soon. Yes, it will […]The post Deployment: Part 1 in Considering Your Next Email System appeared first on Zimbra :: Blog.'>Deployment: Part 1 in Considering Your Next Email System</a> <span class="rss-date">December 15, 2014</span></li><li><a class='rsswidget' href='http://feedproxy.google.com/~r/zimbra/~3/X7IW2zLjaKA/half-email-systems-will-replaced-two-years.html' title='Today, Zimbra announced the results of the Ponemon Institute’s “The Open Source Collaboration Study: Viewpoints on Security and Privacy in the U.S. and EMEA” report. Sponsored by Zimbra, the study […]The post Half of All Email Systems will be Replaced in Two Years appeared first on Zimbra :: Blog.'>Half of All Email Systems will be Replaced in Two Years</a> <span class="rss-date">November 19, 2014</span></li><li><a class='rsswidget' href='http://feedproxy.google.com/~r/zimbra/~3/bQdEQ-xuEDs/zimbra-social-8-5-delivering-brand-excellence.html' title='Zimbra Community is now Zimbra Social, and we are happy to announce the availability of Zimbra Social version 8.5. Brand is Everything The best brands demand a unique social experience. […]The post Zimbra Social 8.5: Delivering Brand Excellence appeared first on Zimbra :: Blog.'>Zimbra Social 8.5: Delivering Brand Excellence</a> <span class="rss-date">November 18, 2014</span></li><li><a class='rsswidget' href='http://feedproxy.google.com/~r/zimbra/~3/d8By6cQL5KY/tco-really-mean.html' title='As with other types of software, when IT (or any software selection team) is in the process of procuring a messaging and collaboration solution, cost enters the discussion early. But, […]The post What Does TCO Really Mean? appeared first on Zimbra :: Blog.'>What Does TCO Really Mean?</a> <span class="rss-date">November 13, 2014</span></li><li><a class='rsswidget' href='http://feedproxy.google.com/~r/zimbra/~3/z7B_QxvFUME/one-brand-one-organization-keys-ma-success.html' title='A recent interview with Zimbra CEO, Patrick Brandt, and After Nines Content Czar, Joe Panettieri, focused on successful tech M&amp;A strategy. To no surprise, the conversation continually came back to […]The post One Brand, One Organization: Keys to M&amp;A Success appeared first on Zimbra :: Blog.'>One Brand, One Organization: Keys to M&amp;A Success</a> <span class="rss-date">November 12, 2014</span></li><li><a class='rsswidget' href='http://feedproxy.google.com/~r/zimbra/~3/lmydgv94obs/zimbra-collaboration-updates-8-0-9-8-5-1.html' title='Yesterday, Zimbra released updates to Zimbra Collaboration, both the 8.0.x and 8.5.x trees. Security These updates address the OpenSSL security advisory dated October 15 and provide a partial fix for […]The post Zimbra Collaboration Updates (8.0.9 &amp; 8.5.1) appeared first on Zimbra :: Blog.'>Zimbra Collaboration Updates (8.0.9 &amp; 8.5.1)</a> <span class="rss-date">November 6, 2014</span></li><li><a class='rsswidget' href='http://feedproxy.google.com/~r/zimbra/~3/v4hsphY7KmA/poodle-sslv3.html' title='This week has brought about the latest security vulnerability. Google’s Thai Duong, Krzysztof Kotowicz, and Bodo Möller made the vulnerability — POODLE (Padding Oracle On Downgraded Legacy Encryption) — public […]The post POODLE and SSLv3 appeared first on Zimbra :: Blog.'>POODLE and SSLv3</a> <span class="rss-date">October 16, 2014</span></li><li><a class='rsswidget' href='http://feedproxy.google.com/~r/zimbra/~3/cKjrUOx1mkY/shellshock-flaw.html' title='***Security Alert*** [Update 2 | September 30, 2014, 9:10am CST] Apple has released at update. [Update 1 | September 26, 2014, 11:40am CST] Red Hat has released a full patch. […]The post The Shellshock Flaw appeared first on Zimbra :: Blog.'>The Shellshock Flaw</a> <span class="rss-date">September 30, 2014</span></li><li><a class='rsswidget' href='http://feedproxy.google.com/~r/zimbra/~3/T-75Ma6MLFk/zimbra-customers-named-finalists-next-generation-customer-experience-award.html' title='So often, corporate blogs post about themselves, market trends, products and other assorted topics. What is often forgotten, unfortunately, is the one topic that matters the most, customers. A company’s […]The post Zimbra Customers Named Finalists for Next Generation Customer Experience Award appeared first on Zimbra :: Blog.'>Zimbra Customers Named Finalists for Next Generation Customer Experience Award</a> <span class="rss-date">September 23, 2014</span></li><li><a class='rsswidget' href='http://feedproxy.google.com/~r/zimbra/~3/HNakAhDj28E/three-tenets-delivering-promise-internal-social-networks.html' title='What does it mean to be visionary? To Gartner, Visionaries “understand where the market is going or have a vision for changing market rules.” In the recent Gartner “Magic Quadrant […]The post Three Tenets for Delivering on the Promise of Internal Social Networks appeared first on Zimbra :: Blog.'>Three Tenets for Delivering on the Promise of Internal Social Networks</a> <span class="rss-date">September 16, 2014</span></li></ul></aside>
+</div><!-- #secondary .widget-area -->
+	</div><!-- #main -->
+
+	<div id="supplementary" class="clear-fix one">
+	
+	
+	
+		<div id="footer-sidebar-four" class="widget-area" role="complementary">
+		<aside id="text-4" class="widget widget_text"><h1 class="widgettitle">alexa</h1>			<div class="textwidget">
+
+The title of your home page
+<!-- QbhurrTXzWGOEyMpqS9lBn1v1_E -->
+ You could put your verification ID in a
+comment
+
+ Or, in its own meta tag
+
+ Or, as one of your keywords
+
+
+Your content is here. The verification ID will NOT be detected if you put it here.
+
+
+
+</div>
+		</aside>	</div><!-- #fourth .widget-area -->
+	</div><!-- #supplementary -->
+	<footer id="colophon" class="site-footer clear-fix" role="contentinfo">
+		<div class="site-info">
+						<a href="https://wordpress.com/?ref=footer_website">Create a free website or blog at WordPress.com</a>.
+			<span class="sep"> | </span>
+			<a href="https://wordpress.com/themes/oxygen/" title="Learn more about this theme">The Oxygen Theme</a>.		</div><!-- .site-info -->
+					<nav class="menu-tertiary">
+				<div class="menu-home-container"><ul id="menu-home-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-390"><a title="HOME" href="https://efrizalzaida.wordpress.com">HOME</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-401"><a href="https://efrizalzaida.wordpress.com/category/email-server/">EMAIL SERVER</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-402"><a href="https://efrizalzaida.wordpress.com/category/netadmin/">NETADMIN</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-403"><a href="https://efrizalzaida.wordpress.com/category/sysadmin/">SYSADMIN</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-404"><a href="https://efrizalzaida.wordpress.com/category/security/">SECURITY</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-405"><a href="https://efrizalzaida.wordpress.com/category/file-server/">FILE SERVER</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-406"><a href="https://efrizalzaida.wordpress.com/category/databases/">DATABASE</a></li>
+</ul></div>			</nav><!-- #menu-subsidiary .menu-container -->
+			</footer><!-- .site-footer .site-footer -->
+</div><!-- #page .hfeed .site -->
+
+<!-- wpcom_wp_footer -->
+	<script type="text/javascript">
+	/* <![CDATA[ */
+		jQuery(document).ready( function($) {
+			function doFollowingHover() {
+				$('#wp-admin-bar-follow > a').unbind( '.unfollow' );
+
+				$('#wp-admin-bar-follow > a').bind( 'mouseover.unfollow', function() {
+
+					$(this).html( "Unfollow" ).parent( 'li' ).addClass( 'unfollow' );
+				});
+				$('#wp-admin-bar-follow > a').bind( 'mouseout.unfollow', function() {
+					$(this).html( "Following" ).parent( 'li' ).removeClass( 'unfollow' );
+				});
+			}
+			
+			$('#wp-admin-bar-follow > a').click( function( e ) {
+				$('#wp-admin-bar-follow > a').unbind( '.unfollow' );
+
+				e.preventDefault();
+
+				var link = $( this ), li = $( '#wp-admin-bar-follow' ), timeout = 0;
+
+				if ( li.hasClass( 'subscribed' ) ) {
+					li.removeClass( 'subscribed' ).removeClass( 'unfollow' );
+					link.html( "Follow" );
+
+					$('body').append( $( 'div.wpcom-bubble' ).removeClass( 'fadein' ) ).off( 'click.bubble' );
+
+					var action = 'ab_unsubscribe_from_blog';
+				} else {
+					li.addClass( 'subscribed' ).removeClass( 'unfollow' );
+					link.html( "Following" );
+
+						var left = 131 - link.width();
+						li.append( $( 'div.wpcom-bubble' ).css( { left: '-' + left + 'px' } ) );
+						$( 'div.bubble-txt', 'div.wpcom-bubble' ).html( "New posts from this blog will now appear in <a target=\"_blank\" href=\"http:\/\/id.wordpress.com\/\">your reader<\/a>." );
+
+						$( 'div.wpcom-bubble.action-bubble' ).addClass( 'fadein' );
+
+						setTimeout( function() {
+							$('body').on( 'click.bubble touchstart.bubble', function(e) {
+								if ( !$(e.target).hasClass('wpcom-bubble') && !$(e.target).parents( 'div.wpcom-bubble' ).length )
+									hideBubble();
+							});
+							setTimeout( hideBubble, 10000 );
+						}, 500 );
+
+					var action = 'ab_subscribe_to_blog';
+					$('#wp-admin-bar-follow > a').bind( 'mouseout.shift', function() {
+						doFollowingHover();
+						$(this).unbind( '.shift' );
+					});
+				}
+
+				var nonce = link.attr( 'href' ).split( '_wpnonce=' );
+				nonce = nonce[1];
+
+				$.post( "https:\/\/efrizalzaida.wordpress.com\/wp-admin\/admin-ajax.php", {
+					'action': action,
+					'_wpnonce': nonce,
+					'source': 'admin_bar',
+					'blog_id': 38360756				});
+			});
+		});
+	/* ]]> */
+	</script>
+<script type='text/javascript' src='//0.gravatar.com/js/gprofiles.js?ver=201503x'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":"c0c6ac8d1913b7a637b372fb85e821d8"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s2.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781g'></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	</div>
+
+	<div id="ab-reblog-box">
+		<form action="" name="reblog">
+			<textarea id="reblog-content" name="reblog-content" placeholder="Tambahkan pemikiran Anda di sini... (opsional)"></textarea>
+			<label for="blogid" id="lblogid">Tuliskan ke</label>
+
+			<select name="to_blog_id" id="reblog-to-blog-id">
+														<option value="65168183">elfriirlfe</option>
+														<option value="50803403">Ulfa Ilma News</option>
+							</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="" class="cancel">Batal</a></span>
+				<input type="submit" name="reblog-submit" class="button-primary" id="reblog-submit" value="Blog Ulang Pos" />
+				<input type="hidden" id="original-blog-id" value="38360756" />
+				<input type="hidden" id="original-post-id" value="488" />
+			</div>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="8901cbe6ea" /><input type="hidden" name="_wp_http_referer" value="/2013/01/07/integrasi-antivirus-dan-antispam-ke-email-server/" />		</form>
+
+		<div class="arrow"></div>
+	</div>
+
+	<script type="text/javascript">
+	var wpcom_reblog = {
+		request: false,
+		source: 'toolbar',
+
+		init: function() {
+			// Click reblog button on post
+			jQuery(document).on( 'click', '#wpadminbar .reblog', function(e) {
+				e.preventDefault();
+				wpcom_reblog.source = 'toolbar';
+
+				if ( jQuery( '#wpadminbar #ab-reblog-box' ).is( ':visible' ) ) {
+					wpcom_reblog.cancel_reblog();
+				}
+				else {
+					wpcom_reblog.show_reblog_box();
+				}
+			} );
+
+			// Clicked reblog button on already reblogged post.
+			jQuery(document).on( 'click', '#wpadminbar .reblogged', function(e) {
+				e.preventDefault();
+			});
+
+			// Click cancel reblog button
+			jQuery(document).on( 'click', '#ab-reblog-box a.cancel', function(e) {
+				e.preventDefault();
+				wpcom_reblog.cancel_reblog();
+			});
+
+			// Submit reblog box
+			jQuery(document).on( 'click', '#ab-reblog-box input[type=submit]', function(e) {
+				e.preventDefault();
+				wpcom_reblog.submit_reblog( jQuery(this) );
+			});
+		},
+
+		show_reblog_box: function() {
+			return this.show_reblog_box_here(
+				'#wp-admin-bar-wpr-reblog',
+				'#wpadminbar'
+			);
+		},
+
+		toggle_reblog_box_flair: function( obj_id ) {
+			if ( jQuery( '#jp-post-flair #ab-reblog-box' ).is( ':visible' ) ) {
+				wpcom_reblog.cancel_reblog();
+			}
+			else {
+				wpcom_reblog.show_reblog_box_flair( obj_id );
+			}
+		},
+
+		show_reblog_box_flair: function( obj_id ) {
+			this.source = 'post_flair';
+			this.obj_id = obj_id;
+			return this.show_reblog_box_here(
+				'.post-likes-widget',
+				'body'
+			);
+		},
+
+		show_reblog_box_here: function(anchorId, parentId) {
+			var jq = jQuery,
+			    $anchor = jq( anchorId ),
+			    $parent = jq( parentId ),
+			    $window = jq( window ),
+			    $scroll = jq('html, body'),
+			    $reblog_box = jq( '#ab-reblog-box' ),
+			    offset = $anchor.offset(),
+			    left = offset.left + 'px',
+			    width = '500px',
+			    position,
+			    top;
+
+			if ( $parent.css( 'position' ) === 'fixed' ) {
+				position = 'fixed';
+				top = $parent.position().top + $parent.outerHeight();
+			}
+			else {
+				position = 'absolute';
+				top = offset.top + $anchor.outerHeight() + 'px';
+			}
+			$reblog_box.remove();
+			$parent.append( $reblog_box );
+			$anchor.addClass( 'selected' );
+
+			if ( jq( window ).innerWidth() < offset.left + 500 ) {
+				// Most likely mobile or tablet
+				left = '0px';
+				width = ( jq( window ).innerWidth() - 24 ) + 'px';
+			}
+
+			$reblog_box
+				.find('p.response').remove().end()
+				.find('div.submit, div.submit span.canceltext').show().end()
+				.find('div.submit input[type=submit]').prop('disabled',false).end()
+				.show()
+				.css({
+					top : top,
+					left : left,
+					width : width,
+					position: position,
+					'z-index': 2 // slide under twentyfourteen's fixed-positioned masthead
+				});
+
+			// Ensure we can see the whole reblog box
+			var docViewTop = $window.scrollTop(),
+			    windowHeight = $window.height(),
+			    docViewBottom = docViewTop + windowHeight,
+			    elemTop = $reblog_box.offset().top,
+			    elemHeight = $reblog_box.outerHeight() + 10,
+			    elemBottom = elemTop + elemHeight;
+			if ( docViewTop > elemTop ) {
+				// Need to scroll up
+				// leave 75px for toolbar + Reblog button + margin
+				$scroll.animate({scrollTop: elemTop - 75});
+			}
+			else if ( docViewBottom < elemBottom ) {
+				// Need to scroll down
+				$scroll.animate({scrollTop: elemBottom - windowHeight}, 100);
+			}
+		},
+
+		submit_reblog: function( input ) {
+			var jq = jQuery;
+			var self = this;
+			if ( typeof this.request == 'object' )
+				this.request.abort();
+
+			input.attr( 'value', 'Reblogging...' );
+			input.prop( 'disabled', true );
+
+			jq( '#ab-reblog-box div.submit span.canceltext' ).fadeOut( 150, function() {
+				input.before( '<span class="spinner"></span>' );
+			});
+
+			var note = jq('#ab-reblog-box textarea').val();
+
+			if ( jq('#default-reblog-note').val() == note )
+				note = "";
+
+			this.request = jq.get( '/wp-admin/admin-ajax.php', {
+				'action': 'post_reblog',
+				'original_blog_id': jq('#original-blog-id').val(),
+				'original_post_id': jq('#original-post-id').val(),
+				'blog_id': jq('#ab-reblog-box select').val(),
+				'note': note,
+				'_wpnonce': jq('#ab-reblog-box #_wpnonce').val(),
+				'reblog_source': this.source
+			},
+			function(result, status, jqxhr) {
+				if ( ! ( "type" in result ) ) {
+					alert( "Error: " + jqxhr.responseText );
+				}
+				else if ( "error" == result.type ) {
+					alert( result.message );
+				}
+				else {
+					if ( typeof pm === 'function' ) {
+						console.log(self);
+						pm({
+							target : window.frames['likes-master'],
+							type : 'likesMessage',
+							data : { event: 'didReblog', obj_id: self.obj_id },
+							origin : '*'
+						});
+					}
+
+					jq( '#ab-reblog-box' ).hide();
+					jq( '#wp-admin-bar-wpr-reblog' ).addClass( 'reblogged' ).removeClass( 'reblog' ).find( 'a:first' ).text( 'Reblogged' );
+				}
+			}, 'json' );
+		},
+
+		cancel_reblog: function() {
+			jQuery( '#ab-reblog-box' ).hide();
+			jQuery( '#wp-admin-bar-wpr-reblog' ).removeClass( 'selected' );
+		}
+	};
+
+	wpcom_reblog.init();
+	</script>
+<div id="report-form-window" style="display:none;"></div><script type='text/javascript'>
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Posting Comment\u2026","postCommentText":"Post Comment","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Out","loginText":"Log In","connectURL":"https:\/\/efrizalzaida.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/efrizalzaida.wordpress.com\/wp-login.php?action=logout&_wpnonce=2fa2af1135","homeURL":"https:\/\/efrizalzaida.wordpress.com\/","postID":"488","gravDefault":"identicon","enterACommentError":"Please enter a comment","enterEmailError":"Please enter your email address here","invalidEmailError":"Invalid email address","enterAuthorError":"Please enter your name here","gravatarFromEmail":"This picture will show whenever you leave a comment. Click to customize it.","logInToExternalAccount":"Log in to use details from one of these accounts.","change":"Change","changeAccount":"Change Account","comment_registration":"0","userIsLoggedIn":"1","isJetpack":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1414003384j'></script>
+
+	<script type="text/javascript">
+		WPCOM_sharing_counts = {"https:\/\/efrizalzaida.wordpress.com\/2013\/01\/07\/integrasi-antivirus-dan-antispam-ke-email-server\/":488}	</script>
+		<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+				<iframe src='https://widgets.wp.com/likes/master.html?ver=20141028#ver=20141028&amp;mp6=1' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+		<div id='likes-other-gravatars'><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+		<script type="text/javascript">
+		//<![CDATA[
+			var jetpackLikesWidgetQueue = [];
+			var jetpackLikesWidgetBatch = [];
+			var jetpackLikesMasterReady = false;
+
+			function JetpackLikespostMessage( message, target ) {
+				if ( "string" === typeof message ){
+					try{
+						message = JSON.parse( message );
+					}
+					catch(e) {
+						return;
+					}
+				}
+
+				pm( {
+					target: target,
+					type: 'likesMessage',
+					data: message,
+					origin: '*'
+				} );
+			}
+
+			function JetpackLikesBatchHandler() {
+				var requests = [];
+				jQuery( 'div.jetpack-likes-widget-unloaded' ).each( function( i ) {
+					if ( jetpackLikesWidgetBatch.indexOf( this.id ) > -1 )
+						return;
+					jetpackLikesWidgetBatch.push( this.id );
+					var regex = /like-(post|comment)-wrapper-(\d+)-(\d+)-(\w+)/;
+					var match = regex.exec( this.id );
+					if ( ! match || match.length != 5 )
+						return;
+
+					var info = {
+						blog_id: match[2],
+						width:   this.width
+					};
+
+					if ( 'post' == match[1] ) {
+						info.post_id = match[3];
+					} else if ( 'comment' == match[1] ) {
+						info.comment_id = match[3];
+					}
+
+					info.obj_id = match[4];
+
+					requests.push( info );
+				});
+
+				if ( requests.length > 0 ) {
+					JetpackLikespostMessage( { event: 'initialBatch', requests: requests }, window.frames['likes-master'] );
+				}
+			}
+
+			function JetpackLikesMessageListener( event ) {
+				if ( "undefined" == typeof event.event )
+					return;
+
+				if ( 'masterReady' == event.event ) {
+					jQuery( document ).ready( function() {
+						jetpackLikesMasterReady = true;
+
+						var stylesData = {
+								event: 'injectStyles'
+						};
+
+						if ( jQuery( 'iframe.admin-bar-likes-widget' ).length > 0 ) {
+							JetpackLikespostMessage( { event: 'adminBarEnabled' }, window.frames[ 'likes-master' ] );
+
+							stylesData.adminBarStyles = {
+								background: jQuery( '#wpadminbar .quicklinks li#wp-admin-bar-wpl-like > a' ).css( 'background' ),
+								isRtl: ( 'rtl' == jQuery( '#wpadminbar' ).css( 'direction' ) )
+							};
+						}
+
+						if ( !window.addEventListener )
+							jQuery( '#wp-admin-bar-admin-bar-likes-widget' ).hide();
+
+						stylesData.textStyles = {
+							color: jQuery( '.sd-text-color').css( 'color' ),
+							fontFamily: jQuery( '.sd-text-color' ).css( 'font-family' ),
+							fontSize: jQuery( '.sd-text-color' ).css( 'font-size' ),
+							direction: jQuery( '.sd-text-color' ).css( 'direction' ),
+							fontWeight: jQuery( '.sd-text-color' ).css( 'font-weight' ),
+							fontStyle: jQuery( '.sd-text-color' ).css( 'font-style' ),
+							textDecoration: jQuery( '.sd-text-color' ).css('text-decoration')
+						};
+
+						stylesData.linkStyles = {
+							color: jQuery( '.sd-link-color' ).css('color'),
+							fontFamily: jQuery( '.sd-link-color' ).css('font-family'),
+							fontSize: jQuery( '.sd-link-color' ).css('font-size'),
+							textDecoration: jQuery( '.sd-link-color' ).css('text-decoration'),
+							fontWeight: jQuery( '.sd-link-color' ).css( 'font-weight' ),
+							fontStyle: jQuery( '.sd-link-color' ).css( 'font-style' )
+						};
+
+						JetpackLikespostMessage( stylesData, window.frames[ 'likes-master' ] );
+
+						JetpackLikesBatchHandler();
+
+						jQuery( document ).on( 'inview', 'div.jetpack-likes-widget-unloaded', function() {
+							jetpackLikesWidgetQueue.push( this.id );
+						});
+					});
+				}
+
+				if ( 'showLikeWidget' == event.event ) {
+					jQuery( '#' + event.id + ' .post-likes-widget-placeholder'  ).fadeOut( 'fast', function() {
+						jQuery( '#' + event.id + ' .post-likes-widget' ).fadeIn( 'fast', function() {
+							JetpackLikespostMessage( { event: 'likeWidgetDisplayed', blog_id: event.blog_id, post_id: event.post_id, obj_id: event.obj_id }, window.frames['likes-master'] );
+						});
+					});
+				}
+
+				if ( 'clickReblogFlair' == event.event ) {
+					wpcom_reblog.toggle_reblog_box_flair( event.obj_id );
+				}
+
+				if ( 'showOtherGravatars' == event.event ) {
+					var $container = jQuery( '#likes-other-gravatars' );
+					var $list = $container.find( 'ul' );
+
+					$container.hide();
+					$list.html( '' );
+
+					$container.find( '.likes-text span' ).text( event.total );
+
+					jQuery.each( event.likers, function( i, liker ) {
+						$list.append( '<li class="' + liker.css_class + '"><a href="' + liker.profile_URL + '" class="wpl-liker" rel="nofollow" target="_parent"><img src="' + liker.avatar_URL + '" alt="' + liker.name + '" width="30" height="30" style="padding-right: 3px;" /></a></li>');
+					} );
+
+					var offset = jQuery( "[name='" + event.parent + "']" ).offset();
+
+					$container.css( 'left', offset.left + event.position.left - 10 + 'px' );
+					$container.css( 'top', offset.top + event.position.top - 33 + 'px' );
+
+					var rowLength = Math.floor( event.width / 37 );
+					var height = ( Math.ceil( event.likers.length / rowLength ) * 37 ) + 13;
+					if ( height > 204 ) {
+						height = 204;
+					}
+
+					$container.css( 'height', height + 'px' );
+					$container.css( 'width', rowLength * 37 - 7 + 'px' );
+
+					$list.css( 'width', rowLength * 37 + 'px' );
+
+					$container.fadeIn( 'slow' );
+
+					var scrollbarWidth = $list[0].offsetWidth - $list[0].clientWidth;
+					if ( scrollbarWidth > 0 ) {
+						$container.width( $container.width() + scrollbarWidth );
+						$list.width( $list.width() + scrollbarWidth );
+					}
+				}
+			}
+
+			pm.bind( 'likesMessage', function(e) { JetpackLikesMessageListener(e); } );
+
+			jQuery( document ).click( function( e ) {
+				var $container = jQuery( '#likes-other-gravatars' );
+
+				if ( $container.has( e.target ).length === 0 ) {
+					$container.fadeOut( 'slow' );
+				}
+			});
+
+			function JetpackLikesWidgetQueueHandler() {
+				var wrapperID;
+				if ( ! jetpackLikesMasterReady ) {
+					setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+					return;
+				}
+
+				if ( jetpackLikesWidgetQueue.length > 0 ) {
+					// We may have a widget that needs creating now
+					var found = false;
+					while( jetpackLikesWidgetQueue.length > 0 ) {
+						// Grab the first member of the queue that isn't already loading.
+						wrapperID = jetpackLikesWidgetQueue.splice( 0, 1 )[0];
+						if ( jQuery( '#' + wrapperID ).hasClass( 'jetpack-likes-widget-unloaded' ) ) {
+							found = true;
+							break;
+						}
+					}
+					if ( ! found ) {
+						setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+						return;
+					}
+				} else if ( jQuery( 'div.jetpack-likes-widget-unloaded' ).length > 0 ) {
+					// Grab any unloaded widgets for a batch request
+					JetpackLikesBatchHandler();
+
+					// Get the next unloaded widget
+					wrapperID = jQuery( 'div.jetpack-likes-widget-unloaded' ).first()[0].id;
+					if ( ! wrapperID ) {
+						// Everything is currently loaded
+						setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+						return;
+					}
+				}
+
+				if ( 'undefined' === typeof wrapperID ) {
+					setTimeout( JetpackLikesWidgetQueueHandler, 500 );
+					return;
+				}
+
+				var $wrapper = jQuery( '#' + wrapperID );
+				$wrapper.find( 'iframe' ).remove();
+
+				if ( $wrapper.hasClass( 'slim-likes-widget' ) ) {
+					$wrapper.find( '.post-likes-widget-placeholder' ).after( "<iframe class='post-likes-widget jetpack-likes-widget' name='" + $wrapper.data( 'name' ) + "' height='22px' width='68px' frameBorder='0' scrolling='no' src='" + $wrapper.data( 'src' ) + "'></iframe>" );
+				} else {
+					$wrapper.find( '.post-likes-widget-placeholder' ).after( "<iframe class='post-likes-widget jetpack-likes-widget' name='" + $wrapper.data( 'name' ) + "' height='55px' width='100%' frameBorder='0' src='" + $wrapper.data( 'src' ) + "'></iframe>" );
+				}
+
+				$wrapper.removeClass( 'jetpack-likes-widget-unloaded' ).addClass( 'jetpack-likes-widget-loading' );
+
+				$wrapper.find( 'iframe' ).load( function( e ) {
+					var $iframe = jQuery( e.target );
+					$wrapper.removeClass( 'jetpack-likes-widget-loading' ).addClass( 'jetpack-likes-widget-loaded' );
+
+					JetpackLikespostMessage( { event: 'loadLikeWidget', name: $iframe.attr( 'name' ), width: $iframe.width() }, window.frames[ 'likes-master' ] );
+
+					if ( $wrapper.hasClass( 'slim-likes-widget' ) ) {
+						$wrapper.find( 'iframe' ).Jetpack( 'resizeable' );
+					}
+				});
+				setTimeout( JetpackLikesWidgetQueueHandler, 250 );
+			}
+			JetpackLikesWidgetQueueHandler();
+		//]]>
+		</script>
+<script type='text/javascript' src='https://s1.wp.com/wp-content/mu-plugins/akismet-3.0/_inc/form.js?m=1404442431g'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"https:\/\/s1.wp.com\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+var thickboxL10n = {"next":"Next >","prev":"< Prev","image":"Image","of":"of","close":"Close","noiframes":"This feature requires inline frames. You have iframes disabled or your browser does not support them.","loadingAnimation":"https:\/\/s1.wp.com\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s2.wp.com/_static/??-eJxdjV0KgCAQhC+UWVHRS3SWWqXWcpXU6vjZQz8EAzPwzTB8twwJliCk48rxXmgkNvRrGj1VLuGxAIa8JH9xITcEaY8bfbd+QpgHczzhv9eB2SWMSJ+fyMFo9v4q1+k2L4usaqJqdQIEdDpP'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var kissmetrics_api = {"api_key":"39e3e583aca28fab00c85ad9019b51d9f073fc6d","username":"elfriirlfe","user_id":"49084738"};
+var kissmetrics_queries = {"events":[],"properties":[{"Browser_Type":"desktop"}]};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s0.wp.com/wp-content/mu-plugins/kissmetrics/kissmetrics.js?m=1417525689g&#038;ver=20141202'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var JetpackEmojiSettings = {"base_url":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/emoji\/twemoji\/"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpNotesArgs = {"cacheBuster":"20150109","iframeUrl":"https:\/\/widgets.wp.com\/notifications\/","iframeAppend":"2","iframeScroll":"yes"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcom_tos_report_form = {"ajaxurl":"\/wp-admin\/admin-ajax.php","isLoggedoutUser":"","post_ID":"488","current_url":"https:\/\/efrizalzaida.wordpress.com\/2013\/01\/07\/integrasi-antivirus-dan-antispam-ke-email-server","report_this_content":"Report this content"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var recaptcha_options = {"lang":"en"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s2.wp.com/_static/??-eJyNkdFSxCAMRX9IFu32wRfHb6E0tiBJkMCu/Xup2hnX6bZ9IUM4N7kJ+hqVZcpAWecREETH0mn+nAYg7UULmhAUApWTlwe9h/uPAmk62ckGOKGjReTIhtJXvDJohKlCd55/SiyVVuAjBhyaASSw6aE/pPtOrtmxjHX6rBLEsGoDi4qhDI5EA7J3Ol9v4i7vIUdj39Ux+ob6a7RQD0ksp7uL72qXjgnWppj/pUg2doQNC8QZfk81L4ZJXZpd3vS1oepM2oYzy7xlTlm9ccL/9w1lZKlMMC5pGU1yNCyxil7x5altHp/P56Zt/Rcmzhku'></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script><script src="//stats.wp.com/w.js?37" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['identifyUser', 49084738, 'elfriirlfe']);
+_tkq.push(['storeContext', {'blog_id':'38360756','blog_tz':'0','user_lang':'id','blog_lang':'en'}]);
+_stq.push(['view', {'blog':'38360756','v':'wpcom','tz':'0','user_id':'49084738','post':'488','subd':'efrizalzaida'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1zNDZ8S252Wis9XUQyb3YrcUVIU2R0VH5TdWI5d350TFdaeXR4OFRqPytqcHcxeT1JUVVCclRNUmxkUWhYX21NQTlVaWd0Ql1jS0J2aVQsd05vU1p8LW1yOHdXcWM4cFF5YXh5Z3JvUlJ3d3J1RHZ+P1pKNkJIJVtFRVVkVitXPzQwenROcFMrQUptRCV1Yms4Jk8rfC9CbV1UVz1kVXxWM3VDWG1xWHwrdXxrSjNKVnJhWEFsSnVRU3pfS01tUHBHWjltTmdiX2J5QTcrQ1RNK1FuUHxFWjN+Mi0/Q28tQjZtOWExL0lWQWJIazJrcj9uRFU5VWpGMEpQbEFvVkJbN3hFYXY/aDBDUUxVRTU9U3BpbTBbLHJ5WlM5V2FLNWl6bCtOZCs1RDVRTmpueTN0eWl8JnZsZz1ick58OVQ2UTVwRm4mJWc3TnAlMHZkbjNOLEdLZmpUQm5IWVksZWtDdUx5WDNr'}]);
+_stq.push([ 'clickTrackerInit', '38360756', '488' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+		<div id="wpadminbar" class="nojq nojs ltr" role="navigation">
+			<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Lewat ke baris perkakas</a>
+			<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Baris perkakas navigasi atas." tabindex="0">
+				<ul id="wp-admin-bar-root-default" class="ab-top-menu">
+		<li id="wp-admin-bar-blog" class="menupop my-sites"><a class="ab-item"  aria-haspopup="true" href="https://wordpress.com/stats">Situs-situsku</a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-blog-default" class="ab-submenu">
+		<li id="wp-admin-bar-blog-info" class="all-my-sites"><div class="ab-item ab-empty-item" ><div class="ab-site-icon"></div><a href="https://wordpress.com/stats"><span class="ab-site-title">Semua Situs Saya</span><span class="ab-site-description">Kelola semua situs Anda</span></a></div>		</li>
+		<li id="wp-admin-bar-blog-stats" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/my-stats/">Stat</a>		</li>
+		<li id="wp-admin-bar-shortlink"><a class="ab-item"  href="http://wp.me/p2AXnS-7S">Shortlink http://wp.me/p2AXnS-7S</a>Shortlink: <input id="adminbar-shortlink-input" value="http://wp.me/p2AXnS-7S" readonly="readonly" />		</li>
+		<li id="wp-admin-bar-theme-oxygen"><a class="ab-item"  href="http://theme.wordpress.com/themes/oxygen/">Theme: Oxygen</a>		</li></ul><ul id="wp-admin-bar-blog-secondary" class="ab-sub-secondary ab-submenu">
+		<li id="wp-admin-bar-wpcom_report_url"><a class="ab-item"  href="http://en.wordpress.com/complaints/">Laporkan isi ini</a>		</li></ul></div>		</li>
+		<li id="wp-admin-bar-jumptotop-button-menu"><a class="ab-item"  href="#"><div id="jumptotop"><span class="noticon noticon-top"></span></div></a>		</li>
+		<li id="wp-admin-bar-newdash" class="menupop"><a class="ab-item"  aria-haspopup="true" href="https://wordpress.com/">Pembaca</a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-newdash-default" class="ab-submenu">
+		<li id="wp-admin-bar-following"><a class="ab-item"  href="https://wordpress.com/">Blog yang Saya Ikuti</a>		</li></ul><ul id="wp-admin-bar-discover" class="ab-submenu">
+		<li id="wp-admin-bar-discover-header" class="ab-submenu-header"><div class="ab-item ab-empty-item" >Temukan</div>		</li>
+		<li id="wp-admin-bar-discover-freshly-pressed"><a class="ab-item"  href="https://wordpress.com/fresh/">Terbitan Terkini</a>		</li>
+		<li id="wp-admin-bar-discover-recommended-blogs"><a class="ab-item"  href="https://wordpress.com/recommendations/">Blog Rekomendasi</a>		</li>
+		<li id="wp-admin-bar-discover-find-friends"><a class="ab-item"  href="https://wordpress.com/me/find-friends/">Temukan Teman</a>		</li></ul><ul id="wp-admin-bar-my-activity" class="ab-submenu">
+		<li id="wp-admin-bar-my-activity-header" class="ab-submenu-header"><div class="ab-item ab-empty-item" >Aktivitas Saya</div>		</li>
+		<li id="wp-admin-bar-my-activity-my-comments"><a class="ab-item"  href="https://wordpress.com/activities/comments/">Komentar Saya</a>		</li>
+		<li id="wp-admin-bar-my-activity-my-likes"><a class="ab-item"  href="https://wordpress.com/activities/likes/">Kesukaan Saya</a>		</li></ul></div>		</li>
+		<li id="wp-admin-bar-follow"><a class="ab-item"  href="https://wordpress.com/read?b=38360756&#038;_wpnonce=7e0f6b1d2c"><span id="admin-bar-follow-link">Ikuti</span></a>		</li>
+		<li id="wp-admin-bar-admin-bar-likes-widget"><div class="ab-item ab-empty-item" ></div><iframe class='admin-bar-likes-widget jetpack-likes-widget' scrolling='no' frameBorder='0' name='admin-bar-likes-widget' src='https://widgets.wp.com/likes/#blog_id=38360756&amp;post_id=488&amp;origin=https://efrizalzaida.wordpress.com'></iframe>		</li>
+		<li id="wp-admin-bar-wpr-reblog" class="reblog"><a class="ab-item"  href="#reblog">Blog Ulang</a>		</li></ul><ul id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu">
+		<li id="wp-admin-bar-notes" class="menupop"><div class="ab-item ab-empty-item" ><span id="wpnt-notes-unread-count" class="wpnt-loading wpn-read">
+						<span class="noticon noticon-notification"></span>
+						</span></div><div id="wpnt-notes-panel2" style="display:none" lang="id" dir="ltr"><div class="wpnt-notes-panel-header"><span class="wpnt-notes-header"></span><span class="wpnt-notes-panel-link"></span></div></div>		</li>
+		<li id="wp-admin-bar-my-account" class="menupop with-avatar"><a class="ab-item"  aria-haspopup="true" href="https://wordpress.com/me/public-profile/"><img alt='' src='https://0.gravatar.com/avatar/c0c6ac8d1913b7a637b372fb85e821d8?s=32&#038;d=mm&#038;r=G' class='avatar avatar-32' height='32' width='32' /></a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-user-actions" class="ab-submenu">
+		<li id="wp-admin-bar-user-info" class="user-info user-info-item"><div class="ab-item ab-empty-item" tabindex="-1"><img alt='' src='https://0.gravatar.com/avatar/c0c6ac8d1913b7a637b372fb85e821d8?s=128&#038;d=mm&#038;r=G' class='avatar avatar-128' height='128' width='128' /><span class="display-name">elfriirlfe</span><span class="username"><a class="at-username" href="http://gravatar.com/elfriirlfe">elfriirlfe</a>&nbsp;&middot;&nbsp;<a href="https://efrizalzaida.wordpress.com/wp-login.php?action=logout&amp;redirect_to=https%3A%2F%2Fwordpress.com%2F&amp;_wpnonce=2fa2af1135">Keluar</a></span></div>		</li>
+		<li id="wp-admin-bar-profile-header" class="ab-submenu-header"><div class="ab-item ab-empty-item" >Profil</div>		</li>
+		<li id="wp-admin-bar-account-settings"><a class="ab-item"  href="https://wordpress.com/me/public-profile/">Pengaturan Akun</a>		</li>
+		<li id="wp-admin-bar-trophy-case"><a class="ab-item"  href="https://wordpress.com/me/trophies">Galeri Trofi</a>		</li>
+		<li id="wp-admin-bar-billing"><a class="ab-item"  href="https://wordpress.com/me/billing">Penagihan</a>		</li>
+		<li id="wp-admin-bar-extras-header" class="ab-submenu-header"><div class="ab-item ab-empty-item" >Ekstra</div>		</li>
+		<li id="wp-admin-bar-help" class="user-info-item"><a class="ab-item"  href="http://id.support.wordpress.com/">Bantuan</a>		</li>
+		<li id="wp-admin-bar-find-friends" class="user-info-item"><a class="ab-item"  href="https://wordpress.com/me/find-friends/">Temukan Teman</a>		</li>
+		<li id="wp-admin-bar-manage-blogs" class="user-info-item"><a class="ab-item"  href="https://wordpress.com/my-blogs/">Kelola Blog Saya</a>		</li></ul><ul id="wp-admin-bar-my-sites" class="ab-sub-secondary ab-submenu">
+		<li id="wp-admin-bar-blog-65168183" class="menupop"><a class="ab-item"  aria-haspopup="true" href="http://elfriirlfe.wordpress.com/"><img src="https://s2.wp.com/i/wpmini-blue.png" alt="Blavatar" width="16" height="16" />elfriirlfe</a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-blog-65168183-default" class="ab-submenu">
+		<li id="wp-admin-bar-blog-65168183-d"><a class="ab-item"  href="https://elfriirlfe.wordpress.com/wp-admin/">Admin WP</a>		</li>
+		<li id="wp-admin-bar-blog-65168183-n"><a class="ab-item"  href="https://wordpress.com/post/65168183/new">Pos Baru</a>		</li>
+		<li id="wp-admin-bar-blog-65168183-s"><a class="ab-item"  href="https://wordpress.com/my-stats/?blog=65168183">Statistik Situs</a>		</li>
+		<li id="wp-admin-bar-blog-65168183-c"><a class="ab-item"  href="https://elfriirlfe.wordpress.com/wp-admin/edit-comments.php">Kelola Komentar</a>		</li>
+		<li id="wp-admin-bar-blog-65168183-v"><a class="ab-item"  href="https://elfriirlfe.wordpress.com">Baca Blog</a>		</li></ul></div>		</li>
+		<li id="wp-admin-bar-blog-50803403" class="menupop"><a class="ab-item"  aria-haspopup="true" href="http://ulfailmanews.wordpress.com/"><img src="https://secure.gravatar.com/blavatar/1d3b4bf8742900c77736ae8e038cf28d?s=32&#038;d=https%3A%2F%2Fs2.wp.com%2Fi%2Fwpmini-blue.png" alt="Blavatar" width="16" height="16" />Ulfa Ilma News</a><div class="ab-sub-wrapper"><ul id="wp-admin-bar-blog-50803403-default" class="ab-submenu">
+		<li id="wp-admin-bar-blog-50803403-d"><a class="ab-item"  href="https://ulfailmanews.wordpress.com/wp-admin/">Admin WP</a>		</li>
+		<li id="wp-admin-bar-blog-50803403-n"><a class="ab-item"  href="https://wordpress.com/post/50803403/new">Pos Baru</a>		</li>
+		<li id="wp-admin-bar-blog-50803403-s"><a class="ab-item"  href="https://wordpress.com/my-stats/?blog=50803403">Statistik Situs</a>		</li>
+		<li id="wp-admin-bar-blog-50803403-c"><a class="ab-item"  href="https://ulfailmanews.wordpress.com/wp-admin/edit-comments.php">Kelola Komentar</a>		</li>
+		<li id="wp-admin-bar-blog-50803403-v"><a class="ab-item"  href="https://ulfailmanews.wordpress.com">Baca Blog</a>		</li></ul></div>		</li></ul></div>		</li>
+		<li id="wp-admin-bar-ab-new-post"><a class="ab-item"  href="https://id.wordpress.com/post/"></a>		</li></ul>			</div>
+						<a class="screen-reader-shortcut" href="https://efrizalzaida.wordpress.com/wp-login.php?action=logout&#038;_wpnonce=2fa2af1135">Keluar</a>
+					</div>
+
+		
+<script type="text/javascript">
+/* <![CDATA[ */
+var clickDebugLink;
+
+jQuery(document).ready( function($) {
+	var single = true, w = 1000,
+		supe = false;
+
+	$(document.body).load(function(){ $('#wpadminbar img.grav-hashed').removeClass('grav-hashed'); }); // hack to hide the gravatar hovercard
+
+	if ( single && supe )
+		w = 1385;
+	else if ( supe )
+		w = 1200;
+
+	// debug bar extra
+	clickDebugLink = function( parent_id, obj ) {
+
+		$('#'+parent_id).children('div').hide();
+
+		document.getElementById( obj.href.substr( obj.href.indexOf( '#' ) + 1 ) ).style.display = 'block';
+		$( obj.href.substr( obj.href.indexOf( '#' ) ) ).show()
+
+		$(obj).parent().addClass('current').siblings('li').removeClass('current');
+
+		return false;
+	};
+
+	$( '#wpadminbar #wp-admin-bar-shortlink' ).click( function() {
+		$( '#adminbar-shortlink-input' ).select();
+	});
+
+});
+/* ]]> */
+</script>
+	<div class="wpcom-bubble action-bubble">
+		<div class="bubble-txt"></div>
+	</div>
+	<script type="text/javascript">function hideBubble() { jQuery('body').append( jQuery( 'div.wpcom-bubble' ).removeClass( 'fadein' ) ).off( 'click.bubble touchstart.bubble' ); jQuery(document).off( 'scroll.bubble' ); };</script>
+		<script type="text/javascript">
+	jQuery( '#wp-admin-bar-jumptotop-button-menu a' ).click( function( e ) {
+		e.preventDefault();
+		jQuery( 'html, body' ).animate( { scrollTop: 0 }, 'fast' );
+	} );
+	function hideShowTbJumpToTop() {
+		var total_width = 0;
+		// Calculate total width taken by li's minus our button to see if we it'll
+		// overlap with other toolbar menus.
+		jQuery( '#wp-admin-bar-root-default > li' ).each( function() {
+			var self = jQuery( this );
+			if ( 'wp-admin-bar-jumptotop-button-menu' != self.attr( 'id' ) )
+				total_width += self.width();
+		});
+		if ( jQuery( '#wp-admin-bar-jumptotop-button-menu' ).position()['left'] - total_width < 10 ) {
+			jQuery( '#jumptotop' ).animate( { 'top': '-50px' }, 'fast' );
+		} else if (  jQuery( window ).scrollTop() >= 350 && parseInt( jQuery( '#jumptotop' ).css( 'top' ) ) < 0 ) {
+			if ( jQuery( '#wp-admin-bar-jumptotop-button-menu' ).position()['left'] - total_width < 10 )
+			   return;
+			jQuery( '#jumptotop' ).animate( { 'top': 0 }, 'fast' );
+		} else if (  jQuery( window ).scrollTop() < 1 && parseInt( jQuery( '#jumptotop' ).css( 'top' ) ) >= 0 ) {
+			jQuery( '#jumptotop' ).animate( { 'top': '-50px' }, 'fast' );
+		}
+	}
+	// handle on page load if auto scrolling to a position
+	hideShowTbJumpToTop();
+	// bind to scrolll event
+	var jumpToTopTimer = null;
+	jQuery( window ).scroll( function() {
+		clearTimeout( jumpToTopTimer );
+		jumpToTopTimer = setTimeout( jumpToTopRefresh, 150 );
+	} );
+	var jumpToTopRefresh = function() {
+		hideShowTbJumpToTop();
+	};
+	</script>
+	<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>

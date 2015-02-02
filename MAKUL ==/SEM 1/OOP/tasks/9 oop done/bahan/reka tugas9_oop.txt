@@ -1,0 +1,76 @@
+//TestContainer.java
+
+public class TestContainer {
+    public static void main(String args[]){
+    Container sumber = new Sumur();
+    Container small = new Glass(0, 1);
+    Container med = new Glass(0, 5);
+    Container big = new Glass(0, 10);
+
+    //mengisi gelas med dengan 4 liter air
+    med.fill(sumber);
+    small.fill(med);
+    System.out.println("1. Isi Gelas Med adalah : "+med.volume+" Liter\n");
+    med.empty(0);
+    small.empty(0);
+
+    //mengisi gelas big dengan 6 liter air
+    med.fill(sumber);
+    small.fill(sumber);
+    big.fill(med);
+    big.fill(small);    
+    System.out.println("2. Isi Gelas Big adalah : "+big.volume+" Liter\n");   
+  }
+}
+
+
+//Glass.java
+public class Glass extends Container {
+     
+     public Glass(int volume,int maxVolume){
+           this.volume=volume;
+           this.maxVolume=maxVolume;
+     }
+}
+
+
+//Sumur.java
+public class Sumur extends Container {
+  
+    public Sumur(){
+        this.volume=Integer.MAX_VALUE;
+        this.maxVolume=Integer.MAX_VALUE;
+    }
+    
+    public void empty(){     
+    }
+    
+    public void fill(){
+        
+    }
+}
+
+//Container.java
+public class Container {
+    public int volume;
+    public int maxVolume;
+    
+    public Container(){
+    }
+    
+    public void empty(int nol){
+        this.volume=nol;
+    }
+    
+    public void fill(Container obj){     
+        int max=obj.volume;       
+        if(max>this.maxVolume){
+             this.volume += this.maxVolume;      
+             obj.volume-=this.maxVolume;
+        }else{
+            
+             this.volume += obj.volume;
+        }
+       
+    }
+}

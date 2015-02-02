@@ -1,0 +1,40 @@
+=================================
+== OBJECT ORIENTED PROGRAMMING ==
+=================================
+
+dosen : p.fahrul
+uts oop :
+ -Materi Awal s/d Akhir(Enkapsulasi)
+
+
+-----------
+kendaraan objbck = new Becak();
+kendaraan objmbl = new Mobil();
+
+motor objmtr  = new Motor();
+
+kendaraan[] arrayKendaraan = new kendaraan[10];
+arrayKendaraan[2] = objMtr
+
+
+---------------------------
+
+class Testcontainer{
+	public static void main(String args[]){
+
+		container sumber = new sumur ();
+		container small = new Glass (0,1);
+		container med = new glass(0,5);
+		container big = new glass(0,10);
+		//mengisi	
+		med.fill(sumber);
+		small.fill(med);
+		big.fill(med);
+		//geas ukuran big terisi emoat liter air
+	}
+}
+
+tugas 
+1. isi gelas med dengna 4 liter air
+2. isi gelas med dengna 6 liter air
+-----------------------------

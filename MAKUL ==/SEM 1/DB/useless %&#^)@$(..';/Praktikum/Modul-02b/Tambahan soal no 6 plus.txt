@@ -1,0 +1,3 @@
+Tambahan soal utk laporan resmi:
+6. Buat perintah SQL untuk menampilkan semua data Barang dengan Harga barang antara 1000 dan 2000.
+

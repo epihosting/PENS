@@ -1,0 +1,14 @@
+===========================
+== ARTIFIAL INTELLIGENCE ==
+===========================
+
+dosen : B.entin
+uts :
+- representasi
+- reasoning/semantic
+- search algorithm 
+
+-------------
+just note
+
+seri tutorial algoritma genetika (aplikasi)

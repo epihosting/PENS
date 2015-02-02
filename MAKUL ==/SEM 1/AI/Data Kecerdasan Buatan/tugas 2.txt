@@ -1,0 +1,22 @@
+travels_by(bird,flying). 
+covered_by(bird,feathers). 
+covered_by(animal,skin). 
+travels_by(fish,swimming). 
+travels_by(ostrich,walking). 
+travels_by(penguin,walking). 
+is_a(bird,animal). 
+is_a(fish,animal). 
+is_a(ostrich,bird). 
+is_a(penguin,bird). 
+is_a(canary,bird). 
+is_a(robin,bird). 
+colour(canary,yellow). 
+colour(robin,red). 
+colour(tweety,white). 
+instance_of(opus,penguin). 
+instance_of(tweety,canary). 
+subclass(Class1,Class2) :- is_a(Class1,Class2). 
+subclass(Class1,Class2) :- is_a(Class1,Class3), subclass (Class3,Class2). aninstance(Obj,Class) :- instance_of(Obj,Class). 
+aninstance(Obj,Class) :- instance_of(Obj,Class1), subclass (Class1,Class). attribute(Obj,X) :- aninstance(Obj,Class),travels_by (Class,X). 
+attribute(Obj,X) :- aninstance(Obj,Class),covered_by (Class,X). 
+attribute(Obj,X) :- aninstance(Obj,Class),colour(Class,X).
