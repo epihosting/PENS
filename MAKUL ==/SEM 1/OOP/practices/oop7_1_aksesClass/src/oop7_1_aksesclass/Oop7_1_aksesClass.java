@@ -8,12 +8,3 @@ public class Oop7_1_aksesClass {
         System.out.println(anak.nrp);
     }
 }
-
-//public class Siswa {
-//
-//    int nrp;
-//
-//    public void setNrp(int i) {
-//        nrp = i;
-//    }
-//}

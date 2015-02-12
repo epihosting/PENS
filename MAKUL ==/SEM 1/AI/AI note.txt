@@ -12,3 +12,10 @@ uts :
 just note
 
 seri tutorial algoritma genetika (aplikasi)
+
+
+
+UAS 
+-sistem pakar
+-logika fuzzy 
+-jaringna syaraf tiruan 

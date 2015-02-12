@@ -41,3 +41,21 @@ tugas
 
 
 post test : 6 feb 15 , jam 18.00 
+
+
+
+bahan UAS 
+1...
+..
+..ENKAPUSLAI 
+INHERRITANCE 
+POLIMIRFISM
+COLLECTION
+
+
+------------
+game tebak kartu 
+< > = 
+
+- interface (GUI)
+- metode : polimorfism, 

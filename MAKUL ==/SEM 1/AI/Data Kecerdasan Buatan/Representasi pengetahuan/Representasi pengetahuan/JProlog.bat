@@ -1,1 +1,0 @@
-java -jar JProlog.jar
